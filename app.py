@@ -34,6 +34,14 @@ if uploaded_file is not None:
             return f'Other ({name})'
     df['ContractType'] = df['ContractName'].apply(get_contract_type)
 
+    # --- Outlier Detection for PnL ---
+    pnl_mean = df['PnL'].mean()
+    pnl_std = df['PnL'].std()
+    outliers = df[np.abs(df['PnL'] - pnl_mean) > 5 * pnl_std]
+    if not outliers.empty:
+        st.warning(f"Warning: {len(outliers)} P&L value(s) are extreme outliers (>|5σ| from mean). Please check your data for errors.")
+        st.write(outliers[['EnteredAt', 'PnL', 'ContractName', 'Size']])
+
     # --- Dashboard Summary ---
     st.header("Dashboard Summary")
     col1, col2, col3 = st.columns(3)
@@ -52,7 +60,7 @@ if uploaded_file is not None:
         st.metric("Total Lots Traded", int(df['Size'].sum()))
         st.metric("Best Trade", f"${df['PnL'].max():.2f}")
 
-    # --- Equity Curve (Plotly with markers) ---
+    # --- Equity Curve (Plotly with markers and x-axis buffer) ---
     st.header("Equity Curve")
     fig = go.Figure()
     # Line for equity curve
@@ -72,12 +80,16 @@ if uploaded_file is not None:
         marker=dict(color='cyan', size=8, line=dict(color='black', width=1)),
         showlegend=True
     ))
+    # Set x-axis range with a small buffer after the last trade
+    start_time = df['EnteredAt'].min()
+    end_time = df['EnteredAt'].max() + pd.Timedelta(minutes=10)
     fig.update_layout(
         template='plotly_dark',
         title='Equity Curve',
         xaxis_title='Time',
         yaxis_title='Cumulative P&L ($)',
-        legend=dict(bgcolor='rgba(0,0,0,0)')
+        legend=dict(bgcolor='rgba(0,0,0,0)'),
+        xaxis=dict(range=[start_time, end_time])
     )
     st.plotly_chart(fig, use_container_width=True)
 
