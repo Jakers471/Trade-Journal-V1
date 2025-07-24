@@ -60,12 +60,14 @@ if uploaded_file is not None:
         st.metric("Total Lots Traded", int(df['Size'].sum()))
         st.metric("Best Trade", f"${df['PnL'].max():.2f}")
 
-    # --- Equity Curve (Plotly with markers and x-axis buffer) ---
+    # --- Equity Curve (Plotly with markers, by trade number) ---
     st.header("Equity Curve")
+    df = df.sort_values('EnteredAt').reset_index(drop=True)
+    trade_numbers = np.arange(1, len(df)+1)
     fig = go.Figure()
     # Line for equity curve
     fig.add_trace(go.Scatter(
-        x=df['EnteredAt'],
+        x=trade_numbers,
         y=df['Cumulative_PnL'],
         mode='lines',
         name='Equity Curve',
@@ -73,23 +75,19 @@ if uploaded_file is not None:
     ))
     # Circles for each trade
     fig.add_trace(go.Scatter(
-        x=df['EnteredAt'],
+        x=trade_numbers,
         y=df['Cumulative_PnL'],
         mode='markers',
         name='Trade',
         marker=dict(color='cyan', size=8, line=dict(color='black', width=1)),
         showlegend=True
     ))
-    # Set x-axis range with a small buffer after the last trade
-    start_time = df['EnteredAt'].min()
-    end_time = df['EnteredAt'].max() + pd.Timedelta(minutes=10)
     fig.update_layout(
         template='plotly_dark',
-        title='Equity Curve',
-        xaxis_title='Time',
+        title='Equity Curve (by Trade Number)',
+        xaxis_title='Trade Number',
         yaxis_title='Cumulative P&L ($)',
-        legend=dict(bgcolor='rgba(0,0,0,0)'),
-        xaxis=dict(range=[start_time, end_time])
+        legend=dict(bgcolor='rgba(0,0,0,0)')
     )
     st.plotly_chart(fig, use_container_width=True)
 
