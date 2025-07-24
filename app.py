@@ -4,6 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import plotly.express as px
+import plotly.graph_objects as go
 import io
 
 st.set_page_config(page_title="Trade Journal Analysis", layout="wide")
@@ -51,11 +52,33 @@ if uploaded_file is not None:
         st.metric("Total Lots Traded", int(df['Size'].sum()))
         st.metric("Best Trade", f"${df['PnL'].max():.2f}")
 
-    # --- Equity Curve (Plotly) ---
+    # --- Equity Curve (Plotly with markers) ---
     st.header("Equity Curve")
-    fig = px.line(df, x='EnteredAt', y='Cumulative_PnL', title='Equity Curve', template='plotly_dark')
-    fig.update_traces(line=dict(color='red'))
-    fig.update_layout(xaxis_title='Time', yaxis_title='Cumulative P&L ($)')
+    fig = go.Figure()
+    # Line for equity curve
+    fig.add_trace(go.Scatter(
+        x=df['EnteredAt'],
+        y=df['Cumulative_PnL'],
+        mode='lines',
+        name='Equity Curve',
+        line=dict(color='red', width=2)
+    ))
+    # Circles for each trade
+    fig.add_trace(go.Scatter(
+        x=df['EnteredAt'],
+        y=df['Cumulative_PnL'],
+        mode='markers',
+        name='Trade',
+        marker=dict(color='cyan', size=8, line=dict(color='black', width=1)),
+        showlegend=True
+    ))
+    fig.update_layout(
+        template='plotly_dark',
+        title='Equity Curve',
+        xaxis_title='Time',
+        yaxis_title='Cumulative P&L ($)',
+        legend=dict(bgcolor='rgba(0,0,0,0)')
+    )
     st.plotly_chart(fig, use_container_width=True)
 
     # --- Monte Carlo Simulation (matplotlib for now) ---
