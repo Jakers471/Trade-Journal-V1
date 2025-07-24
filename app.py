@@ -22,7 +22,12 @@ if uploaded_file is not None:
     # --- Preprocessing ---
     df = df.sort_values('EnteredAt').reset_index(drop=True)
     df['Was_Win'] = df['PnL'] > 0
-    df['Cumulative_PnL'] = df['PnL'].cumsum()
+    # Subtract Fees from PnL for net PnL
+    if 'Fees' in df.columns:
+        df['NetPnL'] = df['PnL'] - df['Fees']
+    else:
+        df['NetPnL'] = df['PnL']
+    df['Cumulative_PnL'] = df['NetPnL'].cumsum()
     def get_contract_type(name):
         name = str(name).upper()
         if 'MNQ' in name:
@@ -33,46 +38,46 @@ if uploaded_file is not None:
             return f'Other ({name})'
     df['ContractType'] = df['ContractName'].apply(get_contract_type)
 
-    # --- Outlier Detection for PnL and Big Jumps ---
-    pnl_mean = df['PnL'].mean()
-    pnl_std = df['PnL'].std()
-    outliers = df[np.abs(df['PnL'] - pnl_mean) > 5 * pnl_std]
+    # --- Outlier Detection for NetPnL and Big Jumps ---
+    pnl_mean = df['NetPnL'].mean()
+    pnl_std = df['NetPnL'].std()
+    outliers = df[np.abs(df['NetPnL'] - pnl_mean) > 5 * pnl_std]
     if not outliers.empty:
-        st.warning(f"Warning: {len(outliers)} P&L value(s) are extreme outliers (>|5σ| from mean). Please check your data for errors.")
-        st.write(outliers[['EnteredAt', 'PnL', 'ContractName', 'Size']])
+        st.warning(f"Warning: {len(outliers)} Net P&L value(s) are extreme outliers (>|5σ| from mean). Please check your data for errors.")
+        st.write(outliers[['EnteredAt', 'NetPnL', 'ContractName', 'Size']])
     # Warn for big single-trade jumps
     jump_threshold = 3 * max(abs(pnl_mean), abs(pnl_std))
-    big_jumps = df[np.abs(df['PnL']) > jump_threshold]
+    big_jumps = df[np.abs(df['NetPnL']) > jump_threshold]
     if not big_jumps.empty:
-        st.warning(f"{len(big_jumps)} trade(s) have unusually large P&L (>|3x mean/std|). Please check for data entry errors.")
-        st.write(big_jumps[['EnteredAt', 'PnL', 'Size', 'Cumulative_PnL']])
+        st.warning(f"{len(big_jumps)} trade(s) have unusually large Net P&L (>|3x mean/std|). Please check for data entry errors.")
+        st.write(big_jumps[['EnteredAt', 'NetPnL', 'Size', 'Cumulative_PnL']])
 
-    # --- Quick PnL and Trade Diagnostics ---
-    st.write(f"**Sum of PnL:** {df['PnL'].sum():,.2f}")
+    # --- Quick NetPnL and Trade Diagnostics ---
+    st.write(f"**Sum of Net PnL:** {df['NetPnL'].sum():,.2f}")
     st.write(f"**Number of trades:** {len(df)}")
-    st.write('**Top 10 biggest trades:**')
-    st.write(df[['EnteredAt', 'PnL', 'Size', 'Cumulative_PnL']].sort_values('PnL', ascending=False).head(10))
-    st.write('**Top 10 biggest losses:**')
-    st.write(df[['EnteredAt', 'PnL', 'Size', 'Cumulative_PnL']].sort_values('PnL').head(10))
+    st.write('**Top 10 biggest trades (Net PnL):**')
+    st.write(df[['EnteredAt', 'NetPnL', 'Size', 'Cumulative_PnL']].sort_values('NetPnL', ascending=False).head(10))
+    st.write('**Top 10 biggest losses (Net PnL):**')
+    st.write(df[['EnteredAt', 'NetPnL', 'Size', 'Cumulative_PnL']].sort_values('NetPnL').head(10))
 
     # --- Dashboard Summary ---
     st.header("Dashboard Summary")
     col1, col2, col3 = st.columns(3)
     with col1:
-        st.metric("Total P&L", f"${df['PnL'].sum():,.2f}")
+        st.metric("Total P&L", f"${df['NetPnL'].sum():,.2f}")
         st.metric("Trade Win %", f"{(df['Was_Win'].mean()*100):.2f}%")
         st.metric("Total Trades", len(df))
     with col2:
-        avg_win = df[df['Was_Win']]['PnL'].mean()
-        avg_loss = df[~df['Was_Win']]['PnL'].mean()
+        avg_win = df[df['Was_Win']]['NetPnL'].mean()
+        avg_loss = df[~df['Was_Win']]['NetPnL'].mean()
         st.metric("Avg Win / Avg Loss", f"{abs(avg_win/avg_loss):.2f}")
         st.metric("Avg Winning Trade", f"${avg_win:.2f}")
         st.metric("Avg Losing Trade", f"${avg_loss:.2f}")
     with col3:
-        profit_factor = df[df['PnL'] > 0]['PnL'].sum() / abs(df[df['PnL'] < 0]['PnL'].sum())
+        profit_factor = df[df['NetPnL'] > 0]['NetPnL'].sum() / abs(df[df['NetPnL'] < 0]['NetPnL'].sum())
         st.metric("Profit Factor", f"{profit_factor:.2f}")
         st.metric("Total Lots Traded", int(df['Size'].sum()))
-        st.metric("Best Trade", f"${df['PnL'].max():.2f}")
+        st.metric("Best Trade", f"${df['NetPnL'].max():.2f}")
 
     # --- Performance Analysis ---
     st.subheader("Performance Analysis")
@@ -80,7 +85,7 @@ if uploaded_file is not None:
 - **Win Rate:** {df['Was_Win'].mean()*100:.2f}%
 - **Avg Win / Avg Loss:** {abs(avg_win/avg_loss):.2f}
 - **Profit Factor:** {profit_factor:.2f}
-- **Total P&L:** ${df['PnL'].sum():,.2f}
+- **Total P&L:** ${df['NetPnL'].sum():,.2f}
 """
     if profit_factor > 1.2 and df['Was_Win'].mean() > 0.4:
         perf_text += "\n:green[You have a positive edge! Your winners are larger than your losers and your win rate is solid. Keep focusing on consistency and risk management.]"
@@ -128,7 +133,7 @@ if uploaded_file is not None:
 """)
     n_trades = len(df)
     n_simulations = 100
-    trade_outcomes = df['PnL'].values
+    trade_outcomes = df['NetPnL'].values
     your_sim = []
     for _ in range(n_simulations):
         outcomes = np.random.choice(trade_outcomes, size=n_trades, replace=True)
@@ -156,7 +161,7 @@ if uploaded_file is not None:
     st.markdown("""
 **What this shows:** The bell curve (histogram) shows the distribution of your trade profits and losses. Most trades should cluster near the center. A long right tail means you have big winners; a long left tail means big losers. The box plot above shows the spread and outliers. Use this to spot if your results are skewed or have outliers.
 """)
-    fig3 = px.histogram(df, x='PnL', nbins=30, marginal='box', opacity=0.7, color_discrete_sequence=['deepskyblue'], template='plotly_dark')
+    fig3 = px.histogram(df, x='NetPnL', nbins=30, marginal='box', opacity=0.7, color_discrete_sequence=['deepskyblue'], template='plotly_dark')
     fig3.update_layout(title='Distribution of Trade Profits (Bell Curve)', xaxis_title='Trade P&L ($)', yaxis_title='Count', legend_title_text='Profit/Loss')
     fig3.update_traces(name='PnL', showlegend=True)
     st.plotly_chart(fig3, use_container_width=True)
@@ -198,22 +203,22 @@ if uploaded_file is not None:
     st.pyplot(fig4)
 
     # --- Full PnL Diagnostics ---
-    st.write(f"**Sum of PnL (raw):** {df['PnL'].sum():,.2f}")
-    st.write(f"**PnL dtype:** {df['PnL'].dtype}")
-    st.write("**First 5 PnL values:**")
-    st.write(df['PnL'].head())
-    st.write("**Trades with PnL > 200 or < -200:**")
-    st.write(df[(df['PnL'] > 200) | (df['PnL'] < -200)][['EnteredAt', 'PnL', 'Size', 'Cumulative_PnL']])
+    st.write(f"**Sum of Net PnL (raw):** {df['NetPnL'].sum():,.2f}")
+    st.write(f"**Net PnL dtype:** {df['NetPnL'].dtype}")
+    st.write("**First 5 Net PnL values:**")
+    st.write(df['NetPnL'].head())
+    st.write("**Trades with Net PnL > 200 or < -200:**")
+    st.write(df[(df['NetPnL'] > 200) | (df['NetPnL'] < -200)][['EnteredAt', 'NetPnL', 'Size', 'Cumulative_PnL']])
     # --- Check for and handle duplicate trades by Id ---
     dups = df[df.duplicated(subset=['Id'], keep=False)]
     if not dups.empty:
         st.warning(f"{len(dups)} duplicate trade(s) found by Id. This can cause PnL to be counted twice. Only the first occurrence will be kept in the analysis.")
-        st.write(dups[['Id', 'EnteredAt', 'PnL', 'Size', 'Cumulative_PnL']])
+        st.write(dups[['Id', 'EnteredAt', 'NetPnL', 'Size', 'Cumulative_PnL']])
         # Drop duplicates, keep first occurrence
         df = df.drop_duplicates(subset=['Id'], keep='first').reset_index(drop=True)
         # Recalculate Cumulative_PnL after removing duplicates
         df = df.sort_values('EnteredAt').reset_index(drop=True)
-        df['Cumulative_PnL'] = df['PnL'].cumsum()
+        df['Cumulative_PnL'] = df['NetPnL'].cumsum()
 
 else:
     st.info("Please upload a CSV file to see your trade analysis dashboard.") 
