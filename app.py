@@ -44,8 +44,14 @@ if uploaded_file is not None:
     jump_threshold = 3 * max(abs(pnl_mean), abs(pnl_std))
     big_jumps = df[np.abs(df['PnL']) > jump_threshold]
     if not big_jumps.empty:
-        st.warning(f"Warning: {len(big_jumps)} trade(s) have unusually large P&L (>|3x mean/std|). Please check for data entry errors.")
-        st.write(big_jumps[['EnteredAt', 'PnL', 'Cumulative_PnL']])
+        st.warning(f"{len(big_jumps)} trade(s) have unusually large P&L (>|3x mean/std|). Please check for data entry errors.")
+        st.write(big_jumps[['EnteredAt', 'PnL', 'Size', 'Cumulative_PnL']])
+
+    # --- Show top 10 biggest wins and losses ---
+    st.write('Top 10 biggest trades:')
+    st.write(df[['EnteredAt', 'PnL', 'Size', 'Cumulative_PnL']].sort_values('PnL', ascending=False).head(10))
+    st.write('Top 10 biggest losses:')
+    st.write(df[['EnteredAt', 'PnL', 'Size', 'Cumulative_PnL']].sort_values('PnL').head(10))
 
     # --- Dashboard Summary ---
     st.header("Dashboard Summary")
