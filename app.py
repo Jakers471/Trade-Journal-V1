@@ -196,5 +196,18 @@ if uploaded_file is not None:
     fig4.patch.set_facecolor('black')
     plt.tight_layout()
     st.pyplot(fig4)
+
+    # --- Full PnL Diagnostics ---
+    st.write(f"**Sum of PnL (raw):** {df['PnL'].sum():,.2f}")
+    st.write(f"**PnL dtype:** {df['PnL'].dtype}")
+    st.write("**First 5 PnL values:**")
+    st.write(df['PnL'].head())
+    st.write("**Trades with PnL > 200 or < -200:**")
+    st.write(df[(df['PnL'] > 200) | (df['PnL'] < -200)][['EnteredAt', 'PnL', 'Size', 'Cumulative_PnL']])
+    dups = df[df.duplicated(subset=['Id'], keep=False)]
+    if not dups.empty:
+        st.warning(f"{len(dups)} duplicate trade(s) found by Id. This can cause PnL to be counted twice.")
+        st.write(dups[['Id', 'EnteredAt', 'PnL', 'Size', 'Cumulative_PnL']])
+
 else:
     st.info("Please upload a CSV file to see your trade analysis dashboard.") 
