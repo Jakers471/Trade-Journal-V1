@@ -204,10 +204,16 @@ if uploaded_file is not None:
     st.write(df['PnL'].head())
     st.write("**Trades with PnL > 200 or < -200:**")
     st.write(df[(df['PnL'] > 200) | (df['PnL'] < -200)][['EnteredAt', 'PnL', 'Size', 'Cumulative_PnL']])
+    # --- Check for and handle duplicate trades by Id ---
     dups = df[df.duplicated(subset=['Id'], keep=False)]
     if not dups.empty:
-        st.warning(f"{len(dups)} duplicate trade(s) found by Id. This can cause PnL to be counted twice.")
+        st.warning(f"{len(dups)} duplicate trade(s) found by Id. This can cause PnL to be counted twice. Only the first occurrence will be kept in the analysis.")
         st.write(dups[['Id', 'EnteredAt', 'PnL', 'Size', 'Cumulative_PnL']])
+        # Drop duplicates, keep first occurrence
+        df = df.drop_duplicates(subset=['Id'], keep='first').reset_index(drop=True)
+        # Recalculate Cumulative_PnL after removing duplicates
+        df = df.sort_values('EnteredAt').reset_index(drop=True)
+        df['Cumulative_PnL'] = df['PnL'].cumsum()
 
 else:
     st.info("Please upload a CSV file to see your trade analysis dashboard.") 
