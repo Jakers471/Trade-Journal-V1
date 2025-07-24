@@ -47,10 +47,12 @@ if uploaded_file is not None:
         st.warning(f"{len(big_jumps)} trade(s) have unusually large P&L (>|3x mean/std|). Please check for data entry errors.")
         st.write(big_jumps[['EnteredAt', 'PnL', 'Size', 'Cumulative_PnL']])
 
-    # --- Show top 10 biggest wins and losses ---
-    st.write('Top 10 biggest trades:')
+    # --- Quick PnL and Trade Diagnostics ---
+    st.write(f"**Sum of PnL:** {df['PnL'].sum():,.2f}")
+    st.write(f"**Number of trades:** {len(df)}")
+    st.write('**Top 10 biggest trades:**')
     st.write(df[['EnteredAt', 'PnL', 'Size', 'Cumulative_PnL']].sort_values('PnL', ascending=False).head(10))
-    st.write('Top 10 biggest losses:')
+    st.write('**Top 10 biggest losses:**')
     st.write(df[['EnteredAt', 'PnL', 'Size', 'Cumulative_PnL']].sort_values('PnL').head(10))
 
     # --- Dashboard Summary ---
