@@ -1,0 +1,4 @@
+ContractType,mean_size,std_size,mode_size,min_size,max_size,num_trades
+Micro (MNQ),4.017857142857143,4.506524851120454,1,1,15,56
+Mini (NQ),1.8571428571428572,0.35856858280031817,2,1,2,21
+Other (GCQ5),1.0,,1,1,1,1
