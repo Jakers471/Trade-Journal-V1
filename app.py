@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+import plotly.express as px
 import io
 
 st.set_page_config(page_title="Trade Journal Analysis", layout="wide")
@@ -50,22 +51,14 @@ if uploaded_file is not None:
         st.metric("Total Lots Traded", int(df['Size'].sum()))
         st.metric("Best Trade", f"${df['PnL'].max():.2f}")
 
-    # --- Equity Curve ---
+    # --- Equity Curve (Plotly) ---
     st.header("Equity Curve")
-    fig, ax = plt.subplots(figsize=(12, 5))
-    ax.plot(df['EnteredAt'], df['Cumulative_PnL'], color='red', linewidth=2, label='Equity Curve')
-    ax.scatter(df['EnteredAt'], df['Cumulative_PnL'], color='cyan', s=40, edgecolor='black', zorder=3, label='Trade Segment')
-    ax.set_title('Detailed Equity Curve (Your Actual Trades)', fontsize=14, color='white')
-    ax.set_xlabel('Time', color='white')
-    ax.set_ylabel('Cumulative P&L ($)', color='white')
-    ax.grid(True, linestyle='--', alpha=0.3, color='white')
-    ax.legend(facecolor='black', edgecolor='white', fontsize=10)
-    ax.tick_params(axis='x', colors='white')
-    ax.tick_params(axis='y', colors='white')
-    fig.patch.set_facecolor('black')
-    st.pyplot(fig)
+    fig = px.line(df, x='EnteredAt', y='Cumulative_PnL', title='Equity Curve', template='plotly_dark')
+    fig.update_traces(line=dict(color='red'))
+    fig.update_layout(xaxis_title='Time', yaxis_title='Cumulative P&L ($)')
+    st.plotly_chart(fig, use_container_width=True)
 
-    # --- Monte Carlo Simulation ---
+    # --- Monte Carlo Simulation (matplotlib for now) ---
     st.header("Monte Carlo Simulation vs. Actual")
     n_trades = len(df)
     n_simulations = 100
@@ -75,20 +68,22 @@ if uploaded_file is not None:
         outcomes = np.random.choice(trade_outcomes, size=n_trades, replace=True)
         your_sim.append(np.cumsum(outcomes))
     your_sim = np.array(your_sim)
-    fig, ax = plt.subplots(figsize=(12, 6))
+    plt.style.use('dark_background')
+    fig2, ax = plt.subplots(figsize=(12, 6), dpi=120)
     for curve in your_sim:
         ax.plot(curve, color=(1, 1, 1, 0.15), zorder=1)
     ax.plot(np.median(your_sim, axis=0), color='orange', linestyle='--', linewidth=2, label='Projected Median', zorder=2)
     ax.plot(np.cumsum(trade_outcomes), color='red', linewidth=2, label='Your Actual', zorder=3)
-    ax.set_title('Monte Carlo Simulations vs. Actual', fontsize=14, color='white')
+    ax.set_title('Monte Carlo Simulations vs. Actual', fontsize=16, color='white')
     ax.set_xlabel('Trade Number', color='white')
     ax.set_ylabel('Cumulative P&L ($)', color='white')
     ax.grid(True, linestyle='--', alpha=0.3, color='white')
-    ax.legend(facecolor='black', edgecolor='white', fontsize=10)
+    ax.legend(facecolor='black', edgecolor='white', fontsize=12)
     ax.tick_params(axis='x', colors='white')
     ax.tick_params(axis='y', colors='white')
-    fig.patch.set_facecolor('black')
-    st.pyplot(fig)
+    fig2.patch.set_facecolor('black')
+    plt.tight_layout()
+    st.pyplot(fig2)
 
     # --- Position Sizing Stats by Contract Type and Size ---
     st.header("Position Sizing Stats by Contract Type and Size")
@@ -101,18 +96,11 @@ if uploaded_file is not None:
     size_stats['win_rate'] = size_stats['win_rate'] * 100
     st.dataframe(size_stats)
 
-    # --- Bell Curve of Profits ---
+    # --- Bell Curve of Profits (Plotly) ---
     st.header("Distribution of Trade Profits (Bell Curve)")
-    fig, ax = plt.subplots(figsize=(10,6))
-    sns.histplot(df['PnL'], bins=30, kde=True, color='deepskyblue', edgecolor='white', stat='density', alpha=0.7, ax=ax)
-    ax.set_title('Distribution of Trade Profits (Bell Curve)', fontsize=14, color='white')
-    ax.set_xlabel('Trade P&L ($)', color='white')
-    ax.set_ylabel('Density', color='white')
-    ax.grid(True, linestyle='--', alpha=0.3, color='white')
-    ax.tick_params(axis='x', colors='white')
-    ax.tick_params(axis='y', colors='white')
-    fig.patch.set_facecolor('black')
-    st.pyplot(fig)
+    fig3 = px.histogram(df, x='PnL', nbins=30, marginal='box', opacity=0.7, color_discrete_sequence=['deepskyblue'], template='plotly_dark')
+    fig3.update_layout(title='Distribution of Trade Profits (Bell Curve)', xaxis_title='Trade P&L ($)', yaxis_title='Count')
+    st.plotly_chart(fig3, use_container_width=True)
 
     # --- Position Sizing Consistency by Contract Type ---
     st.header("Position Sizing Consistency by Contract Type")
@@ -128,19 +116,21 @@ if uploaded_file is not None:
 
     # --- Distribution of Position Sizes by Contract Type ---
     st.header("Distribution of Position Sizes by Contract Type")
-    fig, ax = plt.subplots(figsize=(12,7))
+    plt.style.use('dark_background')
+    fig4, ax = plt.subplots(figsize=(12,7), dpi=120)
     sns.histplot(data=df, x='Size', hue='ContractType', multiple='dodge',
                  bins=range(int(df['Size'].min()), int(df['Size'].max())+2),
                  palette='tab10', edgecolor='white', alpha=0.8, ax=ax)
-    ax.set_title('Distribution of Position Sizes by Contract Type', fontsize=14, color='white')
+    ax.set_title('Distribution of Position Sizes by Contract Type', fontsize=16, color='white')
     ax.set_xlabel('Position Size (Contracts)', color='white')
     ax.set_ylabel('Number of Trades', color='white')
     ax.grid(True, linestyle='--', alpha=0.3, color='white')
     ax.tick_params(axis='x', colors='white')
     ax.tick_params(axis='y', colors='white')
     ax.legend(title='Contract Type', loc='best')
-    fig.patch.set_facecolor('black')
-    st.pyplot(fig)
+    fig4.patch.set_facecolor('black')
+    plt.tight_layout()
+    st.pyplot(fig4)
 
 else:
     st.info("Please upload a CSV file to see your trade analysis dashboard.") 
