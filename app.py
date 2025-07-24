@@ -20,8 +20,7 @@ if uploaded_file is not None:
     st.write(df.head())
 
     # --- Preprocessing ---
-    df['EnteredAt'] = pd.to_datetime(df['EnteredAt'])
-    df['ExitedAt'] = pd.to_datetime(df['ExitedAt'])
+    df = df.sort_values('EnteredAt').reset_index(drop=True)
     df['Was_Win'] = df['PnL'] > 0
     df['Cumulative_PnL'] = df['PnL'].cumsum()
     def get_contract_type(name):
@@ -34,13 +33,19 @@ if uploaded_file is not None:
             return f'Other ({name})'
     df['ContractType'] = df['ContractName'].apply(get_contract_type)
 
-    # --- Outlier Detection for PnL ---
+    # --- Outlier Detection for PnL and Big Jumps ---
     pnl_mean = df['PnL'].mean()
     pnl_std = df['PnL'].std()
     outliers = df[np.abs(df['PnL'] - pnl_mean) > 5 * pnl_std]
     if not outliers.empty:
         st.warning(f"Warning: {len(outliers)} P&L value(s) are extreme outliers (>|5σ| from mean). Please check your data for errors.")
         st.write(outliers[['EnteredAt', 'PnL', 'ContractName', 'Size']])
+    # Warn for big single-trade jumps
+    jump_threshold = 3 * max(abs(pnl_mean), abs(pnl_std))
+    big_jumps = df[np.abs(df['PnL']) > jump_threshold]
+    if not big_jumps.empty:
+        st.warning(f"Warning: {len(big_jumps)} trade(s) have unusually large P&L (>|3x mean/std|). Please check for data entry errors.")
+        st.write(big_jumps[['EnteredAt', 'PnL', 'Cumulative_PnL']])
 
     # --- Dashboard Summary ---
     st.header("Dashboard Summary")
@@ -82,7 +87,6 @@ if uploaded_file is not None:
     st.markdown("""
 **What this shows:** Your cumulative profit/loss after each trade. Each point is a trade; the red line is your running total. A smooth upward curve means consistent profits; sharp drops or flat sections indicate drawdowns or periods of no progress.
 """)
-    df = df.sort_values('EnteredAt').reset_index(drop=True)
     trade_numbers = np.arange(1, len(df)+1)
     fig = go.Figure()
     fig.add_trace(go.Scatter(
