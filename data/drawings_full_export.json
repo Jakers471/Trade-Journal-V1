@@ -1,0 +1,5918 @@
+[
+  {
+    "symbol": "BTCUSD",
+    "group": "HTF",
+    "timeframe": "1D",
+    "contextKey": "BTCUSD-1D",
+    "drawings": [
+      {
+        "id": "drawing-1752169201610",
+        "singular_id": 2,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_1D_S1_A1_HTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1667606400,
+            "price": 18070.554639534323
+          },
+          "endPoint": {
+            "time": 1673481600,
+            "price": 15470.879249842636
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": -3418,
+            "y": 1463.9604151955791
+          },
+          "endPoint": {
+            "x": -3010,
+            "y": 1494.074585340385
+          }
+        },
+        "metrics": {
+          "barCount": 68,
+          "percentChange": "-14.39%",
+          "rawPercentChange": -14.39,
+          "priceRange": 2599.68,
+          "priceChange": -2599.68,
+          "highPrice": 18070.55,
+          "lowPrice": 15470.88,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1667606400,
+          "endTime": 1673481600
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "1D",
+          "timeframeType": "HTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A1",
+        "structuredLabel": "BTCUSD_1D_S1_A1_HTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1656374400,
+          "barEnd": 1752105600,
+          "captured": "2025-07-10T17:40:05.238Z"
+        },
+        "created": "2025-07-10T17:40:05.238Z",
+        "lastModified": "2025-07-10T17:40:05.238Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "1D",
+        "timestamp": "2025-07-10T17:40:05.243Z",
+        "contextKey": "BTCUSD-1D"
+      },
+      {
+        "id": "drawing-1752169207046",
+        "singular_id": 30,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_1D_S1_A2_HTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1672444800,
+            "price": 16205.083045516132
+          },
+          "endPoint": {
+            "time": 1675209600,
+            "price": 24426.272719637345
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": -3082,
+            "y": 1485.5697011877155
+          },
+          "endPoint": {
+            "x": -2890,
+            "y": 1390.3369249646155
+          }
+        },
+        "metrics": {
+          "barCount": 32,
+          "percentChange": "+50.73%",
+          "rawPercentChange": 50.73,
+          "priceRange": 8221.19,
+          "priceChange": 8221.19,
+          "highPrice": 24426.27,
+          "lowPrice": 16205.08,
+          "bullish": true,
+          "direction": "UP",
+          "startTime": 1672444800,
+          "endTime": 1675209600
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "1D",
+          "timeframeType": "HTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A2",
+        "structuredLabel": "BTCUSD_1D_S1_A2_HTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1656374400,
+          "barEnd": 1752105600,
+          "captured": "2025-07-10T17:40:09.648Z"
+        },
+        "created": "2025-07-10T17:40:09.648Z",
+        "lastModified": "2025-07-10T17:40:09.648Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "1D",
+        "timestamp": "2025-07-10T17:40:14.323Z",
+        "contextKey": "BTCUSD-1D"
+      },
+      {
+        "id": "drawing-1752169210889",
+        "singular_id": 43,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_1D_S1_A1_HTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1674345600,
+            "price": 24313.2813240575
+          },
+          "endPoint": {
+            "time": 1678579200,
+            "price": 21452.3888847747
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": -2950,
+            "y": 1391.6457968818104
+          },
+          "endPoint": {
+            "x": -2656,
+            "y": 1424.7858581464475
+          }
+        },
+        "metrics": {
+          "barCount": 49,
+          "percentChange": "-11.77%",
+          "rawPercentChange": -11.77,
+          "priceRange": 2860.89,
+          "priceChange": -2860.89,
+          "highPrice": 24313.28,
+          "lowPrice": 21452.39,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1674345600,
+          "endTime": 1678579200
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "1D",
+          "timeframeType": "HTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A1",
+        "structuredLabel": "BTCUSD_1D_S1_A1_HTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1656374400,
+          "barEnd": 1752105600,
+          "captured": "2025-07-10T17:40:13.547Z"
+        },
+        "created": "2025-07-10T17:40:13.547Z",
+        "lastModified": "2025-07-10T17:40:13.547Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "1D",
+        "timestamp": "2025-07-10T17:40:14.324Z",
+        "contextKey": "BTCUSD-1D"
+      },
+      {
+        "id": "drawing-1752169215645",
+        "singular_id": 44,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_1D_S2_A2_HTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1678492800,
+            "price": 19688.99605123008
+          },
+          "endPoint": {
+            "time": 1681344000,
+            "price": 31448.4932850989
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": -2662,
+            "y": 1445.2126822153525
+          },
+          "endPoint": {
+            "x": -2464,
+            "y": 1308.992790331043
+          }
+        },
+        "metrics": {
+          "barCount": 33,
+          "percentChange": "+59.73%",
+          "rawPercentChange": 59.73,
+          "priceRange": 11759.5,
+          "priceChange": 11759.5,
+          "highPrice": 31448.49,
+          "lowPrice": 19689,
+          "bullish": true,
+          "direction": "UP",
+          "startTime": 1678492800,
+          "endTime": 1681344000
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "1D",
+          "timeframeType": "HTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A2",
+        "structuredLabel": "BTCUSD_1D_S2_A2_HTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1656374400,
+          "barEnd": 1752105600,
+          "captured": "2025-07-10T17:40:18.519Z"
+        },
+        "created": "2025-07-10T17:40:18.519Z",
+        "lastModified": "2025-07-10T17:40:18.519Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "1D",
+        "timestamp": "2025-07-10T17:40:35.175Z",
+        "contextKey": "BTCUSD-1D"
+      },
+      {
+        "id": "drawing-1752169220045",
+        "singular_id": 45,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_1D_S2_A1_HTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1692403200,
+            "price": 28136.677210882794
+          },
+          "endPoint": {
+            "time": 1697760000,
+            "price": 25115.334133556524
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": -1696,
+            "y": 1347.3562695341427
+          },
+          "endPoint": {
+            "x": -1324,
+            "y": 1382.3549620082927
+          }
+        },
+        "metrics": {
+          "barCount": 62,
+          "percentChange": "-10.74%",
+          "rawPercentChange": -10.74,
+          "priceRange": 3021.34,
+          "priceChange": -3021.34,
+          "highPrice": 28136.68,
+          "lowPrice": 25115.33,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1692403200,
+          "endTime": 1697760000
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "1D",
+          "timeframeType": "HTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A1",
+        "structuredLabel": "BTCUSD_1D_S2_A1_HTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1656374400,
+          "barEnd": 1752105600,
+          "captured": "2025-07-10T17:40:22.843Z"
+        },
+        "created": "2025-07-10T17:40:22.843Z",
+        "lastModified": "2025-07-10T17:40:22.843Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "1D",
+        "timestamp": "2025-07-10T17:40:35.175Z",
+        "contextKey": "BTCUSD-1D"
+      },
+      {
+        "id": "drawing-1752169224696",
+        "singular_id": 46,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_1D_S3_A2_HTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1696982400,
+            "price": 26675.717171376757
+          },
+          "endPoint": {
+            "time": 1702080000,
+            "price": 44837.59046718917
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": -1378,
+            "y": 1364.2797667441791
+          },
+          "endPoint": {
+            "x": -1024,
+            "y": 1153.895906994917
+          }
+        },
+        "metrics": {
+          "barCount": 59,
+          "percentChange": "+68.08%",
+          "rawPercentChange": 68.08,
+          "priceRange": 18161.87,
+          "priceChange": 18161.87,
+          "highPrice": 44837.59,
+          "lowPrice": 26675.72,
+          "bullish": true,
+          "direction": "UP",
+          "startTime": 1696982400,
+          "endTime": 1702080000
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "1D",
+          "timeframeType": "HTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A2",
+        "structuredLabel": "BTCUSD_1D_S3_A2_HTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1656374400,
+          "barEnd": 1752105600,
+          "captured": "2025-07-10T17:40:26.916Z"
+        },
+        "created": "2025-07-10T17:40:26.916Z",
+        "lastModified": "2025-07-10T17:40:26.916Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "1D",
+        "timestamp": "2025-07-10T17:40:35.175Z",
+        "contextKey": "BTCUSD-1D"
+      },
+      {
+        "id": "drawing-1752169228258",
+        "singular_id": 49,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_1D_S3_A1_HTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1701302400,
+            "price": 45995.69774310072
+          },
+          "endPoint": {
+            "time": 1707091200,
+            "price": 39653.46704125007
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": -1078,
+            "y": 1140.4806014952273
+          },
+          "endPoint": {
+            "x": -676,
+            "y": 1213.9478563726889
+          }
+        },
+        "metrics": {
+          "barCount": 67,
+          "percentChange": "-13.79%",
+          "rawPercentChange": -13.79,
+          "priceRange": 6342.23,
+          "priceChange": -6342.23,
+          "highPrice": 45995.7,
+          "lowPrice": 39653.47,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1701302400,
+          "endTime": 1707091200
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "1D",
+          "timeframeType": "HTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A1",
+        "structuredLabel": "BTCUSD_1D_S3_A1_HTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1656374400,
+          "barEnd": 1752105600,
+          "captured": "2025-07-10T17:40:30.781Z"
+        },
+        "created": "2025-07-10T17:40:30.781Z",
+        "lastModified": "2025-07-10T17:40:30.781Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "1D",
+        "timestamp": "2025-07-10T17:40:35.175Z",
+        "contextKey": "BTCUSD-1D"
+      },
+      {
+        "id": "drawing-1752169232308",
+        "singular_id": 51,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_1D_S4_A2_HTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1705881600,
+            "price": 38834.69031090485
+          },
+          "endPoint": {
+            "time": 1710374400,
+            "price": 74151.63559695808
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": -760,
+            "y": 1223.4324181245113
+          },
+          "endPoint": {
+            "x": -448,
+            "y": 814.3273030950747
+          }
+        },
+        "metrics": {
+          "barCount": 52,
+          "percentChange": "+90.94%",
+          "rawPercentChange": 90.94,
+          "priceRange": 35316.95,
+          "priceChange": 35316.95,
+          "highPrice": 74151.64,
+          "lowPrice": 38834.69,
+          "bullish": true,
+          "direction": "UP",
+          "startTime": 1705881600,
+          "endTime": 1710374400
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "1D",
+          "timeframeType": "HTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A2",
+        "structuredLabel": "BTCUSD_1D_S4_A2_HTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1656374400,
+          "barEnd": 1752105600,
+          "captured": "2025-07-10T17:40:34.652Z"
+        },
+        "created": "2025-07-10T17:40:34.652Z",
+        "lastModified": "2025-07-10T17:40:34.652Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "1D",
+        "timestamp": "2025-07-10T17:40:35.175Z",
+        "contextKey": "BTCUSD-1D"
+      },
+      {
+        "id": "drawing-1752169236780",
+        "singular_id": 52,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_1D_S4_A1_HTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1722902400,
+            "price": 63631.3390156993
+          },
+          "endPoint": {
+            "time": 1728864000,
+            "price": 53476.14236018535
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 422,
+            "y": 936.1925184516047
+          },
+          "endPoint": {
+            "x": 836,
+            "y": 1053.828482214904
+          }
+        },
+        "metrics": {
+          "barCount": 69,
+          "percentChange": "-15.96%",
+          "rawPercentChange": -15.96,
+          "priceRange": 10155.2,
+          "priceChange": -10155.2,
+          "highPrice": 63631.34,
+          "lowPrice": 53476.14,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1722902400,
+          "endTime": 1728864000
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "1D",
+          "timeframeType": "HTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A1",
+        "structuredLabel": "BTCUSD_1D_S4_A1_HTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1656374400,
+          "barEnd": 1752105600,
+          "captured": "2025-07-10T17:40:39.852Z"
+        },
+        "created": "2025-07-10T17:40:39.852Z",
+        "lastModified": "2025-07-10T17:40:39.852Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "1D",
+        "timestamp": "2025-07-10T17:40:48.134Z",
+        "contextKey": "BTCUSD-1D"
+      },
+      {
+        "id": "drawing-1752169241630",
+        "singular_id": 53,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_1D_S5_A2_HTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1728345600,
+            "price": 58944.89875036331
+          },
+          "endPoint": {
+            "time": 1733356800,
+            "price": 103538.49278422238
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 800,
+            "y": 990.4793959915484
+          },
+          "endPoint": {
+            "x": 1148,
+            "y": 473.9152574729683
+          }
+        },
+        "metrics": {
+          "barCount": 58,
+          "percentChange": "+75.65%",
+          "rawPercentChange": 75.65,
+          "priceRange": 44593.59,
+          "priceChange": 44593.59,
+          "highPrice": 103538.49,
+          "lowPrice": 58944.9,
+          "bullish": true,
+          "direction": "UP",
+          "startTime": 1728345600,
+          "endTime": 1733356800
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "1D",
+          "timeframeType": "HTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A2",
+        "structuredLabel": "BTCUSD_1D_S5_A2_HTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1656374400,
+          "barEnd": 1752105600,
+          "captured": "2025-07-10T17:40:44.312Z"
+        },
+        "created": "2025-07-10T17:40:44.312Z",
+        "lastModified": "2025-07-10T17:40:44.312Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "1D",
+        "timestamp": "2025-07-10T17:40:48.134Z",
+        "contextKey": "BTCUSD-1D"
+      },
+      {
+        "id": "drawing-1752169245851",
+        "singular_id": 54,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_1D_S5_A1_HTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1740268800,
+            "price": 89055.13766313289
+          },
+          "endPoint": {
+            "time": 1744934400,
+            "price": 78394.2576963378
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 1628,
+            "y": 641.6878271228519
+          },
+          "endPoint": {
+            "x": 1952,
+            "y": 765.1815350243975
+          }
+        },
+        "metrics": {
+          "barCount": 54,
+          "percentChange": "-11.97%",
+          "rawPercentChange": -11.97,
+          "priceRange": 10660.88,
+          "priceChange": -10660.88,
+          "highPrice": 89055.14,
+          "lowPrice": 78394.26,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1740268800,
+          "endTime": 1744934400
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "1D",
+          "timeframeType": "HTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A1",
+        "structuredLabel": "BTCUSD_1D_S5_A1_HTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1656374400,
+          "barEnd": 1752105600,
+          "captured": "2025-07-10T17:40:48.130Z"
+        },
+        "created": "2025-07-10T17:40:48.130Z",
+        "lastModified": "2025-07-10T17:40:48.130Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "1D",
+        "timestamp": "2025-07-10T17:40:48.134Z",
+        "contextKey": "BTCUSD-1D"
+      },
+      {
+        "id": "drawing-1752169250238",
+        "singular_id": 55,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_1D_S6_A2_HTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1743897600,
+            "price": 73637.71355662907
+          },
+          "endPoint": {
+            "time": 1747872000,
+            "price": 113073.47546781186
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 1880,
+            "y": 820.2804831824814
+          },
+          "endPoint": {
+            "x": 2156,
+            "y": 363.4637403335739
+          }
+        },
+        "metrics": {
+          "barCount": 46,
+          "percentChange": "+53.55%",
+          "rawPercentChange": 53.55,
+          "priceRange": 39435.76,
+          "priceChange": 39435.76,
+          "highPrice": 113073.48,
+          "lowPrice": 73637.71,
+          "bullish": true,
+          "direction": "UP",
+          "startTime": 1743897600,
+          "endTime": 1747872000
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "1D",
+          "timeframeType": "HTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A2",
+        "structuredLabel": "BTCUSD_1D_S6_A2_HTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1656374400,
+          "barEnd": 1752105600,
+          "captured": "2025-07-10T17:40:54.050Z"
+        },
+        "created": "2025-07-10T17:40:54.050Z",
+        "lastModified": "2025-07-10T17:40:54.050Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "1D",
+        "timestamp": "2025-07-10T17:41:05.274Z",
+        "contextKey": "BTCUSD-1D"
+      },
+      {
+        "id": "drawing-1752169255829",
+        "singular_id": 56,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_1D_S6_A1_HTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1747440000,
+            "price": 110482.27508987866
+          },
+          "endPoint": {
+            "time": 1751932800,
+            "price": 99076.89495739671
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 2126,
+            "y": 393.4797374729784
+          },
+          "endPoint": {
+            "x": 2438,
+            "y": 525.5976008176347
+          }
+        },
+        "metrics": {
+          "barCount": 52,
+          "percentChange": "-10.32%",
+          "rawPercentChange": -10.32,
+          "priceRange": 11405.38,
+          "priceChange": -11405.38,
+          "highPrice": 110482.28,
+          "lowPrice": 99076.89,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1747440000,
+          "endTime": 1751932800
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "1D",
+          "timeframeType": "HTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A1",
+        "structuredLabel": "BTCUSD_1D_S6_A1_HTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1656374400,
+          "barEnd": 1752105600,
+          "captured": "2025-07-10T17:40:59.380Z"
+        },
+        "created": "2025-07-10T17:40:59.380Z",
+        "lastModified": "2025-07-10T17:40:59.380Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "1D",
+        "timestamp": "2025-07-10T17:41:05.274Z",
+        "contextKey": "BTCUSD-1D"
+      },
+      {
+        "id": "drawing-1752169464018",
+        "singular_id": 57,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_1D_S8_A2_HTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1750636800,
+            "price": 98354.62275245084
+          },
+          "endPoint": {
+            "time": 1752105600,
+            "price": 113390.07032516325
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 2348,
+            "y": 533.9642715784729
+          },
+          "endPoint": {
+            "x": 2450,
+            "y": 359.7963626913287
+          }
+        },
+        "metrics": {
+          "barCount": 17,
+          "percentChange": "+15.29%",
+          "rawPercentChange": 15.29,
+          "priceRange": 15035.45,
+          "priceChange": 15035.45,
+          "highPrice": 113390.07,
+          "lowPrice": 98354.62,
+          "bullish": true,
+          "direction": "UP",
+          "startTime": 1750636800,
+          "endTime": 1752105600
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "1D",
+          "timeframeType": "HTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A2",
+        "structuredLabel": "BTCUSD_1D_S8_A2_HTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1698192000,
+          "barEnd": 1752105600,
+          "captured": "2025-07-10T17:44:29.555Z"
+        },
+        "created": "2025-07-10T17:44:29.555Z",
+        "lastModified": "2025-07-10T17:44:29.555Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "1D",
+        "timestamp": "2025-07-10T17:44:30.060Z",
+        "contextKey": "BTCUSD-1D"
+      }
+    ],
+    "metadata": {
+      "savedVia": "nuclearBridgeUI",
+      "chartVersion": "v4",
+      "timestamp": "2025-07-25T05:04:55.857Z",
+      "symbol": "BTCUSD",
+      "timeframe": "1D",
+      "group": "HTF",
+      "savedBy": "user",
+      "savedAt": "2025-07-25T05:04:55.862Z",
+      "chartZoom": {
+        "from": 1356,
+        "to": 1769
+      },
+      "drawingCount": 14,
+      "indexedDBVersion": "v2.0",
+      "isOnlyStorageSystem": true,
+      "slopeAnalysis": null,
+      "trendHealth": null,
+      "totalSize": 16722,
+      "lastSaved": "2025-07-25T05:04:55.865Z"
+    },
+    "saved": "2025-07-25T05:04:55.865Z",
+    "id": 5
+  },
+  {
+    "symbol": "BTCUSD",
+    "group": "HTF",
+    "timeframe": "3D",
+    "contextKey": "BTCUSD-3D",
+    "drawings": [
+      {
+        "id": "drawing-1752171940465",
+        "singular_id": 13,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_3D_S1_A1_HTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1655251200,
+            "price": 22732.43676938016
+          },
+          "endPoint": {
+            "time": 1673308800,
+            "price": 15615.009377369926
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 1107.9651772840784,
+            "y": 964.2953594255422
+          },
+          "endPoint": {
+            "x": 1222.4662666534828,
+            "y": 1017.451508485683
+          }
+        },
+        "metrics": {
+          "barCount": 70,
+          "percentChange": "-31.31%",
+          "rawPercentChange": -31.31,
+          "priceRange": 7117.43,
+          "priceChange": -7117.43,
+          "highPrice": 22732.44,
+          "lowPrice": 15615.01,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1655251200,
+          "endTime": 1673308800
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "3D",
+          "timeframeType": "HTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A1",
+        "structuredLabel": "BTCUSD_3D_S1_A1_HTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1629417600,
+          "barEnd": 1751932800,
+          "captured": "2025-07-10T18:25:43.591Z"
+        },
+        "created": "2025-07-10T18:25:43.591Z",
+        "lastModified": "2025-07-10T18:25:43.591Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "3D",
+        "timestamp": "2025-07-10T18:25:43.597Z",
+        "group": "HTF",
+        "contextKey": "BTCUSD-3D"
+      },
+      {
+        "id": "drawing-1752171948357",
+        "singular_id": 2,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_3D_S1_A2_HTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1672358400,
+            "price": 16280.393116919637
+          },
+          "endPoint": {
+            "time": 1681344000,
+            "price": 31303.018403085418
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 1215.9233472609455,
+            "y": 1012.4821234405468
+          },
+          "endPoint": {
+            "x": 1273.1738919456477,
+            "y": 900.2864008846011
+          }
+        },
+        "metrics": {
+          "barCount": 35,
+          "percentChange": "+92.27%",
+          "rawPercentChange": 92.27,
+          "priceRange": 15022.63,
+          "priceChange": 15022.63,
+          "highPrice": 31303.02,
+          "lowPrice": 16280.39,
+          "bullish": true,
+          "direction": "UP",
+          "startTime": 1672358400,
+          "endTime": 1681344000
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "3D",
+          "timeframeType": "HTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A2",
+        "structuredLabel": "BTCUSD_3D_S1_A2_HTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1629417600,
+          "barEnd": 1751932800,
+          "captured": "2025-07-10T18:25:50.950Z"
+        },
+        "created": "2025-07-10T18:25:50.950Z",
+        "lastModified": "2025-07-10T18:25:50.950Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "3D",
+        "timestamp": "2025-07-10T18:25:50.952Z",
+        "contextKey": "BTCUSD-3D"
+      },
+      {
+        "id": "drawing-1752171953449",
+        "singular_id": 14,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_3D_S1_A1_HTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1678492800,
+            "price": 30870.618958371968
+          },
+          "endPoint": {
+            "time": 1697155200,
+            "price": 24596.745149344173
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 1255.1808636161697,
+            "y": 903.5157544235655
+          },
+          "endPoint": {
+            "x": 1372.9534126818428,
+            "y": 950.3718659100787
+          }
+        },
+        "metrics": {
+          "barCount": 72,
+          "percentChange": "-20.32%",
+          "rawPercentChange": -20.32,
+          "priceRange": 6273.87,
+          "priceChange": -6273.87,
+          "highPrice": 30870.62,
+          "lowPrice": 24596.75,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1678492800,
+          "endTime": 1697155200
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "3D",
+          "timeframeType": "HTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A1",
+        "structuredLabel": "BTCUSD_3D_S1_A1_HTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1629417600,
+          "barEnd": 1751932800,
+          "captured": "2025-07-10T18:25:56.161Z"
+        },
+        "created": "2025-07-10T18:25:56.161Z",
+        "lastModified": "2025-07-10T18:25:56.161Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "3D",
+        "timestamp": "2025-07-10T18:26:05.719Z",
+        "contextKey": "BTCUSD-3D"
+      },
+      {
+        "id": "drawing-1752171957830",
+        "singular_id": 35,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_3D_S2_A2_HTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1694304000,
+            "price": 24883.513824307327
+          },
+          "endPoint": {
+            "time": 1710028800,
+            "price": 73467.198951252
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 1354.960384352365,
+            "y": 948.2301484618288
+          },
+          "endPoint": {
+            "x": 1454.7399050885601,
+            "y": 585.3853358265974
+          }
+        },
+        "metrics": {
+          "barCount": 61,
+          "percentChange": "+195.24%",
+          "rawPercentChange": 195.24,
+          "priceRange": 48583.69,
+          "priceChange": 48583.69,
+          "highPrice": 73467.2,
+          "lowPrice": 24883.51,
+          "bullish": true,
+          "direction": "UP",
+          "startTime": 1694304000,
+          "endTime": 1710028800
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "3D",
+          "timeframeType": "HTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A2",
+        "structuredLabel": "BTCUSD_3D_S2_A2_HTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1629417600,
+          "barEnd": 1751932800,
+          "captured": "2025-07-10T18:26:01.910Z"
+        },
+        "created": "2025-07-10T18:26:01.910Z",
+        "lastModified": "2025-07-10T18:26:01.910Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "3D",
+        "timestamp": "2025-07-10T18:26:05.719Z",
+        "contextKey": "BTCUSD-3D"
+      },
+      {
+        "id": "drawing-1752171963130",
+        "singular_id": 36,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_3D_S2_A1_HTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1709510400,
+            "price": 72117.21987058889
+          },
+          "endPoint": {
+            "time": 1730160000,
+            "price": 52615.33964437914
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 1451.4684453922914,
+            "y": 595.4675867983958
+          },
+          "endPoint": {
+            "x": 1582.3268332430393,
+            "y": 741.1163999385366
+          }
+        },
+        "metrics": {
+          "barCount": 80,
+          "percentChange": "-27.04%",
+          "rawPercentChange": -27.04,
+          "priceRange": 19501.88,
+          "priceChange": -19501.88,
+          "highPrice": 72117.22,
+          "lowPrice": 52615.34,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1709510400,
+          "endTime": 1730160000
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "3D",
+          "timeframeType": "HTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A1",
+        "structuredLabel": "BTCUSD_3D_S2_A1_HTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1629417600,
+          "barEnd": 1751932800,
+          "captured": "2025-07-10T18:26:05.716Z"
+        },
+        "created": "2025-07-10T18:26:05.716Z",
+        "lastModified": "2025-07-10T18:26:05.716Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "3D",
+        "timestamp": "2025-07-10T18:26:05.719Z",
+        "contextKey": "BTCUSD-3D"
+      },
+      {
+        "id": "drawing-1752171967218",
+        "singular_id": 3,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_3D_S3_A2_HTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1725235200,
+            "price": 52493.50419556106
+          },
+          "endPoint": {
+            "time": 1734307200,
+            "price": 110226.44366030747
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 1551.2479661284865,
+            "y": 742.0263218698026
+          },
+          "endPoint": {
+            "x": 1608.4985108131887,
+            "y": 310.8507626623932
+          }
+        },
+        "metrics": {
+          "barCount": 35,
+          "percentChange": "+109.98%",
+          "rawPercentChange": 109.98,
+          "priceRange": 57732.94,
+          "priceChange": 57732.94,
+          "highPrice": 110226.44,
+          "lowPrice": 52493.5,
+          "bullish": true,
+          "direction": "UP",
+          "startTime": 1725235200,
+          "endTime": 1734307200
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "3D",
+          "timeframeType": "HTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A2",
+        "structuredLabel": "BTCUSD_3D_S3_A2_HTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1629417600,
+          "barEnd": 1751932800,
+          "captured": "2025-07-10T18:26:12.426Z"
+        },
+        "created": "2025-07-10T18:26:12.426Z",
+        "lastModified": "2025-07-10T18:26:12.426Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "3D",
+        "timestamp": "2025-07-10T18:26:12.943Z",
+        "contextKey": "BTCUSD-3D"
+      },
+      {
+        "id": "drawing-1752171975288",
+        "singular_id": 38,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_3D_S3_A1_HTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1732233600,
+            "price": 108201.00380233092
+          },
+          "endPoint": {
+            "time": 1751414400,
+            "price": 77670.66067323202
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 1595.412672028114,
+            "y": 325.97765852982593
+          },
+          "endPoint": {
+            "x": 1716.4566807900558,
+            "y": 553.991993041957
+          }
+        },
+        "metrics": {
+          "barCount": 74,
+          "percentChange": "-28.22%",
+          "rawPercentChange": -28.22,
+          "priceRange": 30530.34,
+          "priceChange": -30530.34,
+          "highPrice": 108201,
+          "lowPrice": 77670.66,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1732233600,
+          "endTime": 1751414400
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "3D",
+          "timeframeType": "HTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A1",
+        "structuredLabel": "BTCUSD_3D_S3_A1_HTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1629417600,
+          "barEnd": 1751932800,
+          "captured": "2025-07-10T18:26:18.041Z"
+        },
+        "created": "2025-07-10T18:26:18.041Z",
+        "lastModified": "2025-07-10T18:26:18.041Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "3D",
+        "timestamp": "2025-07-10T18:26:18.045Z",
+        "contextKey": "BTCUSD-3D"
+      },
+      {
+        "id": "drawing-1752171980440",
+        "singular_id": 39,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_3D_S4_A2_HTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1743638400,
+            "price": 73979.93095987647
+          },
+          "endPoint": {
+            "time": 1751932800,
+            "price": 113598.96314611548
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 1667.3847853460252,
+            "y": 581.5560225681379
+          },
+          "endPoint": {
+            "x": 1719.7281404863245,
+            "y": 285.6632702410328
+          }
+        },
+        "metrics": {
+          "barCount": 32,
+          "percentChange": "+53.55%",
+          "rawPercentChange": 53.55,
+          "priceRange": 39619.03,
+          "priceChange": 39619.03,
+          "highPrice": 113598.96,
+          "lowPrice": 73979.93,
+          "bullish": true,
+          "direction": "UP",
+          "startTime": 1743638400,
+          "endTime": 1751932800
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "3D",
+          "timeframeType": "HTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A2",
+        "structuredLabel": "BTCUSD_3D_S4_A2_HTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1629417600,
+          "barEnd": 1751932800,
+          "captured": "2025-07-10T18:26:24.698Z"
+        },
+        "created": "2025-07-10T18:26:24.698Z",
+        "lastModified": "2025-07-10T18:26:24.698Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "3D",
+        "timestamp": "2025-07-10T18:26:25.216Z",
+        "contextKey": "BTCUSD-3D"
+      }
+    ],
+    "metadata": {
+      "savedVia": "nuclearBridgeUI",
+      "chartVersion": "v4",
+      "timestamp": "2025-07-13T17:08:58.858Z",
+      "symbol": "BTCUSD",
+      "timeframe": "3D",
+      "group": "HTF",
+      "savedBy": "user",
+      "savedAt": "2025-07-13T17:08:58.863Z",
+      "chartZoom": {
+        "from": -379.46352713678425,
+        "to": 1138.1246448851166
+      },
+      "drawingCount": 8,
+      "indexedDBVersion": "v2.0",
+      "isOnlyStorageSystem": true,
+      "slopeAnalysis": null,
+      "trendHealth": null,
+      "totalSize": 9789,
+      "lastSaved": "2025-07-13T17:08:58.875Z"
+    },
+    "saved": "2025-07-13T17:08:58.875Z",
+    "id": 6
+  },
+  {
+    "symbol": "BTCUSD",
+    "group": "MTF",
+    "timeframe": "4HR",
+    "contextKey": "BTCUSD-4HR",
+    "drawings": [
+      {
+        "id": "drawing-1752004381537",
+        "singular_id": 15,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_4HR_S1_A2_MTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1744012800,
+            "price": 74243.93522774799
+          },
+          "endPoint": {
+            "time": 1744502400,
+            "price": 86356.96565880535
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": -312.27897167458195,
+            "y": 1458.3762431509144
+          },
+          "endPoint": {
+            "x": -191.81901167458227,
+            "y": 1158.542970567191
+          }
+        },
+        "metrics": {
+          "barCount": 34,
+          "percentChange": "+16.32%",
+          "rawPercentChange": 16.32,
+          "priceRange": 12113.03,
+          "priceChange": 12113.03,
+          "highPrice": 86356.97,
+          "lowPrice": 74243.94,
+          "bullish": true,
+          "direction": "UP",
+          "startTime": 1744012800,
+          "endTime": 1744502400
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "4HR",
+          "timeframeType": "MTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A2",
+        "structuredLabel": "BTCUSD_4HR_S1_A2_MTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1742659200,
+          "barEnd": 1751932800,
+          "captured": "2025-07-08T19:53:05.750Z"
+        },
+        "created": "2025-07-08T19:53:05.750Z",
+        "lastModified": "2025-07-08T19:53:05.750Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "4HR",
+        "timestamp": "2025-07-08T19:53:05.777Z",
+        "contextKey": "BTCUSD-4HR",
+        "group": "MTF"
+      },
+      {
+        "id": "drawing-1752004388091",
+        "singular_id": 16,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_4HR_S1_A1_MTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1744444800,
+            "price": 85988.37471631868
+          },
+          "endPoint": {
+            "time": 1745179200,
+            "price": 83531.27528603199
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": -205.990771674582,
+            "y": 1167.6666848317188
+          },
+          "endPoint": {
+            "x": -25.30083167458224,
+            "y": 1228.4871514721342
+          }
+        },
+        "metrics": {
+          "barCount": 51,
+          "percentChange": "-2.86%",
+          "rawPercentChange": -2.86,
+          "priceRange": 2457.1,
+          "priceChange": -2457.1,
+          "highPrice": 85988.37,
+          "lowPrice": 83531.28,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1744444800,
+          "endTime": 1745179200
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "4HR",
+          "timeframeType": "MTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A1",
+        "structuredLabel": "BTCUSD_4HR_S1_A1_MTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1742659200,
+          "barEnd": 1751932800,
+          "captured": "2025-07-08T19:53:11.836Z"
+        },
+        "created": "2025-07-08T19:53:11.836Z",
+        "lastModified": "2025-07-08T19:53:11.836Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "4HR",
+        "timestamp": "2025-07-08T19:53:11.869Z",
+        "contextKey": "BTCUSD-4HR",
+        "group": "MTF"
+      },
+      {
+        "id": "drawing-1752004409845",
+        "singular_id": 10,
+        "element": {
+          "lineElement": {}
+        },
+        "type": "line",
+        "label": "BTCUSD_4HR_S1_A12_MTF",
+        "status": "WAITING",
+        "chartValues": {
+          "startPoint": {
+            "time": 1744560000,
+            "price": 83135.22460614015
+          },
+          "endPoint": {
+            "time": 1745712000,
+            "price": 83135.22460614015
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": -177.6472516745821,
+            "y": 1238.2905753252198
+          },
+          "endPoint": {
+            "x": 105.7879483254178,
+            "y": 1238.2905753252198
+          }
+        },
+        "metrics": {
+          "barCount": 80,
+          "percentChange": "0.00%",
+          "rawPercentChange": 0,
+          "priceRange": 0,
+          "priceChange": 0,
+          "highPrice": 83135.22,
+          "lowPrice": 83135.22,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1744560000,
+          "endTime": 1745712000,
+          "breakoutStatus": "WAITING"
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "4HR",
+          "timeframeType": "MTF"
+        },
+        "color": "#888888",
+        "atomicType": "A12",
+        "structuredLabel": "BTCUSD_4HR_S1_A12_MTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1742659200,
+          "barEnd": 1751932800,
+          "captured": "2025-07-08T19:53:45.968Z"
+        },
+        "created": "2025-07-08T19:53:45.968Z",
+        "lastModified": "2025-07-08T19:53:45.968Z",
+        "visible": true,
+        "saved": true,
+        "style": {
+          "color": "#888888"
+        },
+        "symbol": "BTCUSD",
+        "timeframe": "4HR",
+        "timestamp": "2025-07-08T19:53:49.792Z",
+        "contextKey": "BTCUSD-4HR",
+        "group": "MTF"
+      },
+      {
+        "id": "drawing-1752004436490",
+        "singular_id": 17,
+        "element": {
+          "lineElement": {}
+        },
+        "type": "line",
+        "label": "BTCUSD_4HR_S1_A13_MTF",
+        "status": "VALIDATED",
+        "chartValues": {
+          "startPoint": {
+            "time": 1744704000,
+            "price": 85947.51740311776
+          },
+          "endPoint": {
+            "time": 1745740800,
+            "price": 86070.14761960687
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": -142.2178516745821,
+            "y": 1168.6780239838604
+          },
+          "endPoint": {
+            "x": 112.87382832541789,
+            "y": 1165.6425640024088
+          }
+        },
+        "metrics": {
+          "barCount": 72,
+          "percentChange": "+0.14%",
+          "rawPercentChange": 0.14,
+          "priceRange": 122.63,
+          "priceChange": 122.63,
+          "highPrice": 86070.15,
+          "lowPrice": 85947.52,
+          "bullish": true,
+          "direction": "UP",
+          "startTime": 1744704000,
+          "endTime": 1745740800,
+          "breakoutStatus": "VALIDATED"
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "4HR",
+          "timeframeType": "MTF"
+        },
+        "color": "#4caf50",
+        "atomicType": "A13",
+        "structuredLabel": "BTCUSD_4HR_S1_A13_MTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1742659200,
+          "barEnd": 1751932800,
+          "captured": "2025-07-08T19:54:05.095Z"
+        },
+        "created": "2025-07-08T19:54:05.095Z",
+        "lastModified": "2025-07-08T19:54:05.095Z",
+        "visible": true,
+        "saved": true,
+        "style": {
+          "color": "#4caf50"
+        },
+        "symbol": "BTCUSD",
+        "timeframe": "4HR",
+        "timestamp": "2025-07-08T19:54:09.836Z",
+        "contextKey": "BTCUSD-4HR",
+        "group": "MTF"
+      },
+      {
+        "id": "drawing-1752004446953",
+        "singular_id": 19,
+        "element": {
+          "lineElement": {}
+        },
+        "type": "line",
+        "label": "BTCUSD_4HR_S1_A15_MTF",
+        "status": "VALIDATED",
+        "chartValues": {
+          "startPoint": {
+            "time": 1744502400,
+            "price": 86685.9282386147
+          },
+          "endPoint": {
+            "time": 1745740800,
+            "price": 86933.4722783345
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": -191.81901167458227,
+            "y": 1150.4001753002917
+          },
+          "endPoint": {
+            "x": 112.87382832541789,
+            "y": 1144.272729327112
+          }
+        },
+        "metrics": {
+          "barCount": 86,
+          "percentChange": "+0.29%",
+          "rawPercentChange": 0.29,
+          "priceRange": 247.54,
+          "priceChange": 247.54,
+          "highPrice": 86933.47,
+          "lowPrice": 86685.93,
+          "bullish": true,
+          "direction": "UP",
+          "startTime": 1744502400,
+          "endTime": 1745740800,
+          "breakoutStatus": "VALIDATED"
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "4HR",
+          "timeframeType": "MTF"
+        },
+        "color": "#4caf50",
+        "atomicType": "A15",
+        "structuredLabel": "BTCUSD_4HR_S1_A15_MTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1742659200,
+          "barEnd": 1751932800,
+          "captured": "2025-07-08T19:54:18.218Z"
+        },
+        "created": "2025-07-08T19:54:18.218Z",
+        "lastModified": "2025-07-08T19:54:18.218Z",
+        "visible": true,
+        "saved": true,
+        "style": {
+          "color": "#4caf50"
+        },
+        "symbol": "BTCUSD",
+        "timeframe": "4HR",
+        "timestamp": "2025-07-08T19:54:31.881Z",
+        "contextKey": "BTCUSD-4HR",
+        "group": "MTF"
+      },
+      {
+        "id": "drawing-1752004460870",
+        "singular_id": 20,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_4HR_S2_A2_MTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1745121600,
+            "price": 83769.81076403061
+          },
+          "endPoint": {
+            "time": 1745582400,
+            "price": 95875.18123253227
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": -39.47259167458196,
+            "y": 1222.582694003566
+          },
+          "endPoint": {
+            "x": 73.90148832541809,
+            "y": 922.9390281127357
+          }
+        },
+        "metrics": {
+          "barCount": 32,
+          "percentChange": "+14.45%",
+          "rawPercentChange": 14.45,
+          "priceRange": 12105.37,
+          "priceChange": 12105.37,
+          "highPrice": 95875.18,
+          "lowPrice": 83769.81,
+          "bullish": true,
+          "direction": "UP",
+          "startTime": 1745121600,
+          "endTime": 1745582400
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "4HR",
+          "timeframeType": "MTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A2",
+        "structuredLabel": "BTCUSD_4HR_S2_A2_MTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1742659200,
+          "barEnd": 1751932800,
+          "captured": "2025-07-08T19:54:24.155Z"
+        },
+        "created": "2025-07-08T19:54:24.155Z",
+        "lastModified": "2025-07-08T19:54:24.155Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "4HR",
+        "timestamp": "2025-07-08T19:54:31.881Z",
+        "contextKey": "BTCUSD-4HR",
+        "group": "MTF"
+      },
+      {
+        "id": "drawing-1752004465458",
+        "singular_id": 21,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_4HR_S2_A1_MTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1745366400,
+            "price": 96836.85505786374
+          },
+          "endPoint": {
+            "time": 1746633600,
+            "price": 93179.84275332026
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 20.757388325418106,
+            "y": 899.134761141859
+          },
+          "endPoint": {
+            "x": 332.5361083254179,
+            "y": 989.6566147268087
+          }
+        },
+        "metrics": {
+          "barCount": 88,
+          "percentChange": "-3.78%",
+          "rawPercentChange": -3.78,
+          "priceRange": 3657.01,
+          "priceChange": -3657.01,
+          "highPrice": 96836.86,
+          "lowPrice": 93179.84,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1745366400,
+          "endTime": 1746633600
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "4HR",
+          "timeframeType": "MTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A1",
+        "structuredLabel": "BTCUSD_4HR_S2_A1_MTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1742659200,
+          "barEnd": 1751932800,
+          "captured": "2025-07-08T19:54:31.842Z"
+        },
+        "created": "2025-07-08T19:54:31.842Z",
+        "lastModified": "2025-07-08T19:54:31.842Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "4HR",
+        "timestamp": "2025-07-08T19:54:31.881Z",
+        "contextKey": "BTCUSD-4HR",
+        "group": "MTF"
+      },
+      {
+        "id": "drawing-1752004475296",
+        "singular_id": 18,
+        "element": {
+          "lineElement": {}
+        },
+        "type": "line",
+        "label": "BTCUSD_4HR_S2_A12_MTF",
+        "status": "WAITING",
+        "chartValues": {
+          "startPoint": {
+            "time": 1745539200,
+            "price": 92914.51210346444
+          },
+          "endPoint": {
+            "time": 1746936000,
+            "price": 92958.68135274926
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 63.272668325417726,
+            "y": 996.2243318241804
+          },
+          "endPoint": {
+            "x": 406.93784832541814,
+            "y": 995.1310124739143
+          }
+        },
+        "metrics": {
+          "barCount": 97,
+          "percentChange": "+0.05%",
+          "rawPercentChange": 0.05,
+          "priceRange": 44.17,
+          "priceChange": 44.17,
+          "highPrice": 92958.68,
+          "lowPrice": 92914.51,
+          "bullish": true,
+          "direction": "UP",
+          "startTime": 1745539200,
+          "endTime": 1746936000,
+          "breakoutStatus": "WAITING"
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "4HR",
+          "timeframeType": "MTF"
+        },
+        "color": "#888888",
+        "atomicType": "A12",
+        "structuredLabel": "BTCUSD_4HR_S2_A12_MTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1742659200,
+          "barEnd": 1751932800,
+          "captured": "2025-07-08T19:54:44.894Z"
+        },
+        "created": "2025-07-08T19:54:44.894Z",
+        "lastModified": "2025-07-08T19:54:44.894Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "4HR",
+        "timestamp": "2025-07-08T19:54:45.053Z",
+        "contextKey": "BTCUSD-4HR",
+        "style": {
+          "color": "#888888"
+        },
+        "group": "MTF"
+      },
+      {
+        "id": "drawing-1752004488399",
+        "singular_id": 23,
+        "element": {
+          "lineElement": {}
+        },
+        "type": "line",
+        "label": "BTCUSD_4HR_S2_A13_MTF",
+        "status": "VALIDATED",
+        "chartValues": {
+          "startPoint": {
+            "time": 1746187200,
+            "price": 97947.72797446804
+          },
+          "endPoint": {
+            "time": 1746806400,
+            "price": 97947.72797446804
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 222.70496832541812,
+            "y": 871.6373760815443
+          },
+          "endPoint": {
+            "x": 375.051388325418,
+            "y": 871.6373760815443
+          }
+        },
+        "metrics": {
+          "barCount": 43,
+          "percentChange": "0.00%",
+          "rawPercentChange": 0,
+          "priceRange": 0,
+          "priceChange": 0,
+          "highPrice": 97947.73,
+          "lowPrice": 97947.73,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1746187200,
+          "endTime": 1746806400,
+          "breakoutStatus": "VALIDATED"
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "4HR",
+          "timeframeType": "MTF"
+        },
+        "color": "#4caf50",
+        "atomicType": "A13",
+        "structuredLabel": "BTCUSD_4HR_S2_A13_MTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1742659200,
+          "barEnd": 1751932800,
+          "captured": "2025-07-08T19:55:00.587Z"
+        },
+        "created": "2025-07-08T19:55:00.587Z",
+        "lastModified": "2025-07-08T19:55:00.587Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "4HR",
+        "timestamp": "2025-07-08T19:55:00.751Z",
+        "contextKey": "BTCUSD-4HR",
+        "style": {
+          "color": "#4caf50"
+        },
+        "group": "MTF"
+      },
+      {
+        "id": "drawing-1752004502817",
+        "singular_id": 25,
+        "element": {
+          "lineElement": {}
+        },
+        "type": "line",
+        "label": "BTCUSD_4HR_S2_A15_MTF",
+        "status": "VALIDATED",
+        "chartValues": {
+          "startPoint": {
+            "time": 1746201600,
+            "price": 97901.18818334116
+          },
+          "endPoint": {
+            "time": 1747036800,
+            "price": 97901.18818334116
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 226.24790832541794,
+            "y": 872.78937334254
+          },
+          "endPoint": {
+            "x": 431.7384283254178,
+            "y": 872.78937334254
+          }
+        },
+        "metrics": {
+          "barCount": 58,
+          "percentChange": "0.00%",
+          "rawPercentChange": 0,
+          "priceRange": 0,
+          "priceChange": 0,
+          "highPrice": 97901.19,
+          "lowPrice": 97901.19,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1746201600,
+          "endTime": 1747036800,
+          "breakoutStatus": "VALIDATED"
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "4HR",
+          "timeframeType": "MTF"
+        },
+        "color": "#4caf50",
+        "atomicType": "A15",
+        "structuredLabel": "BTCUSD_4HR_S2_A15_MTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1742659200,
+          "barEnd": 1751932800,
+          "captured": "2025-07-08T19:55:10.098Z"
+        },
+        "created": "2025-07-08T19:55:10.098Z",
+        "lastModified": "2025-07-08T19:55:10.098Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "4HR",
+        "timestamp": "2025-07-08T19:55:10.267Z",
+        "contextKey": "BTCUSD-4HR",
+        "style": {
+          "color": "#4caf50"
+        },
+        "group": "MTF"
+      },
+      {
+        "id": "drawing-1752004513328",
+        "singular_id": 26,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_4HR_S3_A2_MTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1746518400,
+            "price": 93312.7920767386
+          },
+          "endPoint": {
+            "time": 1747022400,
+            "price": 106139.39292044565
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 304.192588325418,
+            "y": 986.365726376846
+          },
+          "endPoint": {
+            "x": 428.19548832541795,
+            "y": 668.8694789280459
+          }
+        },
+        "metrics": {
+          "barCount": 35,
+          "percentChange": "+13.75%",
+          "rawPercentChange": 13.75,
+          "priceRange": 12826.6,
+          "priceChange": 12826.6,
+          "highPrice": 106139.39,
+          "lowPrice": 93312.79,
+          "bullish": true,
+          "direction": "UP",
+          "startTime": 1746518400,
+          "endTime": 1747022400
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "4HR",
+          "timeframeType": "MTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A2",
+        "structuredLabel": "BTCUSD_4HR_S3_A2_MTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1742659200,
+          "barEnd": 1751932800,
+          "captured": "2025-07-08T19:55:16.538Z"
+        },
+        "created": "2025-07-08T19:55:16.538Z",
+        "lastModified": "2025-07-08T19:55:16.538Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "4HR",
+        "timestamp": "2025-07-08T19:55:19.930Z",
+        "contextKey": "BTCUSD-4HR",
+        "group": "MTF"
+      },
+      {
+        "id": "drawing-1752004517631",
+        "singular_id": 27,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_4HR_S3_A1_MTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1746691200,
+            "price": 105335.34920919752
+          },
+          "endPoint": {
+            "time": 1747742400,
+            "price": 101695.1549226149
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 346.7078683254181,
+            "y": 688.7719350983672
+          },
+          "endPoint": {
+            "x": 605.3424883254179,
+            "y": 778.8774930756837
+          }
+        },
+        "metrics": {
+          "barCount": 73,
+          "percentChange": "-3.46%",
+          "rawPercentChange": -3.46,
+          "priceRange": 3640.19,
+          "priceChange": -3640.19,
+          "highPrice": 105335.35,
+          "lowPrice": 101695.15,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1746691200,
+          "endTime": 1747742400
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "4HR",
+          "timeframeType": "MTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A1",
+        "structuredLabel": "BTCUSD_4HR_S3_A1_MTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1742659200,
+          "barEnd": 1751932800,
+          "captured": "2025-07-08T19:55:19.888Z"
+        },
+        "created": "2025-07-08T19:55:19.888Z",
+        "lastModified": "2025-07-08T19:55:19.888Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "4HR",
+        "timestamp": "2025-07-08T19:55:19.930Z",
+        "contextKey": "BTCUSD-4HR",
+        "group": "MTF"
+      },
+      {
+        "id": "drawing-1752004525275",
+        "singular_id": 22,
+        "element": {
+          "lineElement": {}
+        },
+        "type": "line",
+        "label": "BTCUSD_4HR_S3_A13_MTF",
+        "status": "VALIDATED",
+        "chartValues": {
+          "startPoint": {
+            "time": 1746907200,
+            "price": 104636.80899809307
+          },
+          "endPoint": {
+            "time": 1747612800,
+            "price": 104636.80899809307
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 399.85196832541806,
+            "y": 706.0628680914656
+          },
+          "endPoint": {
+            "x": 573.456028325418,
+            "y": 706.0628680914656
+          }
+        },
+        "metrics": {
+          "barCount": 49,
+          "percentChange": "0.00%",
+          "rawPercentChange": 0,
+          "priceRange": 0,
+          "priceChange": 0,
+          "highPrice": 104636.81,
+          "lowPrice": 104636.81,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1746907200,
+          "endTime": 1747612800,
+          "breakoutStatus": "VALIDATED"
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "4HR",
+          "timeframeType": "MTF"
+        },
+        "color": "#4caf50",
+        "atomicType": "A13",
+        "structuredLabel": "BTCUSD_4HR_S3_A13_MTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1742659200,
+          "barEnd": 1751932800,
+          "captured": "2025-07-08T19:55:40.672Z"
+        },
+        "created": "2025-07-08T19:55:40.672Z",
+        "lastModified": "2025-07-08T19:55:40.672Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "4HR",
+        "timestamp": "2025-07-08T19:55:40.840Z",
+        "contextKey": "BTCUSD-4HR",
+        "style": {
+          "color": "#4caf50"
+        },
+        "group": "MTF"
+      },
+      {
+        "id": "drawing-1752004545572",
+        "singular_id": 28,
+        "element": {
+          "lineElement": {}
+        },
+        "type": "line",
+        "label": "BTCUSD_4HR_S3_A15_MTF",
+        "status": "VALIDATED",
+        "chartValues": {
+          "startPoint": {
+            "time": 1747598400,
+            "price": 106543.71338539719
+          },
+          "endPoint": {
+            "time": 1747828800,
+            "price": 106543.71338539719
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 569.9130883254179,
+            "y": 658.8613534743057
+          },
+          "endPoint": {
+            "x": 626.6001283254179,
+            "y": 658.8613534743057
+          }
+        },
+        "metrics": {
+          "barCount": 16,
+          "percentChange": "0.00%",
+          "rawPercentChange": 0,
+          "priceRange": 0,
+          "priceChange": 0,
+          "highPrice": 106543.71,
+          "lowPrice": 106543.71,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1747598400,
+          "endTime": 1747828800,
+          "breakoutStatus": "VALIDATED"
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "4HR",
+          "timeframeType": "MTF"
+        },
+        "color": "#4caf50",
+        "atomicType": "A15",
+        "structuredLabel": "BTCUSD_4HR_S3_A15_MTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1742659200,
+          "barEnd": 1751932800,
+          "captured": "2025-07-08T19:55:52.213Z"
+        },
+        "created": "2025-07-08T19:55:52.213Z",
+        "lastModified": "2025-07-08T19:55:52.213Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "4HR",
+        "timestamp": "2025-07-08T19:55:52.391Z",
+        "contextKey": "BTCUSD-4HR",
+        "style": {
+          "color": "#4caf50"
+        },
+        "group": "MTF"
+      },
+      {
+        "id": "drawing-1752004556330",
+        "singular_id": 29,
+        "element": {
+          "lineElement": {}
+        },
+        "type": "line",
+        "label": "BTCUSD_4HR_S3_A12_MTF",
+        "status": "INVALIDATED",
+        "chartValues": {
+          "startPoint": {
+            "time": 1747065600,
+            "price": 100876.82356311986
+          },
+          "endPoint": {
+            "time": 1748116800,
+            "price": 100828.89201437321
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 438.82430832541786,
+            "y": 799.1336107311124
+          },
+          "endPoint": {
+            "x": 697.4589283254179,
+            "y": 800.320058103016
+          }
+        },
+        "metrics": {
+          "barCount": 73,
+          "percentChange": "-0.05%",
+          "rawPercentChange": -0.05,
+          "priceRange": 47.93,
+          "priceChange": -47.93,
+          "highPrice": 100876.82,
+          "lowPrice": 100828.89,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1747065600,
+          "endTime": 1748116800,
+          "breakoutStatus": "INVALIDATED"
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "4HR",
+          "timeframeType": "MTF"
+        },
+        "color": "#e53935",
+        "atomicType": "A12",
+        "structuredLabel": "BTCUSD_4HR_S3_A12_MTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1742659200,
+          "barEnd": 1751932800,
+          "captured": "2025-07-08T19:56:07.830Z"
+        },
+        "created": "2025-07-08T19:56:07.830Z",
+        "lastModified": "2025-07-08T19:56:07.830Z",
+        "visible": true,
+        "saved": true,
+        "style": {
+          "color": "#e53935"
+        },
+        "symbol": "BTCUSD",
+        "timeframe": "4HR",
+        "timestamp": "2025-07-08T19:56:09.872Z",
+        "contextKey": "BTCUSD-4HR",
+        "group": "MTF"
+      },
+      {
+        "id": "drawing-1752171043896",
+        "singular_id": 2,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_4HR_S1_A2_MTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1747627200,
+            "price": 102217.82279427217
+          },
+          "endPoint": {
+            "time": 1747929600,
+            "price": 112087.41361237993
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 576.998968325418,
+            "y": 765.9399198296395
+          },
+          "endPoint": {
+            "x": 651.400708325418,
+            "y": 521.6384024762152
+          }
+        },
+        "metrics": {
+          "barCount": 21,
+          "percentChange": "+9.66%",
+          "rawPercentChange": 9.66,
+          "priceRange": 9869.59,
+          "priceChange": 9869.59,
+          "highPrice": 112087.41,
+          "lowPrice": 102217.82,
+          "bullish": true,
+          "direction": "UP",
+          "startTime": 1747627200,
+          "endTime": 1747929600
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "4HR",
+          "timeframeType": "MTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A2",
+        "structuredLabel": "BTCUSD_4HR_S1_A2_MTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1743307200,
+          "barEnd": 1752163200,
+          "captured": "2025-07-10T18:10:47.300Z"
+        },
+        "created": "2025-07-10T18:10:47.300Z",
+        "lastModified": "2025-07-10T18:10:47.300Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "4HR",
+        "timestamp": "2025-07-10T18:10:47.307Z",
+        "contextKey": "BTCUSD-4HR",
+        "group": "MTF"
+      },
+      {
+        "id": "drawing-1752171058582",
+        "singular_id": 1,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_4HR_S1_A1_MTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1747886400,
+            "price": 111086.80993496809
+          },
+          "endPoint": {
+            "time": 1748520000,
+            "price": 106993.43125464689
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 640.7718883254179,
+            "y": 546.406298244765
+          },
+          "endPoint": {
+            "x": 796.661248325418,
+            "y": 647.7295082070149
+          }
+        },
+        "metrics": {
+          "barCount": 44,
+          "percentChange": "-3.68%",
+          "rawPercentChange": -3.68,
+          "priceRange": 4093.38,
+          "priceChange": -4093.38,
+          "highPrice": 111086.81,
+          "lowPrice": 106993.43,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1747886400,
+          "endTime": 1748520000
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "4HR",
+          "timeframeType": "MTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A1",
+        "structuredLabel": "BTCUSD_4HR_S1_A1_MTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1743724800,
+          "barEnd": 1752163200,
+          "captured": "2025-07-10T18:11:03.394Z"
+        },
+        "created": "2025-07-10T18:11:03.394Z",
+        "lastModified": "2025-07-10T18:11:03.394Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "4HR",
+        "timestamp": "2025-07-10T18:11:03.401Z",
+        "contextKey": "BTCUSD-4HR",
+        "group": "MTF"
+      },
+      {
+        "id": "drawing-1752171073136",
+        "singular_id": 4,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_4HR_S2_A2_MTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1748347200,
+            "price": 110635.36858427754
+          },
+          "endPoint": {
+            "time": 1748664000,
+            "price": 103014.40882633504
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 754.1459683254179,
+            "y": 557.5808047671056
+          },
+          "endPoint": {
+            "x": 832.090648325418,
+            "y": 746.2220632414559
+          }
+        },
+        "metrics": {
+          "barCount": 22,
+          "percentChange": "-6.89%",
+          "rawPercentChange": -6.89,
+          "priceRange": 7620.96,
+          "priceChange": -7620.96,
+          "highPrice": 110635.37,
+          "lowPrice": 103014.41,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1748347200,
+          "endTime": 1748664000
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "4HR",
+          "timeframeType": "MTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A2",
+        "structuredLabel": "BTCUSD_4HR_S2_A2_MTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1744387200,
+          "barEnd": 1752163200,
+          "captured": "2025-07-10T18:11:15.527Z"
+        },
+        "created": "2025-07-10T18:11:15.527Z",
+        "lastModified": "2025-07-10T18:11:15.527Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "4HR",
+        "timestamp": "2025-07-10T18:11:16.058Z",
+        "contextKey": "BTCUSD-4HR",
+        "group": "MTF"
+      },
+      {
+        "id": "drawing-1752171086851",
+        "singular_id": 5,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_4HR_S3_A1_MTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1748606400,
+            "price": 106202.02180201291
+          },
+          "endPoint": {
+            "time": 1749427200,
+            "price": 103600.63650002293
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 817.918888325418,
+            "y": 667.3192291680499
+          },
+          "endPoint": {
+            "x": 1019.866468325418,
+            "y": 731.7111972049673
+          }
+        },
+        "metrics": {
+          "barCount": 57,
+          "percentChange": "-2.45%",
+          "rawPercentChange": -2.45,
+          "priceRange": 2601.39,
+          "priceChange": -2601.39,
+          "highPrice": 106202.02,
+          "lowPrice": 103600.64,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1748606400,
+          "endTime": 1749427200
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "4HR",
+          "timeframeType": "MTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A1",
+        "structuredLabel": "BTCUSD_4HR_S3_A1_MTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1744387200,
+          "barEnd": 1752163200,
+          "captured": "2025-07-10T18:11:29.311Z"
+        },
+        "created": "2025-07-10T18:11:29.311Z",
+        "lastModified": "2025-07-10T18:11:29.311Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "4HR",
+        "timestamp": "2025-07-10T18:11:33.213Z",
+        "contextKey": "BTCUSD-4HR",
+        "group": "MTF"
+      },
+      {
+        "id": "drawing-1752171090623",
+        "singular_id": 6,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_4HR_S4_A2_MTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1749168000,
+            "price": 100449.66275395054
+          },
+          "endPoint": {
+            "time": 1749528000,
+            "price": 110781.92550269952
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 956.0935483254179,
+            "y": 809.7071021510931
+          },
+          "endPoint": {
+            "x": 1044.667048325418,
+            "y": 553.9530882579834
+          }
+        },
+        "metrics": {
+          "barCount": 25,
+          "percentChange": "+10.29%",
+          "rawPercentChange": 10.29,
+          "priceRange": 10332.26,
+          "priceChange": 10332.26,
+          "highPrice": 110781.93,
+          "lowPrice": 100449.66,
+          "bullish": true,
+          "direction": "UP",
+          "startTime": 1749168000,
+          "endTime": 1749528000
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "4HR",
+          "timeframeType": "MTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A2",
+        "structuredLabel": "BTCUSD_4HR_S4_A2_MTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1744387200,
+          "barEnd": 1752163200,
+          "captured": "2025-07-10T18:11:32.673Z"
+        },
+        "created": "2025-07-10T18:11:32.673Z",
+        "lastModified": "2025-07-10T18:11:32.673Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "4HR",
+        "timestamp": "2025-07-10T18:11:33.213Z",
+        "contextKey": "BTCUSD-4HR",
+        "group": "MTF"
+      },
+      {
+        "id": "drawing-1752171096905",
+        "singular_id": 7,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_4HR_S5_A2_MTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1750608000,
+            "price": 98471.14435525393
+          },
+          "endPoint": {
+            "time": 1750910400,
+            "price": 108437.01480794797
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 1310.387548325418,
+            "y": 858.6812750242418
+          },
+          "endPoint": {
+            "x": 1384.789288325418,
+            "y": 611.9965524039376
+          }
+        },
+        "metrics": {
+          "barCount": 21,
+          "percentChange": "+10.12%",
+          "rawPercentChange": 10.12,
+          "priceRange": 9965.87,
+          "priceChange": 9965.87,
+          "highPrice": 108437.01,
+          "lowPrice": 98471.14,
+          "bullish": true,
+          "direction": "UP",
+          "startTime": 1750608000,
+          "endTime": 1750910400
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "4HR",
+          "timeframeType": "MTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A2",
+        "structuredLabel": "BTCUSD_4HR_S5_A2_MTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1744387200,
+          "barEnd": 1752163200,
+          "captured": "2025-07-10T18:11:40.721Z"
+        },
+        "created": "2025-07-10T18:11:40.721Z",
+        "lastModified": "2025-07-10T18:11:40.721Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "4HR",
+        "timestamp": "2025-07-10T18:11:41.253Z",
+        "contextKey": "BTCUSD-4HR",
+        "group": "MTF"
+      },
+      {
+        "id": "drawing-1752252005094",
+        "singular_id": 8,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_4HR_S5_A1_MTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1750780800,
+            "price": 109653.5472691632
+          },
+          "endPoint": {
+            "time": 1752062400,
+            "price": 106691.8203286302
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 1352.9028283254179,
+            "y": 581.8837816050406
+          },
+          "endPoint": {
+            "x": 1668.224488325418,
+            "y": 655.1952692739337
+          }
+        },
+        "metrics": {
+          "barCount": 89,
+          "percentChange": "-2.70%",
+          "rawPercentChange": -2.7,
+          "priceRange": 2961.73,
+          "priceChange": -2961.73,
+          "highPrice": 109653.55,
+          "lowPrice": 106691.82,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1750780800,
+          "endTime": 1752062400
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "4HR",
+          "timeframeType": "MTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A1",
+        "structuredLabel": "BTCUSD_4HR_S5_A1_MTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1747656000,
+          "barEnd": 1752249600,
+          "captured": "2025-07-11T16:40:27.498Z"
+        },
+        "created": "2025-07-11T16:40:27.498Z",
+        "lastModified": "2025-07-11T16:40:27.498Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "4HR",
+        "timestamp": "2025-07-11T16:40:27.501Z",
+        "contextKey": "BTCUSD-4HR"
+      },
+      {
+        "id": "drawing-1752548394092",
+        "singular_id": 9,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_4HR_S6_A2_MTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1751918400,
+            "price": 107737.98975667052
+          },
+          "endPoint": {
+            "time": 1752480000,
+            "price": 123208.58796451412
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 1632.795088325418,
+            "y": 613.3333282470704
+          },
+          "endPoint": {
+            "x": 1770.969748325418,
+            "y": 246.3333282470703
+          }
+        },
+        "metrics": {
+          "barCount": 39,
+          "percentChange": "+14.36%",
+          "rawPercentChange": 14.36,
+          "priceRange": 15470.6,
+          "priceChange": 15470.6,
+          "highPrice": 123208.59,
+          "lowPrice": 107737.99,
+          "bullish": true,
+          "direction": "UP",
+          "startTime": 1751918400,
+          "endTime": 1752480000
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "4HR",
+          "timeframeType": "MTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A2",
+        "structuredLabel": "BTCUSD_4HR_S6_A2_MTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1745280000,
+          "barEnd": 1752537600,
+          "captured": "2025-07-15T03:00:08.482Z"
+        },
+        "created": "2025-07-15T03:00:08.482Z",
+        "lastModified": "2025-07-15T03:00:08.482Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "4HR",
+        "timestamp": "2025-07-15T03:00:08.989Z"
+      }
+    ],
+    "metadata": {
+      "savedVia": "nuclearBridgeUI",
+      "chartVersion": "v4",
+      "timestamp": "2025-07-15T03:00:08.986Z",
+      "symbol": "BTCUSD",
+      "timeframe": "4HR",
+      "group": "MTF",
+      "savedBy": "user",
+      "savedAt": "2025-07-15T03:00:08.989Z",
+      "chartZoom": {
+        "from": 2193.358945303782,
+        "to": 2893.471580572796
+      },
+      "drawingCount": 23,
+      "indexedDBVersion": "v2.0",
+      "isOnlyStorageSystem": true,
+      "slopeAnalysis": null,
+      "trendHealth": null,
+      "totalSize": 28826,
+      "lastSaved": "2025-07-15T03:00:08.991Z"
+    },
+    "saved": "2025-07-15T03:00:08.992Z",
+    "id": 8
+  },
+  {
+    "symbol": "BTCUSD",
+    "group": "LTF",
+    "timeframe": "30MIN",
+    "contextKey": "BTCUSD-30MIN",
+    "drawings": [
+      {
+        "id": "smart-anchor-1752172215428",
+        "type": "horizontal-line",
+        "atomicType": "A11",
+        "structuredLabel": "BTCUSD_30MIN_A11_SMART_ANCHOR",
+        "isSmartAnchor": true,
+        "chartValues": {
+          "startPoint": {
+            "price": 113422.75,
+            "time": 1752172215.429
+          },
+          "endPoint": {
+            "price": 113422.75,
+            "time": 1752172215.429
+          }
+        },
+        "style": {
+          "color": "#00ff00",
+          "lineStyle": "dashed",
+          "lineWidth": 1,
+          "opacity": 0.7
+        },
+        "created": "2025-07-10T18:30:15.429Z",
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "30MIN"
+        },
+        "symbol": "BTCUSD",
+        "timeframe": "30MIN",
+        "timestamp": "2025-07-10T18:30:37.430Z",
+        "contextKey": "BTCUSD-30MIN"
+      },
+      {
+        "id": "drawing-1752172249993",
+        "singular_id": 12,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_30MIN_S1_A2_LTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1750604400,
+            "price": 98715.52790236849
+          },
+          "endPoint": {
+            "time": 1750658400,
+            "price": 102152.80847462727
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 465.9554824988977,
+            "y": 1085.3333282470937
+          },
+          "endPoint": {
+            "x": 515.0628147054626,
+            "y": 883.333328247077
+          }
+        },
+        "metrics": {
+          "barCount": 30,
+          "percentChange": "+3.48%",
+          "rawPercentChange": 3.48,
+          "priceRange": 3437.28,
+          "priceChange": 3437.28,
+          "highPrice": 102152.81,
+          "lowPrice": 98715.53,
+          "bullish": true,
+          "direction": "UP",
+          "startTime": 1750604400,
+          "endTime": 1750658400
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "30MIN",
+          "timeframeType": "LTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A2",
+        "structuredLabel": "BTCUSD_30MIN_S1_A2_LTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1750091400,
+          "barEnd": 1752170400,
+          "captured": "2025-07-10T18:30:53.496Z"
+        },
+        "created": "2025-07-10T18:30:53.496Z",
+        "lastModified": "2025-07-10T18:30:53.496Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "30MIN",
+        "timestamp": "2025-07-10T18:31:11.474Z",
+        "contextKey": "BTCUSD-30MIN"
+      },
+      {
+        "id": "drawing-1752172255082",
+        "singular_id": 24,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_30MIN_S1_A1_LTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1750622400,
+            "price": 101945.3101353864
+          },
+          "endPoint": {
+            "time": 1750710600,
+            "price": 101033.88917272216
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 482.32459323441935,
+            "y": 895.3333282470637
+          },
+          "endPoint": {
+            "x": 562.5332358384755,
+            "y": 948.3333282471012
+          }
+        },
+        "metrics": {
+          "barCount": 49,
+          "percentChange": "-0.89%",
+          "rawPercentChange": -0.89,
+          "priceRange": 911.42,
+          "priceChange": -911.42,
+          "highPrice": 101945.31,
+          "lowPrice": 101033.89,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1750622400,
+          "endTime": 1750710600
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "30MIN",
+          "timeframeType": "LTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A1",
+        "structuredLabel": "BTCUSD_30MIN_S1_A1_LTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1750091400,
+          "barEnd": 1752170400,
+          "captured": "2025-07-10T18:30:57.457Z"
+        },
+        "created": "2025-07-10T18:30:57.457Z",
+        "lastModified": "2025-07-10T18:30:57.457Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "30MIN",
+        "timestamp": "2025-07-10T18:31:11.474Z",
+        "contextKey": "BTCUSD-30MIN"
+      },
+      {
+        "id": "drawing-1752172259463",
+        "singular_id": 31,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_30MIN_S2_A2_LTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1750696200,
+            "price": 99656.6806713283
+          },
+          "endPoint": {
+            "time": 1750730400,
+            "price": 106212.4978901229
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 549.4379472500582,
+            "y": 1029.3333282470594
+          },
+          "endPoint": {
+            "x": 580.5392576475494,
+            "y": 653.3333282470674
+          }
+        },
+        "metrics": {
+          "barCount": 19,
+          "percentChange": "+6.58%",
+          "rawPercentChange": 6.58,
+          "priceRange": 6555.82,
+          "priceChange": 6555.82,
+          "highPrice": 106212.5,
+          "lowPrice": 99656.68,
+          "bullish": true,
+          "direction": "UP",
+          "startTime": 1750696200,
+          "endTime": 1750730400
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "30MIN",
+          "timeframeType": "LTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A2",
+        "structuredLabel": "BTCUSD_30MIN_S2_A2_LTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1750091400,
+          "barEnd": 1752170400,
+          "captured": "2025-07-10T18:31:02.307Z"
+        },
+        "created": "2025-07-10T18:31:02.307Z",
+        "lastModified": "2025-07-10T18:31:02.307Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "30MIN",
+        "timestamp": "2025-07-10T18:31:11.474Z",
+        "contextKey": "BTCUSD-30MIN"
+      },
+      {
+        "id": "drawing-1752172263960",
+        "singular_id": 32,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_30MIN_S2_A1_LTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1750716000,
+            "price": 106086.59356427232
+          },
+          "endPoint": {
+            "time": 1750825800,
+            "price": 104924.58598973168
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 567.4439690591321,
+            "y": 660.3333282470595
+          },
+          "endPoint": {
+            "x": 667.2955445458144,
+            "y": 725.3333282470596
+          }
+        },
+        "metrics": {
+          "barCount": 61,
+          "percentChange": "-1.10%",
+          "rawPercentChange": -1.1,
+          "priceRange": 1162.01,
+          "priceChange": -1162.01,
+          "highPrice": 106086.59,
+          "lowPrice": 104924.59,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1750716000,
+          "endTime": 1750825800
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "30MIN",
+          "timeframeType": "LTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A1",
+        "structuredLabel": "BTCUSD_30MIN_S2_A1_LTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1750091400,
+          "barEnd": 1752170400,
+          "captured": "2025-07-10T18:31:07.017Z"
+        },
+        "created": "2025-07-10T18:31:07.017Z",
+        "lastModified": "2025-07-10T18:31:07.017Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "30MIN",
+        "timestamp": "2025-07-10T18:31:11.474Z",
+        "contextKey": "BTCUSD-30MIN"
+      },
+      {
+        "id": "drawing-1752172268615",
+        "singular_id": 33,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_30MIN_S3_A2_LTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1750789800,
+            "price": 105316.44892828082
+          },
+          "endPoint": {
+            "time": 1750861800,
+            "price": 108284.09970391859
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 634.5573230747711,
+            "y": 703.3333282470841
+          },
+          "endPoint": {
+            "x": 700.0337660168577,
+            "y": 539.3333282470735
+          }
+        },
+        "metrics": {
+          "barCount": 40,
+          "percentChange": "+2.82%",
+          "rawPercentChange": 2.82,
+          "priceRange": 2967.65,
+          "priceChange": 2967.65,
+          "highPrice": 108284.1,
+          "lowPrice": 105316.45,
+          "bullish": true,
+          "direction": "UP",
+          "startTime": 1750789800,
+          "endTime": 1750861800
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "30MIN",
+          "timeframeType": "LTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A2",
+        "structuredLabel": "BTCUSD_30MIN_S3_A2_LTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1750091400,
+          "barEnd": 1752170400,
+          "captured": "2025-07-10T18:31:10.950Z"
+        },
+        "created": "2025-07-10T18:31:10.950Z",
+        "lastModified": "2025-07-10T18:31:10.950Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "30MIN",
+        "timestamp": "2025-07-10T18:31:11.474Z",
+        "contextKey": "BTCUSD-30MIN"
+      },
+      {
+        "id": "drawing-1752172272666",
+        "singular_id": 11,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_30MIN_S4_A2_LTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1751418000,
+            "price": 105280.76463176317
+          },
+          "endPoint": {
+            "time": 1751475600,
+            "price": 109817.74454974399
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 1205.8392877444778,
+            "y": 705.3333282470819
+          },
+          "endPoint": {
+            "x": 1258.2204420981473,
+            "y": 456.3333282470692
+          }
+        },
+        "metrics": {
+          "barCount": 32,
+          "percentChange": "+4.31%",
+          "rawPercentChange": 4.31,
+          "priceRange": 4536.98,
+          "priceChange": 4536.98,
+          "highPrice": 109817.74,
+          "lowPrice": 105280.76,
+          "bullish": true,
+          "direction": "UP",
+          "startTime": 1751418000,
+          "endTime": 1751475600
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "30MIN",
+          "timeframeType": "LTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A2",
+        "structuredLabel": "BTCUSD_30MIN_S4_A2_LTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1750091400,
+          "barEnd": 1752170400,
+          "captured": "2025-07-10T18:31:16.873Z"
+        },
+        "created": "2025-07-10T18:31:16.873Z",
+        "lastModified": "2025-07-10T18:31:16.873Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "30MIN",
+        "timestamp": "2025-07-10T18:31:17.390Z",
+        "contextKey": "BTCUSD-30MIN"
+      },
+      {
+        "id": "drawing-1752172279205",
+        "singular_id": 37,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_30MIN_S4_A1_LTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1751473800,
+            "price": 109910.82340446109
+          },
+          "endPoint": {
+            "time": 1751605200,
+            "price": 108762.20060280839
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 1256.583531024595,
+            "y": 451.33332824707475
+          },
+          "endPoint": {
+            "x": 1376.0780393939035,
+            "y": 513.3333282471024
+          }
+        },
+        "metrics": {
+          "barCount": 73,
+          "percentChange": "-1.05%",
+          "rawPercentChange": -1.05,
+          "priceRange": 1148.62,
+          "priceChange": -1148.62,
+          "highPrice": 109910.82,
+          "lowPrice": 108762.2,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1751473800,
+          "endTime": 1751605200
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "30MIN",
+          "timeframeType": "LTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A1",
+        "structuredLabel": "BTCUSD_30MIN_S4_A1_LTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1750091400,
+          "barEnd": 1752170400,
+          "captured": "2025-07-10T18:31:21.510Z"
+        },
+        "created": "2025-07-10T18:31:21.510Z",
+        "lastModified": "2025-07-10T18:31:21.510Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "30MIN",
+        "timestamp": "2025-07-10T18:31:21.515Z",
+        "contextKey": "BTCUSD-30MIN"
+      },
+      {
+        "id": "drawing-1752172283861",
+        "singular_id": 40,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_30MIN_S4_A1_LTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1751967000,
+            "price": 109260.9244029868
+          },
+          "endPoint": {
+            "time": 1752082200,
+            "price": 108320.80196320925
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 1705.0971651778893,
+            "y": 486.3333282470842
+          },
+          "endPoint": {
+            "x": 1809.859473885228,
+            "y": 537.3333282470757
+          }
+        },
+        "metrics": {
+          "barCount": 64,
+          "percentChange": "-0.86%",
+          "rawPercentChange": -0.86,
+          "priceRange": 940.12,
+          "priceChange": -940.12,
+          "highPrice": 109260.92,
+          "lowPrice": 108320.8,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1751967000,
+          "endTime": 1752082200
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "30MIN",
+          "timeframeType": "LTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A1",
+        "structuredLabel": "BTCUSD_30MIN_S4_A1_LTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1750091400,
+          "barEnd": 1752170400,
+          "captured": "2025-07-10T18:31:26.416Z"
+        },
+        "created": "2025-07-10T18:31:26.416Z",
+        "lastModified": "2025-07-10T18:31:26.416Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "30MIN",
+        "timestamp": "2025-07-10T18:31:31.138Z",
+        "contextKey": "BTCUSD-30MIN"
+      },
+      {
+        "id": "drawing-1752172288079",
+        "singular_id": 41,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_30MIN_S5_A2_LTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1752067800,
+            "price": 108504.4999442403
+          },
+          "endPoint": {
+            "time": 1752098400,
+            "price": 111940.69500996805
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 1796.7641852968109,
+            "y": 527.3333282470868
+          },
+          "endPoint": {
+            "x": 1824.5916735471976,
+            "y": 343.3333282470742
+          }
+        },
+        "metrics": {
+          "barCount": 17,
+          "percentChange": "+3.17%",
+          "rawPercentChange": 3.17,
+          "priceRange": 3436.2,
+          "priceChange": 3436.2,
+          "highPrice": 111940.7,
+          "lowPrice": 108504.5,
+          "bullish": true,
+          "direction": "UP",
+          "startTime": 1752067800,
+          "endTime": 1752098400
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "30MIN",
+          "timeframeType": "LTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A2",
+        "structuredLabel": "BTCUSD_30MIN_S5_A2_LTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1750091400,
+          "barEnd": 1752170400,
+          "captured": "2025-07-10T18:31:30.604Z"
+        },
+        "created": "2025-07-10T18:31:30.604Z",
+        "lastModified": "2025-07-10T18:31:30.604Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "30MIN",
+        "timestamp": "2025-07-10T18:31:31.138Z",
+        "contextKey": "BTCUSD-30MIN"
+      },
+      {
+        "id": "drawing-1752172292630",
+        "singular_id": 34,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_30MIN_S5_A1_LTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1752085800,
+            "price": 111448.62196796825
+          },
+          "endPoint": {
+            "time": 1752163200,
+            "price": 110583.32411578571
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 1813.1332960323325,
+            "y": 369.3333282470695
+          },
+          "endPoint": {
+            "x": 1883.5204721950756,
+            "y": 415.33332824706656
+          }
+        },
+        "metrics": {
+          "barCount": 43,
+          "percentChange": "-0.78%",
+          "rawPercentChange": -0.78,
+          "priceRange": 865.3,
+          "priceChange": -865.3,
+          "highPrice": 111448.62,
+          "lowPrice": 110583.32,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1752085800,
+          "endTime": 1752163200
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "30MIN",
+          "timeframeType": "LTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A1",
+        "structuredLabel": "BTCUSD_30MIN_S5_A1_LTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1750091400,
+          "barEnd": 1752170400,
+          "captured": "2025-07-10T18:31:35.843Z"
+        },
+        "created": "2025-07-10T18:31:35.843Z",
+        "lastModified": "2025-07-10T18:31:35.843Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "30MIN",
+        "timestamp": "2025-07-10T18:31:35.848Z",
+        "contextKey": "BTCUSD-30MIN"
+      },
+      {
+        "id": "drawing-1752172298179",
+        "singular_id": 47,
+        "element": {},
+        "type": "rectangle",
+        "label": "BTCUSD_30MIN_S6_A2_LTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1752156000,
+            "price": 110602.0633119819
+          },
+          "endPoint": {
+            "time": 1752170400,
+            "price": 113776.47563503914
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 1876.9728279008668,
+            "y": 414.3333282470677
+          },
+          "endPoint": {
+            "x": 1890.0681164892844,
+            "y": 247.33332824706042
+          }
+        },
+        "metrics": {
+          "barCount": 8,
+          "percentChange": "+2.87%",
+          "rawPercentChange": 2.87,
+          "priceRange": 3174.41,
+          "priceChange": 3174.41,
+          "highPrice": 113776.48,
+          "lowPrice": 110602.06,
+          "bullish": true,
+          "direction": "UP",
+          "startTime": 1752156000,
+          "endTime": 1752170400
+        },
+        "timeframeInfo": {
+          "symbol": "BTCUSD",
+          "timeframe": "30MIN",
+          "timeframeType": "LTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A2",
+        "structuredLabel": "BTCUSD_30MIN_S6_A2_LTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1750091400,
+          "barEnd": 1752170400,
+          "captured": "2025-07-10T18:31:42.284Z"
+        },
+        "created": "2025-07-10T18:31:42.284Z",
+        "lastModified": "2025-07-10T18:31:42.284Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "BTCUSD",
+        "timeframe": "30MIN",
+        "timestamp": "2025-07-10T18:31:42.802Z"
+      }
+    ],
+    "metadata": {
+      "savedVia": "nuclearBridgeUI",
+      "chartVersion": "v4",
+      "timestamp": "2025-07-10T18:31:42.800Z",
+      "symbol": "BTCUSD",
+      "timeframe": "30MIN",
+      "group": "LTF",
+      "savedBy": "user",
+      "savedAt": "2025-07-10T18:31:42.802Z",
+      "chartZoom": {
+        "from": 394.2337506333904,
+        "to": 1910.7260812397265
+      },
+      "drawingCount": 12,
+      "indexedDBVersion": "v2.0",
+      "isOnlyStorageSystem": true,
+      "slopeAnalysis": null,
+      "trendHealth": null,
+      "totalSize": 14087,
+      "lastSaved": "2025-07-10T18:31:42.832Z"
+    },
+    "saved": "2025-07-10T18:31:42.832Z",
+    "id": 11
+  },
+  {
+    "symbol": "NQU5",
+    "group": "HTF",
+    "timeframe": "3D",
+    "contextKey": "NQU5-3D",
+    "drawings": [
+      {
+        "id": "smart-anchor-1753420048961",
+        "type": "horizontal-line",
+        "atomicType": "A11",
+        "structuredLabel": "NQU5_3D_A11_SMART_ANCHOR",
+        "isSmartAnchor": true,
+        "chartValues": {
+          "startPoint": {
+            "price": 23396,
+            "time": 1753420048.961
+          },
+          "endPoint": {
+            "price": 23396,
+            "time": 1753420048.961
+          }
+        },
+        "style": {
+          "color": "#00ff00",
+          "lineStyle": "dashed",
+          "lineWidth": 1,
+          "opacity": 0.7
+        },
+        "created": "2025-07-25T05:07:28.961Z",
+        "timeframeInfo": {
+          "symbol": "NQU5",
+          "timeframe": "3D"
+        },
+        "symbol": "NQU5",
+        "timeframe": "3D",
+        "timestamp": "2025-07-25T05:07:29.431Z"
+      }
+    ],
+    "metadata": {
+      "deletedDrawingId": "smart-anchor-1753419940855",
+      "deletedAt": "2025-07-25T05:07:29.429Z",
+      "forceSyncAfterDeletion": true,
+      "savedBy": "user",
+      "savedAt": "2025-07-25T05:07:29.432Z",
+      "chartZoom": {
+        "from": 2053.9164047941663,
+        "to": 2339.2301259825545
+      },
+      "drawingCount": 1,
+      "indexedDBVersion": "v2.0",
+      "isOnlyStorageSystem": true,
+      "slopeAnalysis": null,
+      "trendHealth": null,
+      "totalSize": 500,
+      "lastSaved": "2025-07-25T05:07:29.447Z"
+    },
+    "saved": "2025-07-25T05:07:29.447Z",
+    "id": 12
+  },
+  {
+    "symbol": "NQU5",
+    "group": "LTF",
+    "timeframe": "5MIN",
+    "contextKey": "NQU5-5MIN",
+    "drawings": [
+      {
+        "id": "drawing-1753420066870",
+        "singular_id": 48,
+        "element": {},
+        "type": "rectangle",
+        "label": "NQU5_5MIN_S1_A1_LTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1752681600,
+            "price": 23077.86147047851
+          },
+          "endPoint": {
+            "time": 1752729600,
+            "price": 23030.287864054677
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 269.06357813640534,
+            "y": 732.9382004464278
+          },
+          "endPoint": {
+            "x": 351.39381047929146,
+            "y": 796.7296586100497
+          }
+        },
+        "metrics": {
+          "barCount": 160,
+          "percentChange": "-0.21%",
+          "rawPercentChange": -0.21,
+          "priceRange": 47.57,
+          "priceChange": -47.57,
+          "highPrice": 23077.86,
+          "lowPrice": 23030.29,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1752681600,
+          "endTime": 1752729600
+        },
+        "timeframeInfo": {
+          "symbol": "NQU5",
+          "timeframe": "5MIN",
+          "timeframeType": "LTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A1",
+        "structuredLabel": "NQU5_5MIN_S1_A1_LTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1751963100,
+          "barEnd": 1753419300,
+          "captured": "2025-07-25T05:07:49.376Z"
+        },
+        "created": "2025-07-25T05:07:49.376Z",
+        "lastModified": "2025-07-25T05:07:49.376Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "NQU5",
+        "timeframe": "5MIN",
+        "timestamp": "2025-07-25T05:07:49.383Z",
+        "contextKey": "NQU5-5MIN",
+        "group": "LTF"
+      },
+      {
+        "id": "drawing-1753420071447",
+        "singular_id": 50,
+        "element": {},
+        "type": "rectangle",
+        "label": "NQU5_5MIN_S1_A2_LTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1752720000,
+            "price": 23021.367812850207
+          },
+          "endPoint": {
+            "time": 1752735900,
+            "price": 23152.19523051575
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 333.5926791619106,
+            "y": 808.6905570157303
+          },
+          "endPoint": {
+            "x": 363.0758029063227,
+            "y": 633.2640470657691
+          }
+        },
+        "metrics": {
+          "barCount": 53,
+          "percentChange": "+0.57%",
+          "rawPercentChange": 0.57,
+          "priceRange": 130.83,
+          "priceChange": 130.83,
+          "highPrice": 23152.2,
+          "lowPrice": 23021.37,
+          "bullish": true,
+          "direction": "UP",
+          "startTime": 1752720000,
+          "endTime": 1752735900
+        },
+        "timeframeInfo": {
+          "symbol": "NQU5",
+          "timeframe": "5MIN",
+          "timeframeType": "LTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A2",
+        "structuredLabel": "NQU5_5MIN_S1_A2_LTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1751963100,
+          "barEnd": 1753419300,
+          "captured": "2025-07-25T05:07:53.762Z"
+        },
+        "created": "2025-07-25T05:07:53.762Z",
+        "lastModified": "2025-07-25T05:07:53.762Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "NQU5",
+        "timeframe": "5MIN",
+        "timestamp": "2025-07-25T05:08:05.197Z",
+        "contextKey": "NQU5-5MIN",
+        "group": "LTF"
+      },
+      {
+        "id": "drawing-1753420075064",
+        "singular_id": 58,
+        "element": {},
+        "type": "rectangle",
+        "label": "NQU5_5MIN_S1_A1_LTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1752730200,
+            "price": 23134.355128106814
+          },
+          "endPoint": {
+            "time": 1752762000,
+            "price": 23095.701572887447
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 352.5063811866278,
+            "y": 657.1858438771255
+          },
+          "endPoint": {
+            "x": 411.4726286754517,
+            "y": 709.0164036350716
+          }
+        },
+        "metrics": {
+          "barCount": 106,
+          "percentChange": "-0.17%",
+          "rawPercentChange": -0.17,
+          "priceRange": 38.65,
+          "priceChange": -38.65,
+          "highPrice": 23134.36,
+          "lowPrice": 23095.7,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1752730200,
+          "endTime": 1752762000
+        },
+        "timeframeInfo": {
+          "symbol": "NQU5",
+          "timeframe": "5MIN",
+          "timeframeType": "LTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A1",
+        "structuredLabel": "NQU5_5MIN_S1_A1_LTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1751963100,
+          "barEnd": 1753419300,
+          "captured": "2025-07-25T05:07:57.555Z"
+        },
+        "created": "2025-07-25T05:07:57.555Z",
+        "lastModified": "2025-07-25T05:07:57.555Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "NQU5",
+        "timeframe": "5MIN",
+        "timestamp": "2025-07-25T05:08:05.197Z",
+        "contextKey": "NQU5-5MIN",
+        "group": "LTF"
+      },
+      {
+        "id": "drawing-1753420079050",
+        "singular_id": 59,
+        "element": {},
+        "type": "rectangle",
+        "label": "NQU5_5MIN_S2_A2_LTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1752757200,
+            "price": 23065.22473127218
+          },
+          "endPoint": {
+            "time": 1752778200,
+            "price": 23281.535972980546
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 402.5720630167614,
+            "y": 749.882806521138
+          },
+          "endPoint": {
+            "x": 441.5120377735318,
+            "y": 459.8310201834246
+          }
+        },
+        "metrics": {
+          "barCount": 70,
+          "percentChange": "+0.94%",
+          "rawPercentChange": 0.94,
+          "priceRange": 216.31,
+          "priceChange": 216.31,
+          "highPrice": 23281.54,
+          "lowPrice": 23065.22,
+          "bullish": true,
+          "direction": "UP",
+          "startTime": 1752757200,
+          "endTime": 1752778200
+        },
+        "timeframeInfo": {
+          "symbol": "NQU5",
+          "timeframe": "5MIN",
+          "timeframeType": "LTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A2",
+        "structuredLabel": "NQU5_5MIN_S2_A2_LTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1751963100,
+          "barEnd": 1753419300,
+          "captured": "2025-07-25T05:08:01.619Z"
+        },
+        "created": "2025-07-25T05:08:01.619Z",
+        "lastModified": "2025-07-25T05:08:01.619Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "NQU5",
+        "timeframe": "5MIN",
+        "timestamp": "2025-07-25T05:08:05.197Z",
+        "contextKey": "NQU5-5MIN",
+        "group": "LTF"
+      },
+      {
+        "id": "drawing-1753420083146",
+        "singular_id": 60,
+        "element": {},
+        "type": "rectangle",
+        "label": "NQU5_5MIN_S2_A1_LTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1752760800,
+            "price": 23306.066113792836
+          },
+          "endPoint": {
+            "time": 1752850800,
+            "price": 23260.72252017012
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 409.24748726077905,
+            "y": 426.93854956780524
+          },
+          "endPoint": {
+            "x": 569.4576691172063,
+            "y": 487.7397831300094
+          }
+        },
+        "metrics": {
+          "barCount": 300,
+          "percentChange": "-0.19%",
+          "rawPercentChange": -0.19,
+          "priceRange": 45.34,
+          "priceChange": -45.34,
+          "highPrice": 23306.07,
+          "lowPrice": 23260.72,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1752760800,
+          "endTime": 1752850800
+        },
+        "timeframeInfo": {
+          "symbol": "NQU5",
+          "timeframe": "5MIN",
+          "timeframeType": "LTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A1",
+        "structuredLabel": "NQU5_5MIN_S2_A1_LTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1751963100,
+          "barEnd": 1753419300,
+          "captured": "2025-07-25T05:08:05.194Z"
+        },
+        "created": "2025-07-25T05:08:05.194Z",
+        "lastModified": "2025-07-25T05:08:05.194Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "NQU5",
+        "timeframe": "5MIN",
+        "timestamp": "2025-07-25T05:08:05.197Z",
+        "contextKey": "NQU5-5MIN",
+        "group": "LTF"
+      },
+      {
+        "id": "drawing-1753420088082",
+        "singular_id": 61,
+        "element": {},
+        "type": "rectangle",
+        "label": "NQU5_5MIN_S2_A1_LTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1752844200,
+            "price": 23229.502340954477
+          },
+          "endPoint": {
+            "time": 1753054200,
+            "price": 23189.36211053437
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 557.219391336507,
+            "y": 529.6029275498867
+          },
+          "endPoint": {
+            "x": 619.5233509473398,
+            "y": 583.4269703754397
+          }
+        },
+        "metrics": {
+          "barCount": 700,
+          "percentChange": "-0.17%",
+          "rawPercentChange": -0.17,
+          "priceRange": 40.14,
+          "priceChange": -40.14,
+          "highPrice": 23229.5,
+          "lowPrice": 23189.36,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1752844200,
+          "endTime": 1753054200
+        },
+        "timeframeInfo": {
+          "symbol": "NQU5",
+          "timeframe": "5MIN",
+          "timeframeType": "LTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A1",
+        "structuredLabel": "NQU5_5MIN_S2_A1_LTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1751963100,
+          "barEnd": 1753419300,
+          "captured": "2025-07-25T05:08:10.484Z"
+        },
+        "created": "2025-07-25T05:08:10.484Z",
+        "lastModified": "2025-07-25T05:08:10.484Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "NQU5",
+        "timeframe": "5MIN",
+        "timestamp": "2025-07-25T05:08:28.078Z",
+        "contextKey": "NQU5-5MIN",
+        "group": "LTF"
+      },
+      {
+        "id": "drawing-1753420092161",
+        "singular_id": 62,
+        "element": {},
+        "type": "rectangle",
+        "label": "NQU5_5MIN_S3_A2_LTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1752842700,
+            "price": 23320.18952819991
+          },
+          "endPoint": {
+            "time": 1752857100,
+            "price": 23165.57530732245
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 554.4379645681663,
+            "y": 408.0004604254833
+          },
+          "endPoint": {
+            "x": 581.1396615442375,
+            "y": 615.3226994572531
+          }
+        },
+        "metrics": {
+          "barCount": 48,
+          "percentChange": "-0.66%",
+          "rawPercentChange": -0.66,
+          "priceRange": 154.61,
+          "priceChange": -154.61,
+          "highPrice": 23320.19,
+          "lowPrice": 23165.58,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1752842700,
+          "endTime": 1752857100
+        },
+        "timeframeInfo": {
+          "symbol": "NQU5",
+          "timeframe": "5MIN",
+          "timeframeType": "LTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A2",
+        "structuredLabel": "NQU5_5MIN_S3_A2_LTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1751963100,
+          "barEnd": 1753419300,
+          "captured": "2025-07-25T05:08:14.907Z"
+        },
+        "created": "2025-07-25T05:08:14.907Z",
+        "lastModified": "2025-07-25T05:08:14.907Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "NQU5",
+        "timeframe": "5MIN",
+        "timestamp": "2025-07-25T05:08:28.078Z",
+        "contextKey": "NQU5-5MIN",
+        "group": "LTF"
+      },
+      {
+        "id": "drawing-1753420096651",
+        "singular_id": 63,
+        "element": {},
+        "type": "rectangle",
+        "label": "NQU5_5MIN_S4_A2_LTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1752869700,
+            "price": 23204.22886254182
+          },
+          "endPoint": {
+            "time": 1753077900,
+            "price": 23296.402724987995
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 604.5036463982999,
+            "y": 563.492139699307
+          },
+          "endPoint": {
+            "x": 663.4698938871238,
+            "y": 439.89618950729187
+          }
+        },
+        "metrics": {
+          "barCount": 694,
+          "percentChange": "+0.40%",
+          "rawPercentChange": 0.4,
+          "priceRange": 92.17,
+          "priceChange": 92.17,
+          "highPrice": 23296.4,
+          "lowPrice": 23204.23,
+          "bullish": true,
+          "direction": "UP",
+          "startTime": 1752869700,
+          "endTime": 1753077900
+        },
+        "timeframeInfo": {
+          "symbol": "NQU5",
+          "timeframe": "5MIN",
+          "timeframeType": "LTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A2",
+        "structuredLabel": "NQU5_5MIN_S4_A2_LTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1751963100,
+          "barEnd": 1753419300,
+          "captured": "2025-07-25T05:08:18.893Z"
+        },
+        "created": "2025-07-25T05:08:18.893Z",
+        "lastModified": "2025-07-25T05:08:18.893Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "NQU5",
+        "timeframe": "5MIN",
+        "timestamp": "2025-07-25T05:08:28.078Z",
+        "contextKey": "NQU5-5MIN",
+        "group": "LTF"
+      },
+      {
+        "id": "drawing-1753420100078",
+        "singular_id": 64,
+        "element": {},
+        "type": "rectangle",
+        "label": "NQU5_5MIN_S4_A1_LTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1753049700,
+            "price": 23291.94269938576
+          },
+          "endPoint": {
+            "time": 1753107000,
+            "price": 23244.369092961926
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 611.1790706423176,
+            "y": 445.87663871013217
+          },
+          "endPoint": {
+            "x": 717.4295731929344,
+            "y": 509.66809687375394
+          }
+        },
+        "metrics": {
+          "barCount": 191,
+          "percentChange": "-0.20%",
+          "rawPercentChange": -0.2,
+          "priceRange": 47.57,
+          "priceChange": -47.57,
+          "highPrice": 23291.94,
+          "lowPrice": 23244.37,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1753049700,
+          "endTime": 1753107000
+        },
+        "timeframeInfo": {
+          "symbol": "NQU5",
+          "timeframe": "5MIN",
+          "timeframeType": "LTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A1",
+        "structuredLabel": "NQU5_5MIN_S4_A1_LTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1751963100,
+          "barEnd": 1753419300,
+          "captured": "2025-07-25T05:08:21.660Z"
+        },
+        "created": "2025-07-25T05:08:21.660Z",
+        "lastModified": "2025-07-25T05:08:21.660Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "NQU5",
+        "timeframe": "5MIN",
+        "timestamp": "2025-07-25T05:08:28.078Z",
+        "contextKey": "NQU5-5MIN",
+        "group": "LTF"
+      },
+      {
+        "id": "drawing-1753420103059",
+        "singular_id": 65,
+        "element": {},
+        "type": "rectangle",
+        "label": "NQU5_5MIN_S5_A2_LTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1753100400,
+            "price": 23223.5556401515
+          },
+          "endPoint": {
+            "time": 1753113000,
+            "price": 23425.74346745279
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 705.1912954122349,
+            "y": 537.5768598203388
+          },
+          "endPoint": {
+            "x": 728.5552802662974,
+            "y": 266.46316262494736
+          }
+        },
+        "metrics": {
+          "barCount": 42,
+          "percentChange": "+0.87%",
+          "rawPercentChange": 0.87,
+          "priceRange": 202.19,
+          "priceChange": 202.19,
+          "highPrice": 23425.74,
+          "lowPrice": 23223.56,
+          "bullish": true,
+          "direction": "UP",
+          "startTime": 1753100400,
+          "endTime": 1753113000
+        },
+        "timeframeInfo": {
+          "symbol": "NQU5",
+          "timeframe": "5MIN",
+          "timeframeType": "LTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A2",
+        "structuredLabel": "NQU5_5MIN_S5_A2_LTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1751963100,
+          "barEnd": 1753419300,
+          "captured": "2025-07-25T05:08:25.360Z"
+        },
+        "created": "2025-07-25T05:08:25.360Z",
+        "lastModified": "2025-07-25T05:08:25.360Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "NQU5",
+        "timeframe": "5MIN",
+        "timestamp": "2025-07-25T05:08:28.078Z",
+        "contextKey": "NQU5-5MIN",
+        "group": "LTF"
+      },
+      {
+        "id": "drawing-1753420106428",
+        "singular_id": 66,
+        "element": {},
+        "type": "rectangle",
+        "label": "NQU5_5MIN_S5_A1_LTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1753101600,
+            "price": 23414.593403447205
+          },
+          "endPoint": {
+            "time": 1753137000,
+            "price": 23375.93984822784
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 707.4164368269076,
+            "y": 281.41428563204556
+          },
+          "endPoint": {
+            "x": 766.3826843157316,
+            "y": 333.2448453899867
+          }
+        },
+        "metrics": {
+          "barCount": 118,
+          "percentChange": "-0.17%",
+          "rawPercentChange": -0.17,
+          "priceRange": 38.65,
+          "priceChange": -38.65,
+          "highPrice": 23414.59,
+          "lowPrice": 23375.94,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1753101600,
+          "endTime": 1753137000
+        },
+        "timeframeInfo": {
+          "symbol": "NQU5",
+          "timeframe": "5MIN",
+          "timeframeType": "LTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A1",
+        "structuredLabel": "NQU5_5MIN_S5_A1_LTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1751963100,
+          "barEnd": 1753419300,
+          "captured": "2025-07-25T05:08:28.075Z"
+        },
+        "created": "2025-07-25T05:08:28.075Z",
+        "lastModified": "2025-07-25T05:08:28.075Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "NQU5",
+        "timeframe": "5MIN",
+        "timestamp": "2025-07-25T05:08:28.078Z",
+        "contextKey": "NQU5-5MIN",
+        "group": "LTF"
+      },
+      {
+        "id": "drawing-1753420110770",
+        "singular_id": 42,
+        "element": {},
+        "type": "rectangle",
+        "label": "NQU5_5MIN_S6_A2_LTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1753118700,
+            "price": 23410.876715445345
+          },
+          "endPoint": {
+            "time": 1753127400,
+            "price": 23333.569605006614
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 739.1247019859923,
+            "y": 286.3979933010752
+          },
+          "endPoint": {
+            "x": 755.2569772423685,
+            "y": 390.0591128169624
+          }
+        },
+        "metrics": {
+          "barCount": 29,
+          "percentChange": "-0.33%",
+          "rawPercentChange": -0.33,
+          "priceRange": 77.31,
+          "priceChange": -77.31,
+          "highPrice": 23410.88,
+          "lowPrice": 23333.57,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1753118700,
+          "endTime": 1753127400
+        },
+        "timeframeInfo": {
+          "symbol": "NQU5",
+          "timeframe": "5MIN",
+          "timeframeType": "LTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A2",
+        "structuredLabel": "NQU5_5MIN_S6_A2_LTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1751963100,
+          "barEnd": 1753419300,
+          "captured": "2025-07-25T05:08:32.643Z"
+        },
+        "created": "2025-07-25T05:08:32.643Z",
+        "lastModified": "2025-07-25T05:08:32.643Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "NQU5",
+        "timeframe": "5MIN",
+        "timestamp": "2025-07-25T05:08:54.180Z",
+        "contextKey": "NQU5-5MIN",
+        "group": "LTF"
+      },
+      {
+        "id": "drawing-1753420113616",
+        "singular_id": 68,
+        "element": {},
+        "type": "rectangle",
+        "label": "NQU5_5MIN_S6_A1_LTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1753125900,
+            "price": 23350.66636981518
+          },
+          "endPoint": {
+            "time": 1753192500,
+            "price": 23306.066113792836
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 752.4755504740278,
+            "y": 367.13405753941197
+          },
+          "endPoint": {
+            "x": 869.2954747443393,
+            "y": 426.93854956780524
+          }
+        },
+        "metrics": {
+          "barCount": 222,
+          "percentChange": "-0.19%",
+          "rawPercentChange": -0.19,
+          "priceRange": 44.6,
+          "priceChange": -44.6,
+          "highPrice": 23350.67,
+          "lowPrice": 23306.07,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1753125900,
+          "endTime": 1753192500
+        },
+        "timeframeInfo": {
+          "symbol": "NQU5",
+          "timeframe": "5MIN",
+          "timeframeType": "LTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A1",
+        "structuredLabel": "NQU5_5MIN_S6_A1_LTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1751963100,
+          "barEnd": 1753419300,
+          "captured": "2025-07-25T05:08:35.646Z"
+        },
+        "created": "2025-07-25T05:08:35.646Z",
+        "lastModified": "2025-07-25T05:08:35.647Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "NQU5",
+        "timeframe": "5MIN",
+        "timestamp": "2025-07-25T05:08:54.180Z",
+        "contextKey": "NQU5-5MIN",
+        "group": "LTF"
+      },
+      {
+        "id": "drawing-1753420117634",
+        "singular_id": 69,
+        "element": {},
+        "type": "rectangle",
+        "label": "NQU5_5MIN_S7_A2_LTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1753187700,
+            "price": 23343.976331411828
+          },
+          "endPoint": {
+            "time": 1753197900,
+            "price": 23106.10829929266
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 860.3949090856489,
+            "y": 376.10473134367
+          },
+          "endPoint": {
+            "x": 879.3086111103661,
+            "y": 695.062022161779
+          }
+        },
+        "metrics": {
+          "barCount": 34,
+          "percentChange": "-1.02%",
+          "rawPercentChange": -1.02,
+          "priceRange": 237.87,
+          "priceChange": -237.87,
+          "highPrice": 23343.98,
+          "lowPrice": 23106.11,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1753187700,
+          "endTime": 1753197900
+        },
+        "timeframeInfo": {
+          "symbol": "NQU5",
+          "timeframe": "5MIN",
+          "timeframeType": "LTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A2",
+        "structuredLabel": "NQU5_5MIN_S7_A2_LTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1751963100,
+          "barEnd": 1753419300,
+          "captured": "2025-07-25T05:08:41.244Z"
+        },
+        "created": "2025-07-25T05:08:41.244Z",
+        "lastModified": "2025-07-25T05:08:41.244Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "NQU5",
+        "timeframe": "5MIN",
+        "timestamp": "2025-07-25T05:08:54.180Z",
+        "contextKey": "NQU5-5MIN",
+        "group": "LTF"
+      },
+      {
+        "id": "drawing-1753420122487",
+        "singular_id": 70,
+        "element": {},
+        "type": "rectangle",
+        "label": "NQU5_5MIN_S7_A1_LTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1753188300,
+            "price": 23263.69587057161
+          },
+          "endPoint": {
+            "time": 1753292100,
+            "price": 23174.49535852692
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 861.5074797929852,
+            "y": 483.7528169947808
+          },
+          "endPoint": {
+            "x": 1047.3067879181474,
+            "y": 603.3618010515725
+          }
+        },
+        "metrics": {
+          "barCount": 346,
+          "percentChange": "-0.38%",
+          "rawPercentChange": -0.38,
+          "priceRange": 89.2,
+          "priceChange": -89.2,
+          "highPrice": 23263.7,
+          "lowPrice": 23174.5,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1753188300,
+          "endTime": 1753292100
+        },
+        "timeframeInfo": {
+          "symbol": "NQU5",
+          "timeframe": "5MIN",
+          "timeframeType": "LTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A1",
+        "structuredLabel": "NQU5_5MIN_S7_A1_LTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1751963100,
+          "barEnd": 1753419300,
+          "captured": "2025-07-25T05:08:44.705Z"
+        },
+        "created": "2025-07-25T05:08:44.705Z",
+        "lastModified": "2025-07-25T05:08:44.705Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "NQU5",
+        "timeframe": "5MIN",
+        "timestamp": "2025-07-25T05:08:54.180Z",
+        "contextKey": "NQU5-5MIN",
+        "group": "LTF"
+      },
+      {
+        "id": "drawing-1753420126416",
+        "singular_id": 71,
+        "element": {},
+        "type": "rectangle",
+        "label": "NQU5_5MIN_S8_A2_LTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1753275000,
+            "price": 23149.965217714634
+          },
+          "endPoint": {
+            "time": 1753308600,
+            "price": 23422.770117051303
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 1015.5985227590628,
+            "y": 636.2542716671867
+          },
+          "endPoint": {
+            "x": 1071.2270581258779,
+            "y": 270.45012876017097
+          }
+        },
+        "metrics": {
+          "barCount": 112,
+          "percentChange": "+1.18%",
+          "rawPercentChange": 1.18,
+          "priceRange": 272.8,
+          "priceChange": 272.8,
+          "highPrice": 23422.77,
+          "lowPrice": 23149.97,
+          "bullish": true,
+          "direction": "UP",
+          "startTime": 1753275000,
+          "endTime": 1753308600
+        },
+        "timeframeInfo": {
+          "symbol": "NQU5",
+          "timeframe": "5MIN",
+          "timeframeType": "LTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A2",
+        "structuredLabel": "NQU5_5MIN_S8_A2_LTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1751963100,
+          "barEnd": 1753419300,
+          "captured": "2025-07-25T05:08:49.364Z"
+        },
+        "created": "2025-07-25T05:08:49.364Z",
+        "lastModified": "2025-07-25T05:08:49.364Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "NQU5",
+        "timeframe": "5MIN",
+        "timestamp": "2025-07-25T05:08:54.180Z",
+        "contextKey": "NQU5-5MIN",
+        "group": "LTF"
+      },
+      {
+        "id": "drawing-1753420130570",
+        "singular_id": 72,
+        "element": {},
+        "type": "rectangle",
+        "label": "NQU5_5MIN_S8_A1_LTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1753296900,
+            "price": 23416.080078647952
+          },
+          "endPoint": {
+            "time": 1753330200,
+            "price": 23387.8332498338
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 1056.2073535768377,
+            "y": 279.42080256442887
+          },
+          "endPoint": {
+            "x": 1111.2796035899846,
+            "y": 317.2969808490826
+          }
+        },
+        "metrics": {
+          "barCount": 111,
+          "percentChange": "-0.12%",
+          "rawPercentChange": -0.12,
+          "priceRange": 28.25,
+          "priceChange": -28.25,
+          "highPrice": 23416.08,
+          "lowPrice": 23387.83,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1753296900,
+          "endTime": 1753330200
+        },
+        "timeframeInfo": {
+          "symbol": "NQU5",
+          "timeframe": "5MIN",
+          "timeframeType": "LTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A1",
+        "structuredLabel": "NQU5_5MIN_S8_A1_LTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1751963100,
+          "barEnd": 1753419300,
+          "captured": "2025-07-25T05:08:54.176Z"
+        },
+        "created": "2025-07-25T05:08:54.176Z",
+        "lastModified": "2025-07-25T05:08:54.176Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "NQU5",
+        "timeframe": "5MIN",
+        "timestamp": "2025-07-25T05:08:54.180Z",
+        "contextKey": "NQU5-5MIN",
+        "group": "LTF"
+      },
+      {
+        "id": "drawing-1753420136554",
+        "singular_id": 73,
+        "element": {},
+        "type": "rectangle",
+        "label": "NQU5_5MIN_S9_A2_LTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1753324800,
+            "price": 23413.850065846833
+          },
+          "endPoint": {
+            "time": 1753328700,
+            "price": 23372.223160225978
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 1101.266467223958,
+            "y": 282.41102716585146
+          },
+          "endPoint": {
+            "x": 1108.498176821644,
+            "y": 338.2285530590211
+          }
+        },
+        "metrics": {
+          "barCount": 13,
+          "percentChange": "-0.18%",
+          "rawPercentChange": -0.18,
+          "priceRange": 41.63,
+          "priceChange": -41.63,
+          "highPrice": 23413.85,
+          "lowPrice": 23372.22,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1753324800,
+          "endTime": 1753328700
+        },
+        "timeframeInfo": {
+          "symbol": "NQU5",
+          "timeframe": "5MIN",
+          "timeframeType": "LTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A2",
+        "structuredLabel": "NQU5_5MIN_S9_A2_LTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1751963100,
+          "barEnd": 1753419300,
+          "captured": "2025-07-25T05:09:01.162Z"
+        },
+        "created": "2025-07-25T05:09:01.162Z",
+        "lastModified": "2025-07-25T05:09:01.162Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "NQU5",
+        "timeframe": "5MIN",
+        "timestamp": "2025-07-25T05:09:10.943Z",
+        "contextKey": "NQU5-5MIN",
+        "group": "LTF"
+      },
+      {
+        "id": "drawing-1753420142702",
+        "singular_id": 74,
+        "element": {},
+        "type": "rectangle",
+        "label": "NQU5_5MIN_S9_A1_LTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1753327500,
+            "price": 23387.8332498338
+          },
+          "endPoint": {
+            "time": 1753338900,
+            "price": 23376.683185828213
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 1106.2730354069713,
+            "y": 317.2969808490826
+          },
+          "endPoint": {
+            "x": 1127.411878846361,
+            "y": 332.24810385618093
+          }
+        },
+        "metrics": {
+          "barCount": 38,
+          "percentChange": "-0.05%",
+          "rawPercentChange": -0.05,
+          "priceRange": 11.15,
+          "priceChange": -11.15,
+          "highPrice": 23387.83,
+          "lowPrice": 23376.68,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1753327500,
+          "endTime": 1753338900
+        },
+        "timeframeInfo": {
+          "symbol": "NQU5",
+          "timeframe": "5MIN",
+          "timeframeType": "LTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A1",
+        "structuredLabel": "NQU5_5MIN_S9_A1_LTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1751963100,
+          "barEnd": 1753419300,
+          "captured": "2025-07-25T05:09:04.901Z"
+        },
+        "created": "2025-07-25T05:09:04.901Z",
+        "lastModified": "2025-07-25T05:09:04.901Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "NQU5",
+        "timeframe": "5MIN",
+        "timestamp": "2025-07-25T05:09:10.943Z",
+        "contextKey": "NQU5-5MIN",
+        "group": "LTF"
+      },
+      {
+        "id": "drawing-1753420146687",
+        "singular_id": 75,
+        "element": {},
+        "type": "rectangle",
+        "label": "NQU5_5MIN_S10_A2_LTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1753337700,
+            "price": 23387.089912233427
+          },
+          "endPoint": {
+            "time": 1753342200,
+            "price": 23345.463006612572
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 1125.1867374316885,
+            "y": 318.2937223828884
+          },
+          "endPoint": {
+            "x": 1133.5310177367107,
+            "y": 374.1112482760582
+          }
+        },
+        "metrics": {
+          "barCount": 15,
+          "percentChange": "-0.18%",
+          "rawPercentChange": -0.18,
+          "priceRange": 41.63,
+          "priceChange": -41.63,
+          "highPrice": 23387.09,
+          "lowPrice": 23345.46,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1753337700,
+          "endTime": 1753342200
+        },
+        "timeframeInfo": {
+          "symbol": "NQU5",
+          "timeframe": "5MIN",
+          "timeframeType": "LTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A2",
+        "structuredLabel": "NQU5_5MIN_S10_A2_LTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1751963100,
+          "barEnd": 1753419300,
+          "captured": "2025-07-25T05:09:10.422Z"
+        },
+        "created": "2025-07-25T05:09:10.422Z",
+        "lastModified": "2025-07-25T05:09:10.422Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "NQU5",
+        "timeframe": "5MIN",
+        "timestamp": "2025-07-25T05:09:10.943Z",
+        "contextKey": "NQU5-5MIN",
+        "group": "LTF"
+      },
+      {
+        "id": "drawing-1753420160330",
+        "singular_id": 2,
+        "element": {},
+        "type": "rectangle",
+        "label": "NQU5_5MIN_S10_A1_LTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1753343100,
+            "price": 23343.976331411828
+          },
+          "endPoint": {
+            "time": 1753399200,
+            "price": 23402.700001841247
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 1135.199873797715,
+            "y": 376.10473134367
+          },
+          "endPoint": {
+            "x": 1232.5498106896414,
+            "y": 297.3621501729498
+          }
+        },
+        "metrics": {
+          "barCount": 187,
+          "percentChange": "+0.25%",
+          "rawPercentChange": 0.25,
+          "priceRange": 58.72,
+          "priceChange": 58.72,
+          "highPrice": 23402.7,
+          "lowPrice": 23343.98,
+          "bullish": true,
+          "direction": "UP",
+          "startTime": 1753343100,
+          "endTime": 1753399200
+        },
+        "timeframeInfo": {
+          "symbol": "NQU5",
+          "timeframe": "5MIN",
+          "timeframeType": "LTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A1",
+        "structuredLabel": "NQU5_5MIN_S10_A1_LTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1751963100,
+          "barEnd": 1753419300,
+          "captured": "2025-07-25T05:09:23.998Z"
+        },
+        "created": "2025-07-25T05:09:23.998Z",
+        "lastModified": "2025-07-25T05:09:23.998Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "NQU5",
+        "timeframe": "5MIN",
+        "timestamp": "2025-07-25T05:09:28.970Z",
+        "contextKey": "NQU5-5MIN"
+      },
+      {
+        "id": "drawing-1753420166139",
+        "singular_id": 3,
+        "element": {},
+        "type": "rectangle",
+        "label": "NQU5_5MIN_S11_A2_LTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1753386300,
+            "price": 23363.30310902151
+          },
+          "endPoint": {
+            "time": 1753410300,
+            "price": 23440.61021946024
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 1215.3049647259288,
+            "y": 350.18945146469684
+          },
+          "endPoint": {
+            "x": 1253.132368775363,
+            "y": 246.52833194881464
+          }
+        },
+        "metrics": {
+          "barCount": 80,
+          "percentChange": "+0.33%",
+          "rawPercentChange": 0.33,
+          "priceRange": 77.31,
+          "priceChange": 77.31,
+          "highPrice": 23440.61,
+          "lowPrice": 23363.3,
+          "bullish": true,
+          "direction": "UP",
+          "startTime": 1753386300,
+          "endTime": 1753410300
+        },
+        "timeframeInfo": {
+          "symbol": "NQU5",
+          "timeframe": "5MIN",
+          "timeframeType": "LTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A2",
+        "structuredLabel": "NQU5_5MIN_S11_A2_LTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1751963100,
+          "barEnd": 1753419300,
+          "captured": "2025-07-25T05:09:28.452Z"
+        },
+        "created": "2025-07-25T05:09:28.452Z",
+        "lastModified": "2025-07-25T05:09:28.452Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "NQU5",
+        "timeframe": "5MIN",
+        "timestamp": "2025-07-25T05:09:28.970Z",
+        "contextKey": "NQU5-5MIN"
+      },
+      {
+        "id": "drawing-1753420180630",
+        "singular_id": 76,
+        "element": {},
+        "type": "rectangle",
+        "label": "NQU5_5MIN_S11_A4_LTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1753296000,
+            "price": 23415.336741047577
+          },
+          "endPoint": {
+            "time": 1753332300,
+            "price": 23410.13337784497
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 1054.5384975158333,
+            "y": 280.41754409823966
+          },
+          "endPoint": {
+            "x": 1115.1736010656618,
+            "y": 287.394734834886
+          }
+        },
+        "metrics": {
+          "barCount": 121,
+          "percentChange": "-0.02%",
+          "rawPercentChange": -0.02,
+          "priceRange": 5.2,
+          "priceChange": -5.2,
+          "highPrice": 23415.34,
+          "lowPrice": 23410.13,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1753296000,
+          "endTime": 1753332300
+        },
+        "timeframeInfo": {
+          "symbol": "NQU5",
+          "timeframe": "5MIN",
+          "timeframeType": "LTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A4",
+        "structuredLabel": "NQU5_5MIN_S11_A4_LTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1751963100,
+          "barEnd": 1753419300,
+          "captured": "2025-07-25T05:09:44.055Z"
+        },
+        "created": "2025-07-25T05:09:44.055Z",
+        "lastModified": "2025-07-25T05:09:44.055Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "NQU5",
+        "timeframe": "5MIN",
+        "timestamp": "2025-07-25T05:09:56.142Z",
+        "contextKey": "NQU5-5MIN"
+      },
+      {
+        "id": "drawing-1753420185125",
+        "singular_id": 77,
+        "element": {},
+        "type": "rectangle",
+        "label": "NQU5_5MIN_S11_A5_LTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1753296300,
+            "price": 23397.49663863864
+          },
+          "endPoint": {
+            "time": 1753329300,
+            "price": 23387.089912233427
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 1055.0947828695016,
+            "y": 304.3393409095961
+          },
+          "endPoint": {
+            "x": 1109.6107475289803,
+            "y": 318.2937223828884
+          }
+        },
+        "metrics": {
+          "barCount": 110,
+          "percentChange": "-0.04%",
+          "rawPercentChange": -0.04,
+          "priceRange": 10.41,
+          "priceChange": -10.41,
+          "highPrice": 23397.5,
+          "lowPrice": 23387.09,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1753296300,
+          "endTime": 1753329300
+        },
+        "timeframeInfo": {
+          "symbol": "NQU5",
+          "timeframe": "5MIN",
+          "timeframeType": "LTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A5",
+        "structuredLabel": "NQU5_5MIN_S11_A5_LTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1751963100,
+          "barEnd": 1753419300,
+          "captured": "2025-07-25T05:09:48.224Z"
+        },
+        "created": "2025-07-25T05:09:48.224Z",
+        "lastModified": "2025-07-25T05:09:48.224Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "NQU5",
+        "timeframe": "5MIN",
+        "timestamp": "2025-07-25T05:09:56.142Z",
+        "contextKey": "NQU5-5MIN"
+      },
+      {
+        "id": "drawing-1753420192676",
+        "singular_id": 78,
+        "element": {},
+        "type": "rectangle",
+        "label": "NQU5_5MIN_S11_A5_LTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1753127400,
+            "price": 23355.869733017786
+          },
+          "endPoint": {
+            "time": 1753419300,
+            "price": 23347.69301941369
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 755.2569772423685,
+            "y": 360.15686680276576
+          },
+          "endPoint": {
+            "x": 1269.8209293854075,
+            "y": 371.1210236746356
+          }
+        },
+        "metrics": {
+          "barCount": 973,
+          "percentChange": "-0.04%",
+          "rawPercentChange": -0.04,
+          "priceRange": 8.18,
+          "priceChange": -8.18,
+          "highPrice": 23355.87,
+          "lowPrice": 23347.69,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1753127400,
+          "endTime": 1753419300
+        },
+        "timeframeInfo": {
+          "symbol": "NQU5",
+          "timeframe": "5MIN",
+          "timeframeType": "LTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A5",
+        "structuredLabel": "NQU5_5MIN_S11_A5_LTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1751963100,
+          "barEnd": 1753419300,
+          "captured": "2025-07-25T05:09:56.138Z"
+        },
+        "created": "2025-07-25T05:09:56.138Z",
+        "lastModified": "2025-07-25T05:09:56.138Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "NQU5",
+        "timeframe": "5MIN",
+        "timestamp": "2025-07-25T05:09:56.142Z",
+        "contextKey": "NQU5-5MIN"
+      },
+      {
+        "id": "drawing-1753420200660",
+        "singular_id": 67,
+        "element": {},
+        "type": "rectangle",
+        "label": "NQU5_5MIN_S11_A6_LTF",
+        "status": "ACTIVE",
+        "chartValues": {
+          "startPoint": {
+            "time": 1753303500,
+            "price": 23407.903365043854
+          },
+          "endPoint": {
+            "time": 1753419300,
+            "price": 23406.41668984311
+          }
+        },
+        "pixelValues": {
+          "startPoint": {
+            "x": 1068.445631357537,
+            "y": 290.3849594363036
+          },
+          "endPoint": {
+            "x": 1269.8209293854075,
+            "y": 292.3784425039154
+          }
+        },
+        "metrics": {
+          "barCount": 386,
+          "percentChange": "-0.01%",
+          "rawPercentChange": -0.01,
+          "priceRange": 1.49,
+          "priceChange": -1.49,
+          "highPrice": 23407.9,
+          "lowPrice": 23406.42,
+          "bullish": false,
+          "direction": "DOWN",
+          "startTime": 1753303500,
+          "endTime": 1753419300
+        },
+        "timeframeInfo": {
+          "symbol": "NQU5",
+          "timeframe": "5MIN",
+          "timeframeType": "LTF"
+        },
+        "color": "rgba(45, 85, 155, 0.35)",
+        "atomicType": "A6",
+        "structuredLabel": "NQU5_5MIN_S11_A6_LTF",
+        "viewportContext": {
+          "screenWidth": 2560,
+          "screenHeight": 1440,
+          "viewportWidth": 2552,
+          "viewportHeight": 1361,
+          "priceMin": 0,
+          "priceMax": 100000,
+          "barStart": 1751963100,
+          "barEnd": 1753419300,
+          "captured": "2025-07-25T05:10:06.068Z"
+        },
+        "created": "2025-07-25T05:10:06.068Z",
+        "lastModified": "2025-07-25T05:10:06.068Z",
+        "visible": true,
+        "saved": true,
+        "symbol": "NQU5",
+        "timeframe": "5MIN",
+        "timestamp": "2025-07-25T05:10:06.072Z",
+        "contextKey": "NQU5-5MIN"
+      }
+    ],
+    "metadata": {
+      "savedVia": "nuclearBridgeUI",
+      "chartVersion": "v4",
+      "timestamp": "2025-07-25T05:11:34.075Z",
+      "symbol": "NQU5",
+      "timeframe": "5MIN",
+      "group": "LTF",
+      "savedBy": "user",
+      "savedAt": "2025-07-25T05:11:34.079Z",
+      "chartZoom": {
+        "from": 1693.0232993182299,
+        "to": 4906.20103779348
+      },
+      "drawingCount": 26,
+      "indexedDBVersion": "v2.0",
+      "isOnlyStorageSystem": true,
+      "slopeAnalysis": null,
+      "trendHealth": null,
+      "totalSize": 31875,
+      "lastSaved": "2025-07-25T05:11:34.167Z"
+    },
+    "saved": "2025-07-25T05:11:34.167Z",
+    "id": 13
+  }
+]

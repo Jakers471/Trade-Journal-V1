@@ -14,6 +14,9 @@ st.markdown("Upload your trades CSV to begin. All analysis is performed in your 
 # --- File uploader ---
 uploaded_file = st.file_uploader("Upload your trades CSV", type=["csv"])
 
+# Add a checkbox to include/exclude fees
+include_fees = st.checkbox('Include fees in PnL calculations', value=True)
+
 if uploaded_file is not None:
     df = pd.read_csv(uploaded_file)
     st.success("CSV loaded successfully!")
@@ -24,7 +27,10 @@ if uploaded_file is not None:
     df['Was_Win'] = df['PnL'] > 0
     # Subtract Fees from PnL for net PnL
     if 'Fees' in df.columns:
+        if include_fees:
         df['NetPnL'] = df['PnL'] - df['Fees']
+        else:
+            df['NetPnL'] = df['PnL']
     else:
         df['NetPnL'] = df['PnL']
     df['Cumulative_PnL'] = df['NetPnL'].cumsum()
@@ -55,10 +61,14 @@ if uploaded_file is not None:
     # --- Quick NetPnL and Trade Diagnostics ---
     st.write(f"**Sum of Net PnL:** {df['NetPnL'].sum():,.2f}")
     st.write(f"**Number of trades:** {len(df)}")
-    st.write('**Top 10 biggest trades (Net PnL):**')
-    st.write(df[['EnteredAt', 'NetPnL', 'Size', 'Cumulative_PnL']].sort_values('NetPnL', ascending=False).head(10))
-    st.write('**Top 10 biggest losses (Net PnL):**')
-    st.write(df[['EnteredAt', 'NetPnL', 'Size', 'Cumulative_PnL']].sort_values('NetPnL').head(10))
+
+    # Show only the biggest win and biggest loss
+    biggest_win = df.loc[df['NetPnL'].idxmax()]
+    biggest_loss = df.loc[df['NetPnL'].idxmin()]
+    st.write('**Biggest Win (Net PnL):**')
+    st.write(biggest_win[['EnteredAt', 'NetPnL', 'Size', 'Cumulative_PnL']])
+    st.write('**Biggest Loss (Net PnL):**')
+    st.write(biggest_loss[['EnteredAt', 'NetPnL', 'Size', 'Cumulative_PnL']])
 
     # --- Dashboard Summary ---
     st.header("Dashboard Summary")
