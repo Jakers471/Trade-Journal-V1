@@ -782,336 +782,390 @@ if trade_file and analysis_loaded:
                                     st.dataframe(comprehensive_table)
                                     
                                     # Export for ML training
-                                                                            st.markdown('<h4 style="color: gold;">Export for Machine Learning</h4>', unsafe_allow_html=True)
+                                    st.markdown('<h4 style="color: gold;">Export for Machine Learning</h4>', unsafe_allow_html=True)
                                     
                                     # --- MASSIVE BEAST ML DATASET CREATION ---
                                     st.markdown('<h3 style="color: red;">MASSIVE BEAST: Complete Analysis + Trade Dimensions ML Dataset</h3>', unsafe_allow_html=True)
                                     
-                                    # Start with the comprehensive neural network data
-                                    beast_ml_dataset = nn_df[['Symbol', 'Timeframe', 'A_Pattern', 'S_Pattern', 'Normalized_Change', 'Normalized_Bars', 
-                                                             'Pattern_Strength', 'Volatility_Score', 'Pattern_Confidence', 'Z_Score',
-                                                             'Percent_Change_Numeric', 'Bar_Count_Numeric', 'Start_Time_Chart', 'End_Time_Chart',
-                                                             'Start_Price', 'End_Price', 'High_Price', 'Low_Price', 'Price_Range', 'Price_Change',
-                                                             'Percent_Change', 'Raw_Percent_Change', 'Bar_Count', 'Bullish', 'Direction']].copy()
-                                    
-                                    # Add Fibonacci retracement data
-                                    if fib_results:
-                                        fib_df_ml = pd.DataFrame(fib_results)
-                                        beast_ml_dataset = beast_ml_dataset.merge(
-                                            fib_df_ml[['Symbol', 'Timeframe', 'A1_Start_Time', 'Fib_Type', 'Fib_Level', 'Zone']], 
-                                            left_on=['Symbol', 'Timeframe', 'Start_Time_Chart'],
-                                            right_on=['Symbol', 'Timeframe', 'A1_Start_Time'],
-                                            how='left'
-                                        )
-                                        if 'A1_Start_Time' in beast_ml_dataset.columns:
-                                            beast_ml_dataset = beast_ml_dataset.drop('A1_Start_Time', axis=1)
-                                    else:
-                                        beast_ml_dataset['Fib_Type'] = 'N/A'
-                                        beast_ml_dataset['Fib_Level'] = 0.0
-                                        beast_ml_dataset['Zone'] = 'N/A'
-                                    
-                                    # Add A-pattern spatial-temporal analysis data
-                                    if a_pattern_spatial_results:
-                                        spatial_df = pd.DataFrame(a_pattern_spatial_results)
+                                    # Add progress indicator for dataset creation
+                                    with st.spinner("Creating MASSIVE BEAST ML Dataset..."):
+                                        progress_text = st.empty()
                                         
-                                        # Convert string scores to numeric before aggregation
-                                        numeric_columns = ['Spatial_Score', 'Temporal_Score', 'Combined_Score', 'Entry_Retracement', 'Exit_Retracement', 'Trade_PnL']
-                                        for col in numeric_columns:
-                                            if col in spatial_df.columns:
-                                                # Check if column is already numeric
-                                                if spatial_df[col].dtype == 'object':
-                                                    # Handle string values
-                                                    spatial_df[col] = pd.to_numeric(spatial_df[col].astype(str).str.replace('N/A', '0'), errors='coerce')
+                                        # Start with the comprehensive neural network data
+                                        progress_text.text("Step 1/6: Loading neural network data...")
+                                        
+                                        # Show what samples we're working with
+                                        st.info(f"**Found {len(nn_df)} patterns in neural network data**")
+                                        st.write("**Available columns in nn_df:**")
+                                        st.write(nn_df.columns.tolist())
+                                        
+                                        # Try to find pattern column
+                                        pattern_col = None
+                                        for col in nn_df.columns:
+                                            if 'pattern' in col.lower() and 'a_' in col.lower():
+                                                pattern_col = col
+                                                break
+                                        
+                                        if pattern_col:
+                                            st.write(f"**Pattern Types Found in {pattern_col}:**")
+                                            pattern_counts = nn_df[pattern_col].value_counts()
+                                            st.write(pattern_counts)
+                                        else:
+                                            st.write("**No A_Pattern column found. Available columns:**")
+                                            st.write(nn_df.columns.tolist())
+                                        
+                                        beast_ml_dataset = nn_df[['Symbol', 'Timeframe', 'A_Pattern', 'S_Pattern', 'Normalized_Change', 'Normalized_Bars', 
+                                                                 'Pattern_Strength', 'Volatility_Score', 'Pattern_Confidence', 'Z_Score',
+                                                                 'Percent_Change_Numeric', 'Bar_Count_Numeric', 'Start_Time_Chart', 'End_Time_Chart',
+                                                                 'Start_Price', 'End_Price', 'High_Price', 'Low_Price', 'Price_Range', 'Price_Change',
+                                                                 'Percent_Change', 'Raw_Percent_Change', 'Bar_Count', 'Bullish', 'Direction']].copy()
+                                        
+                                        # Add Fibonacci retracement data
+                                        progress_text.text("Step 2/6: Adding Fibonacci analysis...")
+                                        if fib_results:
+                                            fib_df_ml = pd.DataFrame(fib_results)
+                                            beast_ml_dataset = beast_ml_dataset.merge(
+                                                fib_df_ml[['Symbol', 'Timeframe', 'A1_Start_Time', 'Fib_Type', 'Fib_Level', 'Zone']], 
+                                                left_on=['Symbol', 'Timeframe', 'Start_Time_Chart'],
+                                                right_on=['Symbol', 'Timeframe', 'A1_Start_Time'],
+                                                how='left'
+                                            )
+                                            if 'A1_Start_Time' in beast_ml_dataset.columns:
+                                                beast_ml_dataset = beast_ml_dataset.drop('A1_Start_Time', axis=1)
+                                        else:
+                                            beast_ml_dataset['Fib_Type'] = 'N/A'
+                                            beast_ml_dataset['Fib_Level'] = 0.0
+                                            beast_ml_dataset['Zone'] = 'N/A'
+                                        
+                                        # Add A-pattern spatial-temporal analysis data
+                                        progress_text.text("Step 3/6: Adding spatial-temporal analysis...")
+                                        if a_pattern_spatial_results:
+                                            spatial_df = pd.DataFrame(a_pattern_spatial_results)
+                                            
+                                            # Convert string scores to numeric before aggregation
+                                            numeric_columns = ['Spatial_Score', 'Temporal_Score', 'Combined_Score', 'Entry_Retracement', 'Exit_Retracement', 'Trade_PnL']
+                                            for col in numeric_columns:
+                                                if col in spatial_df.columns:
+                                                    # Check if column is already numeric
+                                                    if spatial_df[col].dtype == 'object':
+                                                        # Handle string values
+                                                        spatial_df[col] = pd.to_numeric(spatial_df[col].astype(str).str.replace('N/A', '0'), errors='coerce')
+                                                    else:
+                                                        # Already numeric, just ensure it's float
+                                                        spatial_df[col] = pd.to_numeric(spatial_df[col], errors='coerce')
+                                            
+                                            # Aggregate spatial metrics by pattern
+                                            spatial_agg = spatial_df.groupby(['Symbol', 'Timeframe', 'S_Pattern', 'Analyzed_A_Pattern']).agg({
+                                                'Spatial_Score': ['mean', 'std', 'min', 'max'],
+                                                'Temporal_Score': ['mean', 'std', 'min', 'max'],
+                                                'Combined_Score': ['mean', 'std', 'min', 'max'],
+                                                'Entry_Retracement': ['mean', 'std'],
+                                                'Exit_Retracement': ['mean', 'std'],
+                                                'Trade_PnL': ['mean', 'sum', 'count'],
+                                                'Trade_Type': lambda x: x.mode().iloc[0] if len(x.mode()) > 0 else 'Unknown'
+                                            }).reset_index()
+                                            
+                                            # Flatten column names
+                                            spatial_agg.columns = ['Symbol', 'Timeframe', 'S_Pattern', 'Analyzed_A_Pattern'] + \
+                                                                 [f'Spatial_{col[1]}' for col in spatial_agg.columns[4:8]] + \
+                                                                 [f'Temporal_{col[1]}' for col in spatial_agg.columns[8:12]] + \
+                                                                 [f'Combined_{col[1]}' for col in spatial_agg.columns[12:16]] + \
+                                                                 [f'Entry_Retracement_{col[1]}' for col in spatial_agg.columns[16:18]] + \
+                                                                 [f'Exit_Retracement_{col[1]}' for col in spatial_agg.columns[18:20]] + \
+                                                                 [f'Trade_PnL_{col[1]}' for col in spatial_agg.columns[20:23]] + \
+                                                                 ['Trade_Type_Mode']
+                                            
+                                            # Merge spatial data
+                                            beast_ml_dataset = beast_ml_dataset.merge(
+                                                spatial_agg,
+                                                left_on=['Symbol', 'Timeframe', 'S_Pattern', 'A_Pattern'],
+                                                right_on=['Symbol', 'Timeframe', 'S_Pattern', 'Analyzed_A_Pattern'],
+                                                how='left'
+                                            )
+                                            if 'Analyzed_A_Pattern' in beast_ml_dataset.columns:
+                                                beast_ml_dataset = beast_ml_dataset.drop('Analyzed_A_Pattern', axis=1)
+                                        
+                                        # Add trade performance metrics by pattern
+                                        progress_text.text("Step 4/6: Adding trade performance metrics...")
+                                        if 'trades' in locals() and not trades.empty:
+                                            # Convert trade times to Unix timestamps for matching
+                                            trades['EnteredAt_unix'] = pd.to_datetime(trades['EnteredAt']).astype(np.int64) // 10**9
+                                            trades['ExitedAt_unix'] = pd.to_datetime(trades['ExitedAt']).astype(np.int64) // 10**9
+                                            
+                                            # Find trades that occurred during each pattern's timeframe
+                                            trade_pattern_matches = []
+                                            
+                                            for _, pattern in beast_ml_dataset.iterrows():
+                                                pattern_start = pd.to_numeric(pattern['Start_Time_Chart'], errors='coerce')
+                                                pattern_end = pd.to_numeric(pattern['End_Time_Chart'], errors='coerce')
+                                                
+                                                if pd.notna(pattern_start) and pd.notna(pattern_end):
+                                                    # Find trades in this symbol during this pattern's timeframe
+                                                    symbol_trades = trades[trades['ContractName'] == pattern['Symbol']]
+                                                    relevant_trades = symbol_trades[
+                                                        (symbol_trades['EnteredAt_unix'] >= pattern_start) &
+                                                        (symbol_trades['ExitedAt_unix'] <= pattern_end)
+                                                    ]
+                                                    
+                                                    if not relevant_trades.empty:
+                                                        # Calculate trade metrics for this pattern
+                                                        trade_metrics = {
+                                                            'Symbol': pattern['Symbol'],
+                                                            'Timeframe': pattern['Timeframe'],
+                                                            'S_Pattern': pattern['S_Pattern'],
+                                                            'A_Pattern': pattern['A_Pattern'],
+                                                            'Pattern_Trades_Count': len(relevant_trades),
+                                                            'Pattern_Total_PnL': relevant_trades['PnL'].sum(),
+                                                            'Pattern_Avg_PnL': relevant_trades['PnL'].mean(),
+                                                            'Pattern_Win_Rate': (relevant_trades['PnL'] > 0).mean() * 100,
+                                                            'Pattern_Best_Trade': relevant_trades['PnL'].max(),
+                                                            'Pattern_Worst_Trade': relevant_trades['PnL'].min(),
+                                                            'Pattern_Profit_Factor': relevant_trades[relevant_trades['PnL'] > 0]['PnL'].sum() / abs(relevant_trades[relevant_trades['PnL'] < 0]['PnL'].sum()) if relevant_trades[relevant_trades['PnL'] < 0]['PnL'].sum() != 0 else float('nan'),
+                                                            'Pattern_Avg_Win': relevant_trades[relevant_trades['PnL'] > 0]['PnL'].mean() if len(relevant_trades[relevant_trades['PnL'] > 0]) > 0 else 0,
+                                                            'Pattern_Avg_Loss': relevant_trades[relevant_trades['PnL'] < 0]['PnL'].mean() if len(relevant_trades[relevant_trades['PnL'] < 0]) > 0 else 0,
+                                                            'Pattern_Win_Loss_Ratio': abs(relevant_trades[relevant_trades['PnL'] > 0]['PnL'].mean() / relevant_trades[relevant_trades['PnL'] < 0]['PnL'].mean()) if (len(relevant_trades[relevant_trades['PnL'] > 0]) > 0 and len(relevant_trades[relevant_trades['PnL'] < 0]) > 0 and relevant_trades[relevant_trades['PnL'] < 0]['PnL'].mean() != 0) else float('nan'),
+                                                            'Pattern_Total_Volume': relevant_trades['Size'].sum() if 'Size' in relevant_trades.columns else 0,
+                                                            'Pattern_Avg_Volume': relevant_trades['Size'].mean() if 'Size' in relevant_trades.columns else 0,
+                                                            'Pattern_Long_Trades': len(relevant_trades[relevant_trades['Type'] == 'Long']) if 'Type' in relevant_trades.columns else 0,
+                                                            'Pattern_Short_Trades': len(relevant_trades[relevant_trades['Type'] == 'Short']) if 'Type' in relevant_trades.columns else 0,
+                                                            'Pattern_Long_Win_Rate': (relevant_trades[(relevant_trades['Type'] == 'Long') & (relevant_trades['PnL'] > 0)]['PnL'].count() / len(relevant_trades[relevant_trades['Type'] == 'Long'])) * 100 if 'Type' in relevant_trades.columns and len(relevant_trades[relevant_trades['Type'] == 'Long']) > 0 else 0,
+                                                            'Pattern_Short_Win_Rate': (relevant_trades[(relevant_trades['Type'] == 'Short') & (relevant_trades['PnL'] > 0)]['PnL'].count() / len(relevant_trades[relevant_trades['Type'] == 'Short'])) * 100 if 'Type' in relevant_trades.columns and len(relevant_trades[relevant_trades['Type'] == 'Short']) > 0 else 0
+                                                        }
+                                                        trade_pattern_matches.append(trade_metrics)
+                                            
+                                            if trade_pattern_matches:
+                                                trade_pattern_df = pd.DataFrame(trade_pattern_matches)
+                                                beast_ml_dataset = beast_ml_dataset.merge(
+                                                    trade_pattern_df,
+                                                    on=['Symbol', 'Timeframe', 'S_Pattern', 'A_Pattern'],
+                                                    how='left'
+                                                )
+                                        
+                                        # Add pattern sequence and succession features
+                                        progress_text.text("Step 5/6: Adding pattern features and classifications...")
+                                        beast_ml_dataset['Pattern_Sequence'] = beast_ml_dataset.groupby(['Symbol', 'Timeframe', 'S_Pattern']).cumcount() + 1
+                                        beast_ml_dataset['Total_Patterns_In_S_Group'] = beast_ml_dataset.groupby(['Symbol', 'Timeframe', 'S_Pattern'])['A_Pattern'].transform('count')
+                                        beast_ml_dataset['Pattern_Position_In_Sequence'] = beast_ml_dataset['Pattern_Sequence'] / beast_ml_dataset['Total_Patterns_In_S_Group']
+                                        
+                                        # Add pattern type classifications
+                                        beast_ml_dataset['Is_Stage1_Pattern'] = beast_ml_dataset['A_Pattern'].isin(['A1', 'A12', 'A13']).astype(int)
+                                        beast_ml_dataset['Is_Stage2_Pattern'] = beast_ml_dataset['A_Pattern'].isin(['A2', 'A14', 'A15']).astype(int)
+                                        beast_ml_dataset['Is_Support_Resistance'] = beast_ml_dataset['A_Pattern'].isin(['A5', 'A6']).astype(int)
+                                        beast_ml_dataset['Is_Demand_Supply'] = beast_ml_dataset['A_Pattern'].isin(['A3', 'A4']).astype(int)
+                                        beast_ml_dataset['Is_Fibonacci_Pattern'] = beast_ml_dataset['A_Pattern'].isin(['A12', 'A13', 'A14', 'A15', 'A16', 'A17', 'A18', 'A19']).astype(int)
+                                        
+                                        # Add market structure features
+                                        beast_ml_dataset['Is_Bullish_Pattern'] = (beast_ml_dataset['Bullish'] == True).astype(int)
+                                        beast_ml_dataset['Is_Bearish_Pattern'] = (beast_ml_dataset['Bullish'] == False).astype(int)
+                                        beast_ml_dataset['Pattern_Direction_Up'] = (beast_ml_dataset['Direction'] == 'up').astype(int)
+                                        beast_ml_dataset['Pattern_Direction_Down'] = (beast_ml_dataset['Direction'] == 'down').astype(int)
+                                        
+                                        # Add price action features
+                                        beast_ml_dataset['Price_Change_Positive'] = (beast_ml_dataset['Price_Change'] > 0).astype(int)
+                                        beast_ml_dataset['Percent_Change_Positive'] = (beast_ml_dataset['Percent_Change_Numeric'] > 0).astype(int)
+                                        beast_ml_dataset['High_Low_Ratio'] = beast_ml_dataset['High_Price'] / beast_ml_dataset['Low_Price']
+                                        beast_ml_dataset['Price_Range_Percent'] = (beast_ml_dataset['Price_Range'] / beast_ml_dataset['Start_Price']) * 100
+                                        
+                                        # Add timeframe features
+                                        timeframe_mapping = {
+                                            '1M': 1, '5M': 5, '15M': 15, '30M': 30,
+                                            '1H': 60, '4H': 240, '1D': 1440
+                                        }
+                                        beast_ml_dataset['Timeframe_Minutes'] = beast_ml_dataset['Timeframe'].map(timeframe_mapping)
+                                        beast_ml_dataset['Is_Higher_Timeframe'] = (beast_ml_dataset['Timeframe_Minutes'] >= 60).astype(int)
+                                        beast_ml_dataset['Is_Lower_Timeframe'] = (beast_ml_dataset['Timeframe_Minutes'] < 60).astype(int)
+                                        
+                                        # Add S-group consistency features
+                                        # Ensure numeric columns for aggregation
+                                        numeric_cols_for_agg = ['Pattern_Strength', 'Pattern_Confidence', 'Volatility_Score', 'Z_Score', 'Percent_Change_Numeric', 'Bar_Count_Numeric']
+                                        for col in numeric_cols_for_agg:
+                                            if col in beast_ml_dataset.columns:
+                                                # Handle mixed data types safely
+                                                if beast_ml_dataset[col].dtype == 'object':
+                                                    # Convert string values to numeric
+                                                    beast_ml_dataset[col] = pd.to_numeric(beast_ml_dataset[col].astype(str).str.replace('N/A', '0'), errors='coerce')
                                                 else:
                                                     # Already numeric, just ensure it's float
-                                                    spatial_df[col] = pd.to_numeric(spatial_df[col], errors='coerce')
+                                                    beast_ml_dataset[col] = pd.to_numeric(beast_ml_dataset[col], errors='coerce')
                                         
-                                        # Aggregate spatial metrics by pattern
-                                        spatial_agg = spatial_df.groupby(['Symbol', 'Timeframe', 'S_Pattern', 'Analyzed_A_Pattern']).agg({
-                                            'Spatial_Score': ['mean', 'std', 'min', 'max'],
-                                            'Temporal_Score': ['mean', 'std', 'min', 'max'],
-                                            'Combined_Score': ['mean', 'std', 'min', 'max'],
-                                            'Entry_Retracement': ['mean', 'std'],
-                                            'Exit_Retracement': ['mean', 'std'],
-                                            'Trade_PnL': ['mean', 'sum', 'count'],
-                                            'Trade_Type': lambda x: x.mode().iloc[0] if len(x.mode()) > 0 else 'Unknown'
+                                        s_group_metrics = beast_ml_dataset.groupby(['Symbol', 'Timeframe', 'S_Pattern']).agg({
+                                            'Pattern_Strength': ['mean', 'std'],
+                                            'Pattern_Confidence': ['mean', 'std'],
+                                            'Volatility_Score': ['mean', 'std'],
+                                            'Z_Score': ['mean', 'std'],
+                                            'Percent_Change_Numeric': ['mean', 'std'],
+                                            'Bar_Count_Numeric': ['mean', 'std']
                                         }).reset_index()
                                         
                                         # Flatten column names
-                                        spatial_agg.columns = ['Symbol', 'Timeframe', 'S_Pattern', 'Analyzed_A_Pattern'] + \
-                                                             [f'Spatial_{col[1]}' for col in spatial_agg.columns[4:8]] + \
-                                                             [f'Temporal_{col[1]}' for col in spatial_agg.columns[8:12]] + \
-                                                             [f'Combined_{col[1]}' for col in spatial_agg.columns[12:16]] + \
-                                                             [f'Entry_Retracement_{col[1]}' for col in spatial_agg.columns[16:18]] + \
-                                                             [f'Exit_Retracement_{col[1]}' for col in spatial_agg.columns[18:20]] + \
-                                                             [f'Trade_PnL_{col[1]}' for col in spatial_agg.columns[20:23]] + \
-                                                             ['Trade_Type_Mode']
+                                        s_group_metrics.columns = ['Symbol', 'Timeframe', 'S_Pattern'] + \
+                                                                 [f'S_Group_{col[0]}_{col[1]}' for col in s_group_metrics.columns[3:]]
                                         
-                                        # Merge spatial data
                                         beast_ml_dataset = beast_ml_dataset.merge(
-                                            spatial_agg,
-                                            left_on=['Symbol', 'Timeframe', 'S_Pattern', 'A_Pattern'],
-                                            right_on=['Symbol', 'Timeframe', 'S_Pattern', 'Analyzed_A_Pattern'],
+                                            s_group_metrics,
+                                            on=['Symbol', 'Timeframe', 'S_Pattern'],
                                             how='left'
                                         )
-                                        if 'Analyzed_A_Pattern' in beast_ml_dataset.columns:
-                                            beast_ml_dataset = beast_ml_dataset.drop('Analyzed_A_Pattern', axis=1)
-                                    
-                                    # Add trade performance metrics by pattern
-                                    if 'trades' in locals() and not trades.empty:
-                                        # Convert trade times to Unix timestamps for matching
-                                        trades['EnteredAt_unix'] = pd.to_datetime(trades['EnteredAt']).astype(np.int64) // 10**9
-                                        trades['ExitedAt_unix'] = pd.to_datetime(trades['ExitedAt']).astype(np.int64) // 10**9
                                         
-                                        # Find trades that occurred during each pattern's timeframe
-                                        trade_pattern_matches = []
-                                        
-                                        for _, pattern in beast_ml_dataset.iterrows():
-                                            pattern_start = pd.to_numeric(pattern['Start_Time_Chart'], errors='coerce')
-                                            pattern_end = pd.to_numeric(pattern['End_Time_Chart'], errors='coerce')
-                                            
-                                            if pd.notna(pattern_start) and pd.notna(pattern_end):
-                                                # Find trades in this symbol during this pattern's timeframe
-                                                symbol_trades = trades[trades['ContractName'] == pattern['Symbol']]
-                                                relevant_trades = symbol_trades[
-                                                    (symbol_trades['EnteredAt_unix'] >= pattern_start) &
-                                                    (symbol_trades['ExitedAt_unix'] <= pattern_end)
-                                                ]
-                                                
-                                                if not relevant_trades.empty:
-                                                    # Calculate trade metrics for this pattern
-                                                    trade_metrics = {
-                                                        'Symbol': pattern['Symbol'],
-                                                        'Timeframe': pattern['Timeframe'],
-                                                        'S_Pattern': pattern['S_Pattern'],
-                                                        'A_Pattern': pattern['A_Pattern'],
-                                                        'Pattern_Trades_Count': len(relevant_trades),
-                                                        'Pattern_Total_PnL': relevant_trades['PnL'].sum(),
-                                                        'Pattern_Avg_PnL': relevant_trades['PnL'].mean(),
-                                                        'Pattern_Win_Rate': (relevant_trades['PnL'] > 0).mean() * 100,
-                                                        'Pattern_Best_Trade': relevant_trades['PnL'].max(),
-                                                        'Pattern_Worst_Trade': relevant_trades['PnL'].min(),
-                                                        'Pattern_Profit_Factor': relevant_trades[relevant_trades['PnL'] > 0]['PnL'].sum() / abs(relevant_trades[relevant_trades['PnL'] < 0]['PnL'].sum()) if relevant_trades[relevant_trades['PnL'] < 0]['PnL'].sum() != 0 else float('nan'),
-                                                        'Pattern_Avg_Win': relevant_trades[relevant_trades['PnL'] > 0]['PnL'].mean() if len(relevant_trades[relevant_trades['PnL'] > 0]) > 0 else 0,
-                                                        'Pattern_Avg_Loss': relevant_trades[relevant_trades['PnL'] < 0]['PnL'].mean() if len(relevant_trades[relevant_trades['PnL'] < 0]) > 0 else 0,
-                                                        'Pattern_Win_Loss_Ratio': abs(relevant_trades[relevant_trades['PnL'] > 0]['PnL'].mean() / relevant_trades[relevant_trades['PnL'] < 0]['PnL'].mean()) if (len(relevant_trades[relevant_trades['PnL'] > 0]) > 0 and len(relevant_trades[relevant_trades['PnL'] < 0]) > 0 and relevant_trades[relevant_trades['PnL'] < 0]['PnL'].mean() != 0) else float('nan'),
-                                                        'Pattern_Total_Volume': relevant_trades['Size'].sum() if 'Size' in relevant_trades.columns else 0,
-                                                        'Pattern_Avg_Volume': relevant_trades['Size'].mean() if 'Size' in relevant_trades.columns else 0,
-                                                        'Pattern_Long_Trades': len(relevant_trades[relevant_trades['Type'] == 'Long']) if 'Type' in relevant_trades.columns else 0,
-                                                        'Pattern_Short_Trades': len(relevant_trades[relevant_trades['Type'] == 'Short']) if 'Type' in relevant_trades.columns else 0,
-                                                        'Pattern_Long_Win_Rate': (relevant_trades[(relevant_trades['Type'] == 'Long') & (relevant_trades['PnL'] > 0)]['PnL'].count() / len(relevant_trades[relevant_trades['Type'] == 'Long'])) * 100 if 'Type' in relevant_trades.columns and len(relevant_trades[relevant_trades['Type'] == 'Long']) > 0 else 0,
-                                                        'Pattern_Short_Win_Rate': (relevant_trades[(relevant_trades['Type'] == 'Short') & (relevant_trades['PnL'] > 0)]['PnL'].count() / len(relevant_trades[relevant_trades['Type'] == 'Short'])) * 100 if 'Type' in relevant_trades.columns and len(relevant_trades[relevant_trades['Type'] == 'Short']) > 0 else 0
-                                                    }
-                                                    trade_pattern_matches.append(trade_metrics)
-                                        
-                                        if trade_pattern_matches:
-                                            trade_pattern_df = pd.DataFrame(trade_pattern_matches)
-                                            beast_ml_dataset = beast_ml_dataset.merge(
-                                                trade_pattern_df,
-                                                on=['Symbol', 'Timeframe', 'S_Pattern', 'A_Pattern'],
-                                                how='left'
-                                            )
-                                    
-                                    # Add pattern sequence and succession features
-                                    beast_ml_dataset['Pattern_Sequence'] = beast_ml_dataset.groupby(['Symbol', 'Timeframe', 'S_Pattern']).cumcount() + 1
-                                    beast_ml_dataset['Total_Patterns_In_S_Group'] = beast_ml_dataset.groupby(['Symbol', 'Timeframe', 'S_Pattern'])['A_Pattern'].transform('count')
-                                    beast_ml_dataset['Pattern_Position_In_Sequence'] = beast_ml_dataset['Pattern_Sequence'] / beast_ml_dataset['Total_Patterns_In_S_Group']
-                                    
-                                    # Add pattern type classifications
-                                    beast_ml_dataset['Is_Stage1_Pattern'] = beast_ml_dataset['A_Pattern'].isin(['A1', 'A12', 'A13']).astype(int)
-                                    beast_ml_dataset['Is_Stage2_Pattern'] = beast_ml_dataset['A_Pattern'].isin(['A2', 'A14', 'A15']).astype(int)
-                                    beast_ml_dataset['Is_Support_Resistance'] = beast_ml_dataset['A_Pattern'].isin(['A5', 'A6']).astype(int)
-                                    beast_ml_dataset['Is_Demand_Supply'] = beast_ml_dataset['A_Pattern'].isin(['A3', 'A4']).astype(int)
-                                    beast_ml_dataset['Is_Fibonacci_Pattern'] = beast_ml_dataset['A_Pattern'].isin(['A12', 'A13', 'A14', 'A15', 'A16', 'A17', 'A18', 'A19']).astype(int)
-                                    
-                                    # Add market structure features
-                                    beast_ml_dataset['Is_Bullish_Pattern'] = (beast_ml_dataset['Bullish'] == True).astype(int)
-                                    beast_ml_dataset['Is_Bearish_Pattern'] = (beast_ml_dataset['Bullish'] == False).astype(int)
-                                    beast_ml_dataset['Pattern_Direction_Up'] = (beast_ml_dataset['Direction'] == 'up').astype(int)
-                                    beast_ml_dataset['Pattern_Direction_Down'] = (beast_ml_dataset['Direction'] == 'down').astype(int)
-                                    
-                                    # Add price action features
-                                    beast_ml_dataset['Price_Change_Positive'] = (beast_ml_dataset['Price_Change'] > 0).astype(int)
-                                    beast_ml_dataset['Percent_Change_Positive'] = (beast_ml_dataset['Percent_Change_Numeric'] > 0).astype(int)
-                                    beast_ml_dataset['High_Low_Ratio'] = beast_ml_dataset['High_Price'] / beast_ml_dataset['Low_Price']
-                                    beast_ml_dataset['Price_Range_Percent'] = (beast_ml_dataset['Price_Range'] / beast_ml_dataset['Start_Price']) * 100
-                                    
-                                    # Add timeframe features
-                                    timeframe_mapping = {
-                                        '1M': 1, '5M': 5, '15M': 15, '30M': 30,
-                                        '1H': 60, '4H': 240, '1D': 1440
-                                    }
-                                    beast_ml_dataset['Timeframe_Minutes'] = beast_ml_dataset['Timeframe'].map(timeframe_mapping)
-                                    beast_ml_dataset['Is_Higher_Timeframe'] = (beast_ml_dataset['Timeframe_Minutes'] >= 60).astype(int)
-                                    beast_ml_dataset['Is_Lower_Timeframe'] = (beast_ml_dataset['Timeframe_Minutes'] < 60).astype(int)
-                                    
-                                    # Add S-group consistency features
-                                    # Ensure numeric columns for aggregation
-                                    numeric_cols_for_agg = ['Pattern_Strength', 'Pattern_Confidence', 'Volatility_Score', 'Z_Score', 'Percent_Change_Numeric', 'Bar_Count_Numeric']
-                                    for col in numeric_cols_for_agg:
-                                        if col in beast_ml_dataset.columns:
-                                            # Handle mixed data types safely
-                                            if beast_ml_dataset[col].dtype == 'object':
-                                                # Convert string values to numeric
-                                                beast_ml_dataset[col] = pd.to_numeric(beast_ml_dataset[col].astype(str).str.replace('N/A', '0'), errors='coerce')
+                                        # Add pattern reliability features
+                                        # Ensure numeric values for calculations with safe conversion
+                                        def safe_numeric_convert(series):
+                                            if series.dtype == 'object':
+                                                return pd.to_numeric(series.astype(str).str.replace('N/A', '0'), errors='coerce')
                                             else:
-                                                # Already numeric, just ensure it's float
-                                                beast_ml_dataset[col] = pd.to_numeric(beast_ml_dataset[col], errors='coerce')
-                                    
-                                    s_group_metrics = beast_ml_dataset.groupby(['Symbol', 'Timeframe', 'S_Pattern']).agg({
-                                        'Pattern_Strength': ['mean', 'std'],
-                                        'Pattern_Confidence': ['mean', 'std'],
-                                        'Volatility_Score': ['mean', 'std'],
-                                        'Z_Score': ['mean', 'std'],
-                                        'Percent_Change_Numeric': ['mean', 'std'],
-                                        'Bar_Count_Numeric': ['mean', 'std']
-                                    }).reset_index()
-                                    
-                                    # Flatten column names
-                                    s_group_metrics.columns = ['Symbol', 'Timeframe', 'S_Pattern'] + \
-                                                             [f'S_Group_{col[0]}_{col[1]}' for col in s_group_metrics.columns[3:]]
-                                    
-                                    beast_ml_dataset = beast_ml_dataset.merge(
-                                        s_group_metrics,
-                                        on=['Symbol', 'Timeframe', 'S_Pattern'],
-                                        how='left'
-                                    )
-                                    
-                                    # Add pattern reliability features
-                                    # Ensure numeric values for calculations with safe conversion
-                                    def safe_numeric_convert(series):
-                                        if series.dtype == 'object':
-                                            return pd.to_numeric(series.astype(str).str.replace('N/A', '0'), errors='coerce')
+                                                return pd.to_numeric(series, errors='coerce')
+                                        
+                                        beast_ml_dataset['Pattern_Reliability_Score'] = safe_numeric_convert(beast_ml_dataset['Pattern_Confidence']) * (1 - safe_numeric_convert(beast_ml_dataset['Volatility_Score']))
+                                        beast_ml_dataset['Pattern_Performance_Score'] = safe_numeric_convert(beast_ml_dataset['Normalized_Change']) * safe_numeric_convert(beast_ml_dataset['Pattern_Strength'])
+                                        beast_ml_dataset['Pattern_Consistency_Score'] = 1 / (1 + safe_numeric_convert(beast_ml_dataset['Z_Score']).abs())
+                                        
+                                        # Add Fibonacci zone features
+                                        if 'Zone' in beast_ml_dataset.columns:
+                                            beast_ml_dataset['Is_Bullish_Zone'] = (beast_ml_dataset['Zone'].str.contains('Bullish|Green', na=False)).astype(int)
+                                            beast_ml_dataset['Is_Red_Zone'] = (beast_ml_dataset['Zone'].str.contains('Red', na=False)).astype(int)
+                                            beast_ml_dataset['Is_Grey_Zone'] = (beast_ml_dataset['Zone'].str.contains('Grey|Neutral', na=False)).astype(int)
+                                            beast_ml_dataset['Is_Upper_Half'] = (beast_ml_dataset['Zone'].str.contains('Upper', na=False)).astype(int)
+                                            beast_ml_dataset['Is_Lower_Half'] = (beast_ml_dataset['Zone'].str.contains('Lower', na=False)).astype(int)
+                                        
+                                        # Add temporal features
+                                        beast_ml_dataset['Pattern_Duration_Minutes'] = (pd.to_numeric(beast_ml_dataset['End_Time_Chart'], errors='coerce') - 
+                                                                                       pd.to_numeric(beast_ml_dataset['Start_Time_Chart'], errors='coerce')) / 60
+                                        beast_ml_dataset['Bars_Per_Minute'] = safe_numeric_convert(beast_ml_dataset['Bar_Count_Numeric']) / beast_ml_dataset['Pattern_Duration_Minutes']
+                                        beast_ml_dataset['Price_Change_Per_Bar'] = safe_numeric_convert(beast_ml_dataset['Price_Change']) / safe_numeric_convert(beast_ml_dataset['Bar_Count_Numeric'])
+                                        
+                                        # Add market efficiency features
+                                        beast_ml_dataset['Market_Efficiency_Ratio'] = safe_numeric_convert(beast_ml_dataset['Price_Change']) / safe_numeric_convert(beast_ml_dataset['Price_Range'])
+                                        beast_ml_dataset['Pattern_Intensity'] = safe_numeric_convert(beast_ml_dataset['Percent_Change_Numeric']) / safe_numeric_convert(beast_ml_dataset['Bar_Count_Numeric'])
+                                        
+                                        # Fill NaN values with appropriate defaults
+                                        progress_text.text("Step 6/6: Finalizing dataset...")
+                                        numeric_columns = beast_ml_dataset.select_dtypes(include=[np.number]).columns
+                                        beast_ml_dataset[numeric_columns] = beast_ml_dataset[numeric_columns].fillna(0)
+                                        
+                                        categorical_columns = beast_ml_dataset.select_dtypes(include=['object']).columns
+                                        beast_ml_dataset[categorical_columns] = beast_ml_dataset[categorical_columns].fillna('N/A')
+                                        
+                                        # Remove duplicates
+                                        beast_ml_dataset = beast_ml_dataset.drop_duplicates()
+                                        
+                                        progress_text.text("MASSIVE BEAST Dataset Creation Complete!")
+                                        
+                                        if not beast_ml_dataset.empty:
+                                            # Create one-hot encoding for categorical variables
+                                            categorical_cols = ['Symbol', 'Timeframe', 'A_Pattern', 'S_Pattern', 'Fib_Type', 'Zone', 'Direction', 'Bullish']
+                                            existing_categorical_cols = [col for col in categorical_cols if col in beast_ml_dataset.columns]
+                                            
+                                            # Create dynamic prefixes
+                                            prefix_mapping = {
+                                                'Symbol': 'Symbol',
+                                                'Timeframe': 'Timeframe', 
+                                                'A_Pattern': 'Pattern',
+                                                'S_Pattern': 'S_Pattern',
+                                                'Fib_Type': 'Fib',
+                                                'Zone': 'Zone',
+                                                'Direction': 'Direction',
+                                                'Bullish': 'Bullish'
+                                            }
+                                            dynamic_prefixes = [prefix_mapping[col] for col in existing_categorical_cols]
+                                            
+                                            beast_ml_encoded = pd.get_dummies(beast_ml_dataset, columns=existing_categorical_cols, 
+                                                                             prefix=dynamic_prefixes)
+                                            
+                                            # Create download button for the beast dataset
+                                            csv_data = beast_ml_encoded.to_csv(index=False)
+                                            st.download_button(
+                                                label="Download MASSIVE BEAST ML Dataset (CSV)",
+                                                data=csv_data,
+                                                file_name="massive_beast_ml_dataset.csv",
+                                                mime="text/csv"
+                                            )
+                                            
+                                            st.success(f"**MASSIVE BEAST ML Dataset Created!**")
+                                            st.info(f"**Dataset Summary:** {len(beast_ml_encoded)} patterns, {len(beast_ml_encoded.columns)} features")
+                                            
+                                            # Show the actual samples
+                                            st.write("**Your 3 Samples (Patterns):**")
+                                            
+                                            # Check what columns are actually available
+                                            available_cols = beast_ml_encoded.columns.tolist()
+                                            st.write(f"**Available columns:** {len(available_cols)} total")
+                                            
+                                            # Try to find pattern-related columns
+                                            pattern_cols = [col for col in available_cols if 'pattern' in col.lower() or 'symbol' in col.lower() or 'timeframe' in col.lower()]
+                                            if pattern_cols:
+                                                sample_display = beast_ml_encoded[pattern_cols[:6]].copy()  # Show first 6 pattern columns
+                                                st.dataframe(sample_display)
+                                            else:
+                                                # Show first few columns if no pattern columns found
+                                                sample_display = beast_ml_encoded.iloc[:, :6].copy()
+                                                st.dataframe(sample_display)
+                                            
+                                            # Display feature categories
+                                            st.markdown("**Complete Feature Categories:**")
+                                            st.markdown("""
+                                            | Category | Features | Purpose |
+                                            |----------|----------|---------|
+                                            | **Core Pattern Metrics** | Normalized_Change, Normalized_Bars, Pattern_Strength, Volatility_Score, Pattern_Confidence, Z_Score | Pattern performance and reliability |
+                                            | **Price Action** | Start_Price, End_Price, High_Price, Low_Price, Price_Range, Price_Change, Percent_Change | Price movement analysis |
+                                            | **Fibonacci Analysis** | Fib_Type, Fib_Level, Zone, Is_Bullish_Zone, Is_Red_Zone, Is_Grey_Zone | Fibonacci retracement positioning |
+                                            | **Spatial-Temporal** | Spatial_Score, Temporal_Score, Combined_Score, Entry_Retracement, Exit_Retracement | Trade positioning analysis |
+                                            | **Trade Performance** | Pattern_Trades_Count, Pattern_Total_PnL, Pattern_Win_Rate, Pattern_Profit_Factor, Pattern_Avg_Win, Pattern_Avg_Loss | Historical trade performance |
+                                            | **Pattern Classification** | Is_Stage1_Pattern, Is_Stage2_Pattern, Is_Support_Resistance, Is_Demand_Supply, Is_Fibonacci_Pattern | Pattern type identification |
+                                            | **Market Structure** | Is_Bullish_Pattern, Is_Bearish_Pattern, Pattern_Direction_Up, Pattern_Direction_Down | Market direction analysis |
+                                            | **Timeframe Analysis** | Timeframe_Minutes, Is_Higher_Timeframe, Is_Lower_Timeframe | Multi-timeframe context |
+                                            | **S-Group Metrics** | S_Group_Pattern_Strength_mean, S_Group_Pattern_Confidence_mean, S_Group_Volatility_Score_mean | Group consistency analysis |
+                                            | **Reliability Scores** | Pattern_Reliability_Score, Pattern_Performance_Score, Pattern_Consistency_Score | Pattern predictability |
+                                            | **Temporal Features** | Pattern_Duration_Minutes, Bars_Per_Minute, Price_Change_Per_Bar | Time-based analysis |
+                                            | **Market Efficiency** | Market_Efficiency_Ratio, Pattern_Intensity | Market behavior metrics |
+                                            | **Categorical Features** | Symbol, Timeframe, Pattern types (one-hot encoded) | Classification variables |
+                                            """)
+                                            
+                                            # Show sample of the beast dataset
+                                            st.write("**Sample MASSIVE BEAST ML Data (first 5 rows):**")
+                                            sample_beast = beast_ml_encoded.head().reset_index(drop=True)
+                                            st.dataframe(sample_beast)
+                                            
+                                            # Show feature importance summary
+                                            st.markdown("**Key ML Training Features:**")
+                                            st.markdown("""
+                                            - **Target Variables:** Pattern_Total_PnL, Pattern_Win_Rate, Pattern_Profit_Factor
+                                            - **Primary Predictors:** Pattern_Strength, Pattern_Confidence, Spatial_Score, Temporal_Score
+                                            - **Context Features:** Timeframe_Minutes, S_Group metrics, Fibonacci positioning
+                                            - **Classification Features:** Pattern types, market direction, zone positioning
+                                            """)
+                                            
+                                            # Export summary statistics
+                                            st.markdown("**Dataset Statistics:**")
+                                            numeric_summary = beast_ml_encoded.describe()
+                                            st.dataframe(numeric_summary)
+                                            
+                                            # --- MACHINE LEARNING TRAINING SECTION ---
+                                            st.markdown('<h3 style="color: purple;">Machine Learning Training</h3>', unsafe_allow_html=True)
+                                            
+                                            # Store the beast dataset in session state for ML training
+                                            st.session_state['beast_ml_dataset'] = beast_ml_encoded
+                                            st.session_state['beast_ml_ready'] = True
+                                            
+                                            st.success("MASSIVE BEAST ML Dataset ready for training!")
+                                            
+                                            # Trade statistics are handled by your dedicated trade analysis script
+                                            st.markdown("---")
+                                            st.info("**Note:** For detailed trade statistics, equity curves, and position sizing analysis, use your dedicated trade analysis script. This dashboard focuses on pattern analysis and ML training.")
+                                            
+                                            # Add prominent ML training button
+                                            st.markdown("---")
+                                            st.markdown('<h3 style="color: purple;">Ready to Train ML Models?</h3>', unsafe_allow_html=True)
+                                            
+                                            col1, col2, col3 = st.columns([1, 2, 1])
+                                            with col2:
+                                                if st.button("START MACHINE LEARNING TRAINING", type="primary", use_container_width=True):
+                                                    st.rerun()  # Refresh the page to show ML section
+                                            
+                                            st.info("**Scroll down to the bottom of the page to see the ML Training section with all options!**")
+                                            
                                         else:
-                                            return pd.to_numeric(series, errors='coerce')
-                                    
-                                    beast_ml_dataset['Pattern_Reliability_Score'] = safe_numeric_convert(beast_ml_dataset['Pattern_Confidence']) * (1 - safe_numeric_convert(beast_ml_dataset['Volatility_Score']))
-                                    beast_ml_dataset['Pattern_Performance_Score'] = safe_numeric_convert(beast_ml_dataset['Normalized_Change']) * safe_numeric_convert(beast_ml_dataset['Pattern_Strength'])
-                                    beast_ml_dataset['Pattern_Consistency_Score'] = 1 / (1 + safe_numeric_convert(beast_ml_dataset['Z_Score']).abs())
-                                    
-                                    # Add Fibonacci zone features
-                                    if 'Zone' in beast_ml_dataset.columns:
-                                        beast_ml_dataset['Is_Bullish_Zone'] = (beast_ml_dataset['Zone'].str.contains('Bullish|Green', na=False)).astype(int)
-                                        beast_ml_dataset['Is_Red_Zone'] = (beast_ml_dataset['Zone'].str.contains('Red', na=False)).astype(int)
-                                        beast_ml_dataset['Is_Grey_Zone'] = (beast_ml_dataset['Zone'].str.contains('Grey|Neutral', na=False)).astype(int)
-                                        beast_ml_dataset['Is_Upper_Half'] = (beast_ml_dataset['Zone'].str.contains('Upper', na=False)).astype(int)
-                                        beast_ml_dataset['Is_Lower_Half'] = (beast_ml_dataset['Zone'].str.contains('Lower', na=False)).astype(int)
-                                    
-                                    # Add temporal features
-                                    beast_ml_dataset['Pattern_Duration_Minutes'] = (pd.to_numeric(beast_ml_dataset['End_Time_Chart'], errors='coerce') - 
-                                                                                   pd.to_numeric(beast_ml_dataset['Start_Time_Chart'], errors='coerce')) / 60
-                                    beast_ml_dataset['Bars_Per_Minute'] = safe_numeric_convert(beast_ml_dataset['Bar_Count_Numeric']) / beast_ml_dataset['Pattern_Duration_Minutes']
-                                    beast_ml_dataset['Price_Change_Per_Bar'] = safe_numeric_convert(beast_ml_dataset['Price_Change']) / safe_numeric_convert(beast_ml_dataset['Bar_Count_Numeric'])
-                                    
-                                    # Add market efficiency features
-                                    beast_ml_dataset['Market_Efficiency_Ratio'] = safe_numeric_convert(beast_ml_dataset['Price_Change']) / safe_numeric_convert(beast_ml_dataset['Price_Range'])
-                                    beast_ml_dataset['Pattern_Intensity'] = safe_numeric_convert(beast_ml_dataset['Percent_Change_Numeric']) / safe_numeric_convert(beast_ml_dataset['Bar_Count_Numeric'])
-                                    
-                                    # Fill NaN values with appropriate defaults
-                                    numeric_columns = beast_ml_dataset.select_dtypes(include=[np.number]).columns
-                                    beast_ml_dataset[numeric_columns] = beast_ml_dataset[numeric_columns].fillna(0)
-                                    
-                                    categorical_columns = beast_ml_dataset.select_dtypes(include=['object']).columns
-                                    beast_ml_dataset[categorical_columns] = beast_ml_dataset[categorical_columns].fillna('N/A')
-                                    
-                                    # Remove duplicates
-                                    beast_ml_dataset = beast_ml_dataset.drop_duplicates()
-                                    
-                                    if not beast_ml_dataset.empty:
-                                        # Create one-hot encoding for categorical variables
-                                        categorical_cols = ['Symbol', 'Timeframe', 'A_Pattern', 'S_Pattern', 'Fib_Type', 'Zone', 'Direction', 'Bullish']
-                                        existing_categorical_cols = [col for col in categorical_cols if col in beast_ml_dataset.columns]
-                                        
-                                        # Create dynamic prefixes
-                                        prefix_mapping = {
-                                            'Symbol': 'Symbol',
-                                            'Timeframe': 'Timeframe', 
-                                            'A_Pattern': 'Pattern',
-                                            'S_Pattern': 'S_Pattern',
-                                            'Fib_Type': 'Fib',
-                                            'Zone': 'Zone',
-                                            'Direction': 'Direction',
-                                            'Bullish': 'Bullish'
-                                        }
-                                        dynamic_prefixes = [prefix_mapping[col] for col in existing_categorical_cols]
-                                        
-                                        beast_ml_encoded = pd.get_dummies(beast_ml_dataset, columns=existing_categorical_cols, 
-                                                                         prefix=dynamic_prefixes)
-                                        
-                                        # Create download button for the beast dataset
-                                        csv_data = beast_ml_encoded.to_csv(index=False)
-                                        st.download_button(
-                                            label="Download MASSIVE BEAST ML Dataset (CSV)",
-                                            data=csv_data,
-                                            file_name="massive_beast_ml_dataset.csv",
-                                            mime="text/csv"
-                                        )
-                                        
-                                        st.success(f"**MASSIVE BEAST ML Dataset Created!**")
-                                        st.info(f"**Dataset Summary:** {len(beast_ml_encoded)} patterns, {len(beast_ml_encoded.columns)} features")
-                                        
-                                        # Display feature categories
-                                        st.markdown("**Complete Feature Categories:**")
-                                        st.markdown("""
-                                        | Category | Features | Purpose |
-                                        |----------|----------|---------|
-                                        | **Core Pattern Metrics** | Normalized_Change, Normalized_Bars, Pattern_Strength, Volatility_Score, Pattern_Confidence, Z_Score | Pattern performance and reliability |
-                                        | **Price Action** | Start_Price, End_Price, High_Price, Low_Price, Price_Range, Price_Change, Percent_Change | Price movement analysis |
-                                        | **Fibonacci Analysis** | Fib_Type, Fib_Level, Zone, Is_Bullish_Zone, Is_Red_Zone, Is_Grey_Zone | Fibonacci retracement positioning |
-                                        | **Spatial-Temporal** | Spatial_Score, Temporal_Score, Combined_Score, Entry_Retracement, Exit_Retracement | Trade positioning analysis |
-                                        | **Trade Performance** | Pattern_Trades_Count, Pattern_Total_PnL, Pattern_Win_Rate, Pattern_Profit_Factor, Pattern_Avg_Win, Pattern_Avg_Loss | Historical trade performance |
-                                        | **Pattern Classification** | Is_Stage1_Pattern, Is_Stage2_Pattern, Is_Support_Resistance, Is_Demand_Supply, Is_Fibonacci_Pattern | Pattern type identification |
-                                        | **Market Structure** | Is_Bullish_Pattern, Is_Bearish_Pattern, Pattern_Direction_Up, Pattern_Direction_Down | Market direction analysis |
-                                        | **Timeframe Analysis** | Timeframe_Minutes, Is_Higher_Timeframe, Is_Lower_Timeframe | Multi-timeframe context |
-                                        | **S-Group Metrics** | S_Group_Pattern_Strength_mean, S_Group_Pattern_Confidence_mean, S_Group_Volatility_Score_mean | Group consistency analysis |
-                                        | **Reliability Scores** | Pattern_Reliability_Score, Pattern_Performance_Score, Pattern_Consistency_Score | Pattern predictability |
-                                        | **Temporal Features** | Pattern_Duration_Minutes, Bars_Per_Minute, Price_Change_Per_Bar | Time-based analysis |
-                                        | **Market Efficiency** | Market_Efficiency_Ratio, Pattern_Intensity | Market behavior metrics |
-                                        | **Categorical Features** | Symbol, Timeframe, Pattern types (one-hot encoded) | Classification variables |
-                                        """)
-                                        
-                                        # Show sample of the beast dataset
-                                        st.write("**Sample MASSIVE BEAST ML Data (first 5 rows):**")
-                                        sample_beast = beast_ml_encoded.head().reset_index(drop=True)
-                                        st.dataframe(sample_beast)
-                                        
-                                        # Show feature importance summary
-                                        st.markdown("**Key ML Training Features:**")
-                                        st.markdown("""
-                                        - **Target Variables:** Pattern_Total_PnL, Pattern_Win_Rate, Pattern_Profit_Factor
-                                        - **Primary Predictors:** Pattern_Strength, Pattern_Confidence, Spatial_Score, Temporal_Score
-                                        - **Context Features:** Timeframe_Minutes, S_Group metrics, Fibonacci positioning
-                                        - **Classification Features:** Pattern types, market direction, zone positioning
-                                        """)
-                                        
-                                        # Export summary statistics
-                                        st.markdown("**Dataset Statistics:**")
-                                        numeric_summary = beast_ml_encoded.describe()
-                                        st.dataframe(numeric_summary)
-                                        
-                                        # --- MACHINE LEARNING TRAINING SECTION ---
-                                        st.markdown('<h3 style="color: purple;">🤖 Machine Learning Training</h3>', unsafe_allow_html=True)
-                                        
-                                        # Store the beast dataset in session state for ML training
-                                        st.session_state['beast_ml_dataset'] = beast_ml_encoded
-                                        st.session_state['beast_ml_ready'] = True
-                                        
-                                        st.success("✅ MASSIVE BEAST ML Dataset ready for training!")
-                                        
-                                        # Add prominent ML training button
-                                        st.markdown("---")
-                                        st.markdown('<h3 style="color: purple;">Ready to Train ML Models?</h3>', unsafe_allow_html=True)
-                                        
-                                        col1, col2, col3 = st.columns([1, 2, 1])
-                                        with col2:
-                                            if st.button("START MACHINE LEARNING TRAINING", type="primary", use_container_width=True):
-                                                st.rerun()  # Refresh the page to show ML section
-                                        
-                                        st.info("**Scroll down to the bottom of the page to see the ML Training section with all options!**")
-                                        
-                                    else:
-                                        st.warning("No complete data available for MASSIVE BEAST ML export (missing values)")
-                                        st.session_state['beast_ml_ready'] = False
+                                            st.warning("No complete data available for MASSIVE BEAST ML export (missing values)")
+                                            st.session_state['beast_ml_ready'] = False
                                 else:
                                     st.info("No A1 or A2 patterns found for analysis.")
                             else:
@@ -1133,8 +1187,8 @@ if trade_file and analysis_loaded:
             if symbol_col not in trades.columns:
                 st.error(f"Column '{symbol_col}' missing from trades DataFrame!")
                 st.stop()
-            if 'symbol' not in stages.columns:
-                st.error("Column 'symbol' missing from stages DataFrame!")
+            if symbol_col not in stages.columns:
+                st.error(f"Column '{symbol_col}' missing from stages DataFrame!")
                 st.stop()
             if len(trades) == 0:
                 st.error("Trades DataFrame is empty!")
@@ -1166,30 +1220,7 @@ if trade_file and analysis_loaded:
             else:
                 merged['TradeId'] = merged.index
 
-            # --- Mathematical/statistical outputs ---
-            st.header("Mathematical Outputs for Filtered Trades")
-            if not merged.empty:
-                merged['Was_Win'] = merged['PnL'] > 0
-                total_pnl = merged['PnL'].sum()
-                win_pct = (merged['Was_Win'].mean() * 100)
-                avg_win = merged[merged['Was_Win']]['PnL'].mean()
-                avg_loss = merged[~merged['Was_Win']]['PnL'].mean()
-                win_loss_ratio = abs(avg_win / avg_loss) if avg_loss != 0 else float('nan')
-                profit_factor = merged[merged['PnL'] > 0]['PnL'].sum() / abs(merged[merged['PnL'] < 0]['PnL'].sum()) if (merged[merged['PnL'] < 0]['PnL'].sum()) != 0 else float('nan')
-                num_trades = len(merged)
-                best_trade = merged.loc[merged['PnL'].idxmax()]
-                worst_trade = merged.loc[merged['PnL'].idxmin()]
-                st.markdown(f"**Total P&L:** ${total_pnl:,.2f}")
-                st.markdown(f"**Trade Win %:** {win_pct:.2f}%")
-                st.markdown(f"**Avg Win / Avg Loss:** {win_loss_ratio:.2f}")
-                st.markdown(f"**Avg Winning Trade:** ${avg_win:.2f}")
-                st.markdown(f"**Avg Losing Trade:** ${avg_loss:.2f}")
-                st.markdown(f"**Profit Factor:** {profit_factor:.2f}")
-                st.markdown(f"**Total Number of Trades:** {num_trades}")
-                st.markdown(f"**Best Trade:** ${best_trade['PnL']:.2f} | {best_trade['Type']} {best_trade['Size']} {best_trade[symbol_col]} @ {best_trade['EntryPrice']} Exited @ {best_trade['ExitPrice']} {best_trade['ExitedAt']}")
-                st.markdown(f"**Worst Trade:** ${worst_trade['PnL']:.2f} | {worst_trade['Type']} {worst_trade['Size']} {worst_trade[symbol_col]} @ {worst_trade['EntryPrice']} Exited @ {worst_trade['ExitPrice']} {worst_trade['ExitedAt']}")
-            else:
-                st.info("No merged trades available for analysis.")
+            # Trade statistics are handled by your dedicated trade analysis script
             # --- Filter by Trade Id ---
             st.header("Filter by Trade Id")
             unique_ids = merged['TradeId'].dropna().unique()
@@ -1264,122 +1295,203 @@ if 'beast_ml_ready' in st.session_state and st.session_state['beast_ml_ready']:
         
         # ML Training Button
         if st.button("Train Machine Learning Models", type="primary"):
-            with st.spinner("Training ML models..."):
-                try:
-                    # Import ML libraries
-                    from sklearn.model_selection import train_test_split
-                    from sklearn.ensemble import RandomForestRegressor
-                    from sklearn.linear_model import LinearRegression
-                    from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
-                    import xgboost as xgb
+            # Create progress bar and status container
+            progress_bar = st.progress(0)
+            status_text = st.empty()
+            
+            try:
+                # Import ML libraries
+                status_text.text("Loading ML libraries...")
+                progress_bar.progress(10)
+                
+                from sklearn.model_selection import train_test_split
+                from sklearn.ensemble import RandomForestRegressor
+                from sklearn.linear_model import LinearRegression
+                from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
+                import xgboost as xgb
+                
+                # Prepare data
+                status_text.text("Preparing data...")
+                progress_bar.progress(20)
+                
+                X = dataset[selected_features].fillna(0)
+                y = dataset[target_variable].fillna(0)
+                
+                # Data quality checks
+                if y.std() == 0:
+                    progress_bar.progress(0)
+                    status_text.text("Target variable has no variance")
+                    st.error("**Target Variable Issue:** The selected target variable has no variance (all values are the same)")
+                    st.info("Try selecting a different target variable or check your data")
+                    st.stop()
+                
+                if X.shape[0] < 5:
+                    progress_bar.progress(0)
+                    status_text.text("Too few samples")
+                    st.error(f"**Insufficient Data:** Only {X.shape[0]} samples available. Need at least 5 samples for basic ML.")
+                    st.stop()
+                
+                # Split data
+                status_text.text("Splitting data into training and test sets...")
+                progress_bar.progress(30)
+                
+                X_train, X_test, y_train, y_test = train_test_split(
+                    X, y, test_size=test_size/100, random_state=random_state
+                )
+                
+                # Validate sample sizes
+                min_samples = 10  # Minimum samples needed for meaningful ML
+                if len(X_train) < min_samples:
+                    progress_bar.progress(0)
+                    status_text.text("Insufficient data for ML training")
+                    st.error(f"**Insufficient Data for ML Training**")
+                    st.warning(f"""
+                    **Current Data:** {len(X_train)} training samples, {len(X_test)} test samples
                     
-                    # Prepare data
-                    X = dataset[selected_features].fillna(0)
-                    y = dataset[target_variable].fillna(0)
+                    **Required:** At least {min_samples} training samples for meaningful ML results
                     
-                    # Split data
-                    X_train, X_test, y_train, y_test = train_test_split(
-                        X, y, test_size=test_size/100, random_state=random_state
-                    )
+                    **Solutions:**
+                    - Upload more trade data
+                    - Use a smaller test size (try 10%)
+                    - Collect more trading patterns
+                    """)
+                    st.stop()
+                
+                st.success(f"Data split: {len(X_train)} training samples, {len(X_test)} test samples")
+                progress_bar.progress(40)
+                
+                # Train models
+                models = {}
+                results = {}
+                
+                if model_type in ['Random Forest', 'All Models']:
+                    status_text.text("Training Random Forest model...")
+                    progress_bar.progress(50)
                     
-                    st.success(f"Data split: {len(X_train)} training samples, {len(X_test)} test samples")
+                    rf_model = RandomForestRegressor(n_estimators=100, random_state=random_state)
+                    rf_model.fit(X_train, y_train)
+                    rf_pred = rf_model.predict(X_test)
+                    models['Random Forest'] = rf_model
+                    results['Random Forest'] = {
+                        'R2': r2_score(y_test, rf_pred),
+                        'MSE': mean_squared_error(y_test, rf_pred),
+                        'MAE': mean_absolute_error(y_test, rf_pred)
+                    }
+                    progress_bar.progress(60)
+                
+                if model_type in ['XGBoost', 'All Models']:
+                    status_text.text("Training XGBoost model...")
+                    progress_bar.progress(70)
                     
-                    # Train models
-                    models = {}
-                    results = {}
+                    xgb_model = xgb.XGBRegressor(random_state=random_state)
+                    xgb_model.fit(X_train, y_train)
+                    xgb_pred = xgb_model.predict(X_test)
+                    models['XGBoost'] = xgb_model
+                    results['XGBoost'] = {
+                        'R2': r2_score(y_test, xgb_pred),
+                        'MSE': mean_squared_error(y_test, xgb_pred),
+                        'MAE': mean_absolute_error(y_test, xgb_pred)
+                    }
+                    progress_bar.progress(80)
+                
+                if model_type in ['Linear Regression', 'All Models']:
+                    status_text.text("Training Linear Regression model...")
+                    progress_bar.progress(85)
                     
-                    if model_type in ['Random Forest', 'All Models']:
-                        with st.spinner("Training Random Forest..."):
-                            rf_model = RandomForestRegressor(n_estimators=100, random_state=random_state)
-                            rf_model.fit(X_train, y_train)
-                            rf_pred = rf_model.predict(X_test)
-                            models['Random Forest'] = rf_model
-                            results['Random Forest'] = {
-                                'R2': r2_score(y_test, rf_pred),
-                                'MSE': mean_squared_error(y_test, rf_pred),
-                                'MAE': mean_absolute_error(y_test, rf_pred)
-                            }
+                    lr_model = LinearRegression()
+                    lr_model.fit(X_train, y_train)
+                    lr_pred = lr_model.predict(X_test)
+                    models['Linear Regression'] = lr_model
+                    results['Linear Regression'] = {
+                        'R2': r2_score(y_test, lr_pred),
+                        'MSE': mean_squared_error(y_test, lr_pred),
+                        'MAE': mean_absolute_error(y_test, lr_pred)
+                    }
+                    progress_bar.progress(90)
+                
+                # Display results
+                status_text.text("Generating results and visualizations...")
+                progress_bar.progress(95)
+                
+                st.markdown("**Model Performance Results:**")
+                
+                # Create results table
+                results_df = pd.DataFrame(results).T
+                st.dataframe(results_df)
+                
+                # Find best model (handle NaN values)
+                if results_df['R2'].isna().all():
+                    st.warning("**All models produced NaN results.** This usually means:")
+                    st.info("""
+                    - Too few samples for reliable training
+                    - Target variable has no variance
+                    - Features are not predictive
+                    - Data quality issues
+                    """)
+                    st.stop()
+                
+                # Filter out NaN results
+                valid_results = results_df.dropna()
+                if valid_results.empty:
+                    st.error("No valid model results obtained")
+                    st.stop()
+                
+                best_model = valid_results['R2'].idxmax()
+                best_r2 = valid_results.loc[best_model, 'R2']
+                st.success(f"Best Model: {best_model} (R² = {best_r2:.4f})")
+                
+                # Feature importance for tree-based models
+                if best_model in ['Random Forest', 'XGBoost']:
+                    st.markdown("**Feature Importance (Best Model):**")
+                    best_model_obj = models[best_model]
                     
-                    if model_type in ['XGBoost', 'All Models']:
-                        with st.spinner("Training XGBoost..."):
-                            xgb_model = xgb.XGBRegressor(random_state=random_state)
-                            xgb_model.fit(X_train, y_train)
-                            xgb_pred = xgb_model.predict(X_test)
-                            models['XGBoost'] = xgb_model
-                            results['XGBoost'] = {
-                                'R2': r2_score(y_test, xgb_pred),
-                                'MSE': mean_squared_error(y_test, xgb_pred),
-                                'MAE': mean_absolute_error(y_test, xgb_pred)
-                            }
-                    
-                    if model_type in ['Linear Regression', 'All Models']:
-                        with st.spinner("Training Linear Regression..."):
-                            lr_model = LinearRegression()
-                            lr_model.fit(X_train, y_train)
-                            lr_pred = lr_model.predict(X_test)
-                            models['Linear Regression'] = lr_model
-                            results['Linear Regression'] = {
-                                'R2': r2_score(y_test, lr_pred),
-                                'MSE': mean_squared_error(y_test, lr_pred),
-                                'MAE': mean_absolute_error(y_test, lr_pred)
-                            }
-                    
-                    # Display results
-                    st.markdown("**Model Performance Results:**")
-                    
-                    # Create results table
-                    results_df = pd.DataFrame(results).T
-                    st.dataframe(results_df)
-                    
-                    # Find best model
-                    best_model = results_df['R2'].idxmax()
-                    st.success(f"Best Model: {best_model} (R² = {results_df.loc[best_model, 'R2']:.4f})")
-                    
-                    # Feature importance for tree-based models
-                    if best_model in ['Random Forest', 'XGBoost']:
-                        st.markdown("**Feature Importance (Best Model):**")
-                        best_model_obj = models[best_model]
+                    if hasattr(best_model_obj, 'feature_importances_'):
+                        feature_importance = pd.DataFrame({
+                            'Feature': selected_features,
+                            'Importance': best_model_obj.feature_importances_
+                        }).sort_values('Importance', ascending=False)
                         
-                        if hasattr(best_model_obj, 'feature_importances_'):
-                            feature_importance = pd.DataFrame({
-                                'Feature': selected_features,
-                                'Importance': best_model_obj.feature_importances_
-                            }).sort_values('Importance', ascending=False)
-                            
-                            st.dataframe(feature_importance.head(10))
-                            
-                            # Feature importance chart
-                            import plotly.express as px
-                            fig = px.bar(
-                                feature_importance.head(15),
-                                x='Importance',
-                                y='Feature',
-                                orientation='h',
-                                title=f'Top 15 Feature Importance - {best_model}'
-                            )
-                            st.plotly_chart(fig)
-                    
-                    # Store results in session state
-                    st.session_state['ml_results'] = results
-                    st.session_state['ml_models'] = models
-                    st.session_state['ml_best_model'] = best_model
-                    
-                    # Model download option
-                    st.markdown("**Model Export:**")
-                    if st.button("Download Best Model"):
-                        import pickle
-                        best_model_obj = models[best_model]
-                        model_bytes = pickle.dumps(best_model_obj)
-                        st.download_button(
-                            label=f"Download {best_model} Model",
-                            data=model_bytes,
-                            file_name=f"best_model_{best_model.lower().replace(' ', '_')}.pkl",
-                            mime="application/octet-stream"
+                        st.dataframe(feature_importance.head(10))
+                        
+                        # Feature importance chart
+                        import plotly.express as px
+                        fig = px.bar(
+                            feature_importance.head(15),
+                            x='Importance',
+                            y='Feature',
+                            orientation='h',
+                            title=f'Top 15 Feature Importance - {best_model}'
                         )
-                    
-                except Exception as e:
-                    st.error(f"ML Training Error: {str(e)}")
-                    st.info("Make sure you have scikit-learn and xgboost installed: `pip install scikit-learn xgboost`")
+                        st.plotly_chart(fig)
+                
+                # Store results in session state
+                st.session_state['ml_results'] = results
+                st.session_state['ml_models'] = models
+                st.session_state['ml_best_model'] = best_model
+                
+                # Model download option
+                st.markdown("**Model Export:**")
+                if st.button("Download Best Model"):
+                    import pickle
+                    best_model_obj = models[best_model]
+                    model_bytes = pickle.dumps(best_model_obj)
+                    st.download_button(
+                        label=f"Download {best_model} Model",
+                        data=model_bytes,
+                        file_name=f"best_model_{best_model.lower().replace(' ', '_')}.pkl",
+                        mime="application/octet-stream"
+                    )
+                
+                # Complete
+                progress_bar.progress(100)
+                status_text.text("ML Training Complete!")
+                st.balloons()
+                
+            except Exception as e:
+                progress_bar.progress(0)
+                status_text.text("Error occurred during training")
+                st.error(f"ML Training Error: {str(e)}")
+                st.info("Make sure you have scikit-learn and xgboost installed: `pip install scikit-learn xgboost`")
     
     else:
         st.warning("No ML dataset available. Please run the analysis first.")
